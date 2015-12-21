@@ -31,5 +31,7 @@ get_header(); ?>
 	</div><!-- #primary -->
 
 <?php
-get_sidebar();
+if ( 'video' !== get_post_format() ) {
+	get_sidebar();
+}
 get_footer();
