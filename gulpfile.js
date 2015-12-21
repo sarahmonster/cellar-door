@@ -9,36 +9,30 @@ var sass = require( 'gulp-ruby-sass' ),
 	jshint = require( 'gulp-jshint' ),
 	concat = require( 'gulp-concat' ),
 	notify = require( 'gulp-notify' ),
-	cache = require( 'gulp-cache' );
+	cache = require( 'gulp-cache' ),
+	sourcemaps = require( 'gulp-sourcemaps' );
 
-// File Paths
-var paths = {
-	scripts: 'assets/js/**/*.js',
-};
-
-// Tasks
-// Styles
+// Styles tasks
 gulp.task( 'styles', function() {
-	return sass( 'assets/sass/style.scss', { style: 'expanded' } )
+	return sass( 'assets/sass/style.scss', { style: 'expanded', sourcemap: true } )
 		.pipe( autoprefixer( { browsers: ['last 2 versions', 'ie >= 9'], cascade: false } ) )
-		.on('error', function (err) {
-			console.error('Error!', err.message);
-		})
+    .pipe( sourcemaps.write( './', { includeContent: false, sourceRoot: 'source' } ) )
+		.on( 'error', function (err) { console.error('Error!', err.message); } )
 		.pipe( gulp.dest( './' ) )
 		//.pipe( notify( { message: 'Styles task complete' } ) );
 });
 
 // Scripts
-gulp.task('scripts', function() {
+gulp.task( 'scripts', function() {
 	return gulp.src( 'assets/js/*.js' )
 		.pipe( jshint.reporter( 'default' ) )
-		.pipe( concat( 'main.js' ) )
+		//.pipe( concat( 'main.js' ) )
 		.pipe( gulp.dest( 'assets/js' ) )
 		//.pipe( notify( { message: 'Scripts task complete' } ) );
 });
 
 // Images
-gulp.task('images', function() {
+gulp.task( 'images', function() {
   return gulp.src( 'assets/images/*' )
     .pipe( cache( imagemin( {
 		optimizationLevel: 3,
@@ -53,14 +47,8 @@ gulp.task('images', function() {
 
 // Watch files for changes
 gulp.task( 'watch', function() {
-
-	// Watch .scss files
 	gulp.watch( 'assets/sass/**/*.scss', ['styles'] );
-
-	// Watch .js files
 	gulp.watch( 'assets/js/**/*.js', ['scripts'] );
-
-	// Watch image files
 	gulp.watch( 'assets/images/*', ['images'] );
 });
 
