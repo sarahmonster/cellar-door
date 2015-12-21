@@ -11,6 +11,7 @@ var sass = require( 'gulp-ruby-sass' ),
 	notify = require( 'gulp-notify' ),
 	cache = require( 'gulp-cache' ),
 	sourcemaps = require( 'gulp-sourcemaps' );
+	livereload = require( 'gulp-livereload' );
 
 // Styles tasks
 gulp.task( 'styles', function() {
@@ -19,6 +20,7 @@ gulp.task( 'styles', function() {
     .pipe( sourcemaps.write( './', { includeContent: false, sourceRoot: 'source' } ) )
 		.on( 'error', function (err) { console.error('Error!', err.message); } )
 		.pipe( gulp.dest( './' ) )
+		.pipe( livereload() );
 		//.pipe( notify( { message: 'Styles task complete' } ) );
 });
 
@@ -27,7 +29,7 @@ gulp.task( 'scripts', function() {
 	return gulp.src( 'assets/js/*.js' )
 		.pipe( jshint.reporter( 'default' ) )
 		//.pipe( concat( 'main.js' ) )
-		.pipe( gulp.dest( 'assets/js' ) )
+		.pipe( gulp.dest( 'assets/js' ) );
 		//.pipe( notify( { message: 'Scripts task complete' } ) );
 });
 
@@ -41,12 +43,13 @@ gulp.task( 'images', function() {
 		svgoPlugins: [{ removeViewBox: false }],
 		use: [pngquant()]
 	} ) ) )
-    .pipe( gulp.dest( 'assets/images' ) )
+    .pipe( gulp.dest( 'assets/images' ) );
     //.pipe( notify( { message: 'Images task complete' } ) );
 });
 
 // Watch files for changes
 gulp.task( 'watch', function() {
+	livereload.listen();
 	gulp.watch( 'assets/sass/**/*.scss', ['styles'] );
 	gulp.watch( 'assets/js/**/*.js', ['scripts'] );
 	gulp.watch( 'assets/images/*', ['images'] );
