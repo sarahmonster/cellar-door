@@ -14,6 +14,9 @@
 	</div><!-- #content -->
 
 	<footer id="colophon" class="site-footer" role="contentinfo">
+
+		<?php get_sidebar( 'footer' ); ?>
+		
 		<div class="site-info">
 			<?php echo vip_powered_wpcom(); ?>
 		</div><!-- .site-info -->

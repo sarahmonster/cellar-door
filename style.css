@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /*!
 Theme Name: Feminist Frequency
 Theme URI: http://underscores.me/
@@ -270,7 +271,7 @@ input,
 select,
 textarea {
   color: #404040;
-  font-family: sans-serif;
+  font-family: Georgia, serif;
   font-size: 16px;
   font-size: 1rem;
   line-height: 1.5;
@@ -664,10 +665,172 @@ a:hover, a:active {
 --------------------------------------------------------------*/
 .widget {
   margin: 0 0 1.5em;
-  /* Make sure select elements fit in widgets. */
+  border-top: 2px solid blue;
+  font-family: Arial, sans-serif;
+  /* Make sure select elements fit in nicely with their friends. */
 }
 .widget select {
+  font-family: Arial, sans-serif;
+  font-size: 15.2px;
+  font-size: 0.95rem;
   max-width: 100%;
+}
+
+/* Search widget */
+.widget_search .search-form .search-field {
+  width: 100%;
+}
+
+.widget_search .search-submit {
+  display: none;
+}
+
+/* Lists in widgets (pages, categories, comments, etc) */
+.widget ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+.widget ul a {
+  border-top: 1px solid rgba(255, 255, 0, 0.5);
+  color: red;
+  display: block;
+  padding: 7px 0;
+}
+.widget ul a:hover {
+  border-bottom: none;
+  background-color: rgba(255, 255, 0, 0.15);
+}
+.widget ul .sub-menu {
+  margin-left: 1em;
+  padding: 0;
+}
+
+/* Archive widgets */
+.widget_archive ul li,
+.widget_categories ul li {
+  -webkit-align-items: baseline;
+  -ms-flex-align: baseline;
+  align-items: baseline;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+}
+.widget_archive ul li a,
+.widget_categories ul li a {
+  border: none;
+  -webkit-order: 1;
+  -ms-flex-order: 1;
+  order: 1;
+}
+.widget_archive ul li::before,
+.widget_categories ul li::before {
+  border-bottom: 1px dotted #b2b300;
+  content: "";
+  -webkit-flex-grow: 1;
+  -ms-flex-positive: 1;
+  flex-grow: 1;
+  -webkit-order: 2;
+  -ms-flex-order: 2;
+  order: 2;
+  margin: 0.25em 3px;
+}
+.widget_archive ul li .post-count,
+.widget_categories ul li .post-count {
+  -webkit-order: 3;
+  -ms-flex-order: 3;
+  order: 3;
+  padding-top: 0.5em;
+}
+.widget_archive ul li ul,
+.widget_categories ul li ul {
+  -webkit-order: 4;
+  -ms-flex-order: 4;
+  order: 4;
+  -webkit-flex-grow: 0;
+  -ms-flex-positive: 0;
+  flex-grow: 0;
+  -webkit-flex-basis: 100%;
+  -ms-flex-preferred-size: 100%;
+  flex-basis: 100%;
+  margin-left: 1em;
+}
+
+/* Comment widget */
+.widget_recent_comments li {
+  border-top: 1px solid rgba(255, 255, 0, 0.5);
+  font-family: Georgia, serif;
+  font-style: italic;
+  padding: 7px 0;
+  /*.comment-author-link::after,
+  > a::before {
+  	display: inline;
+  	content: "—";
+  }*/
+}
+.widget_recent_comments li a {
+  border: 0;
+  display: inline-block;
+  font-family: Arial, sans-serif;
+  font-style: normal;
+}
+
+/* RSS widget */
+.widget_rss .rsswidget {
+  margin-bottom: -7px;
+}
+.widget_rss .rssSummary {
+  font-family: Georgia, serif;
+  font-style: italic;
+}
+.widget_rss cite {
+  display: block;
+  font-style: normal;
+  padding-bottom: 7px;
+  text-align: right;
+}
+
+/* Text widget */
+.textwidget {
+  font-family: Georgia, serif;
+  font-style: italic;
+  font-size: 1.2em;
+}
+
+/* Tag cloud widget */
+.widget_tag_cloud .tagcloud {
+  font-family: Georgia, serif;
+  font-style: italic;
+}
+
+/* Calendar widget */
+.widget_calendar {
+  line-height: 2.4;
+}
+.widget_calendar #calendar-wrap {
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 500px;
+}
+.widget_calendar caption {
+  font-family: Georgia, serif;
+  font-style: italic;
+  margin-bottom: 5px;
+}
+.widget_calendar thead {
+  border-bottom: 1px solid rgba(255, 255, 0, 0.5);
+}
+.widget_calendar td {
+  text-align: center;
+}
+.widget_calendar #prev {
+  text-align: left;
+}
+.widget_calendar #next {
+  text-align: right;
 }
 
 /*--------------------------------------------------------------
@@ -696,8 +859,24 @@ a:hover, a:active {
 }
 
 .site-footer {
+  font-size: 0;
   clear: both;
   width: 100%;
+}
+.site-footer .widget-area {
+  display: inline-block;
+  font-size: 16px;
+  font-size: 1rem;
+  width: 100%;
+  box-sizing: border-box;
+  padding-left: 1em;
+  padding-right: 1em;
+}
+@media only screen and (min-width: 768px) {
+  .site-footer .widget-area {
+    width: 33.33333%;
+    vertical-align: top;
+  }
 }
 
 .sticky {

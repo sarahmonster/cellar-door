@@ -1,8 +1,174 @@
 .widget {
 	margin: 0 0 1.5em;
+	border-top: 2px solid $color__secondary;
+	font-family: $font__sans;
 
-	/* Make sure select elements fit in widgets. */
+	/* Make sure select elements fit in nicely with their friends. */
 	select {
+		font-family: $font__sans;
+		@include font-size(0.95);
 		max-width: 100%;
+	}
+}
+
+/* Search widget */
+.widget_search .search-form .search-field {
+	width: 100%;
+}
+
+.widget_search .search-submit {
+	display: none;
+}
+
+/* Lists in widgets (pages, categories, comments, etc) */
+.widget ul {
+		list-style-type: none;
+		margin: 0;
+		padding: 0;
+
+	a {
+		border-top: 1px solid transparentize($color__tertiary, 0.5);
+		color: $color__primary;
+		display: block;
+		padding: 7px 0;
+
+		&:hover {
+			border-bottom: none;
+			background-color: transparentize($color__tertiary, 0.85);
+		}
+	}
+
+	.sub-menu {
+		margin-left: 1em;
+		padding: 0;
+	}
+} // .widget ul
+
+/* Archive widgets */
+.widget_archive,
+.widget_categories {
+	ul li {
+		align-items: baseline;
+		display: flex;
+		flex-wrap: wrap;
+
+		a {
+			border: none;
+			order: 1;
+		} // a
+
+		&::before {
+			border-bottom: 1px dotted darken($color__tertiary, 15%);
+			content: "";
+			flex-grow: 1;
+			order: 2;
+			margin: 0.25em 3px;
+		} // :before
+
+		.post-count {
+			order: 3;
+			padding-top: 0.5em;
+		}
+
+		ul {
+			order: 4;
+			flex-grow: 0;
+			flex-basis: 100%;
+			margin-left: 1em;
+		}
+	} // ul li
+} // .widget_archive, .widget_categories
+
+/* Comment widget */
+.widget_recent_comments {
+	li {
+		border-top: 1px solid transparentize($color__tertiary, 0.5);
+		font-family: $font__serif;
+		font-style: italic;
+		padding: 7px 0;
+
+		a {
+			border: 0;
+			display: inline-block;
+			font-family: $font__sans;
+			font-style: normal;
+		}
+
+		/*.comment-author-link::after,
+		> a::before {
+			display: inline;
+			content: "—";
+		}*/
+	}
+}
+
+/* RSS widget */
+.widget_rss {
+
+	.rsswidget {
+		margin-bottom: -7px;
+	}
+
+	.rss-date {
+		//@extend .entry-meta;
+	}
+
+	.rssSummary {
+		font-family: $font__serif;
+		font-style: italic;
+	}
+
+	cite {
+		//@extend .entry-meta;
+		display: block;
+		font-style: normal;
+		padding-bottom: 7px;
+		text-align: right;
+	}
+}
+
+/* Text widget */
+.textwidget {
+	font-family: $font__serif;
+	font-style: italic;
+	font-size: 1.2em;
+}
+
+/* Tag cloud widget */
+.widget_tag_cloud .tagcloud {
+	font-family: $font__serif;
+	font-style: italic;
+}
+
+/* Calendar widget */
+.widget_calendar {
+	line-height: 2.4;
+
+	#calendar-wrap {
+		margin-left: auto;
+		margin-right: auto;
+		max-width: 500px;
+	}
+
+	caption {
+		font-family: $font__serif;
+		font-style: italic;
+		margin-bottom: 5px;
+	}
+
+	thead {
+		border-bottom: 1px solid transparentize($color__tertiary, 0.5);
+	}
+
+	td {
+		text-align: center;
+	}
+
+	#prev {
+		text-align: left;
+	}
+
+	#next {
+		text-align: right;
 	}
 }
