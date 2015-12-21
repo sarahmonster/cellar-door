@@ -4,29 +4,43 @@
 	padding: $size__site-gutter;
 }
 
+.site-content {
+	padding: $size__site-gutter / 2;
+}
+
 .content-area {
-	float: left;
-	margin: 0 (-$size__site-sidebar) 0 0;
-	width: $size__site-main;
+	//width: 100%;
 }
 
-.site-main {
-	margin: 0 $size__site-sidebar 0 0;
+/* On smaller devices, give the sidebar a bit of breathing room at the top */
+@include desktop-max {
+	#secondary {
+		margin-top: $size__site-gutter;
+	}
 }
 
-.site-content .widget-area {
-	float: right;
-	overflow: hidden;
-	width: $size__site-sidebar;
+/* On desktop devices, we'll show a sidebar next to our content */
+@include desktop {
+	// Sidebar is only present on individual blog posts
+	.single {
+		.content-area {
+			@include col(8, 12);
+		}
+
+		.widget-area {
+			@include col(4, 12);
+		}
+	}
 }
 
+/* Footer */
 .site-footer {
 	@include row;
 	clear: both;
 	width: $size__site-main;
 
 	.widget-area {
-		@include col(1, 3);
+		@include col(4, 12);
 	}
 
-}
+} // .site-footer

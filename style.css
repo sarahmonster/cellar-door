@@ -43,6 +43,7 @@ Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
 	## Captions
 	## Galleries
 --------------------------------------------------------------*/
+/* Adapted from http://thesassway.com/intermediate/simple-grid-mixins */
 /*--------------------------------------------------------------
 # Normalize
 --------------------------------------------------------------*/
@@ -842,38 +843,83 @@ a:hover, a:active {
   padding: 20px;
 }
 
-.content-area {
-  float: left;
-  margin: 0 -25% 0 0;
-  width: 100%;
+.site-content {
+  padding: 10px;
 }
 
-.site-main {
-  margin: 0 25% 0 0;
+/* On smaller devices, give the sidebar a bit of breathing room at the top */
+@media (max-width: 1023px) {
+  #secondary {
+    margin-top: 20px;
+  }
+}
+/* On desktop devices, we'll show a sidebar next to our content */
+@media (min-width: 1024px) {
+  .single .content-area {
+    display: inline-block;
+    width: 100%;
+    box-sizing: border-box;
+    padding-left: 1em;
+    padding-right: 1em;
+  }
+  .single .content-area:first-child {
+    padding-left: 0;
+  }
+  .single .content-area:last-child {
+    padding-right: 0;
+  }
+}
+@media (min-width: 1024px) and (min-width: 768px) {
+  .single .content-area {
+    margin-right: -4px;
+    width: 66.66667%;
+    vertical-align: top;
+  }
+}
+@media (min-width: 1024px) {
+  .single .widget-area {
+    display: inline-block;
+    width: 100%;
+    box-sizing: border-box;
+    padding-left: 1em;
+    padding-right: 1em;
+  }
+  .single .widget-area:first-child {
+    padding-left: 0;
+  }
+  .single .widget-area:last-child {
+    padding-right: 0;
+  }
+}
+@media (min-width: 1024px) and (min-width: 768px) {
+  .single .widget-area {
+    margin-right: -4px;
+    width: 33.33333%;
+    vertical-align: top;
+  }
 }
 
-.site-content .widget-area {
-  float: right;
-  overflow: hidden;
-  width: 25%;
-}
-
+/* Footer */
 .site-footer {
-  font-size: 0;
   clear: both;
   width: 100%;
 }
 .site-footer .widget-area {
   display: inline-block;
-  font-size: 16px;
-  font-size: 1rem;
   width: 100%;
   box-sizing: border-box;
   padding-left: 1em;
   padding-right: 1em;
 }
-@media only screen and (min-width: 768px) {
+.site-footer .widget-area:first-child {
+  padding-left: 0;
+}
+.site-footer .widget-area:last-child {
+  padding-right: 0;
+}
+@media (min-width: 768px) {
   .site-footer .widget-area {
+    margin-right: -4px;
     width: 33.33333%;
     vertical-align: top;
   }
