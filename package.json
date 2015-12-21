@@ -16,7 +16,7 @@
     "strike"
   ],
   "author": "Automattic, Inc - Team 51 (http://automattic.com)",
-  "license": "GNU General Public License v2 or later",
+  "license": "GPL-2.0+",
   "bugs": {
     "url": "https://github.com/sarahmonster/femfreq/issues"
   },
