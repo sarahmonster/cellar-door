@@ -1,6 +1,12 @@
-$color__primary: red;
-$color__secondary: blue;
-$color__tertiary: yellow;
+$color__pink: #f20079;
+$color__grey: #efefef;
+$color__charcoal: #3a3a3a;
+$color__purple: #9961bb;
+$color__teal: #59bab6;
+
+$color__primary: $color__pink;
+$color__secondary: $color__purple;
+$color__tertiary: $color__charcoal;
 
 $color__background-body: #fff;
 $color__background-screen: #f1f1f1;
@@ -12,9 +18,9 @@ $color__background-ins: #fff9c0;
 $color__text-screen: #21759b;
 $color__text-input: #666;
 $color__text-input-focus: #111;
-$color__link: royalblue;
-$color__link-visited: purple;
-$color__link-hover: midnightblue;
+$color__link: $color__primary;
+$color__link-visited: $color__primary;
+$color__link-hover: $color__secondary;
 $color__text-main: #404040;
 
 $color__border-button: #ccc #ccc #bbb;

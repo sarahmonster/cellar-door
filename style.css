@@ -477,13 +477,13 @@ textarea {
 ## Links
 --------------------------------------------------------------*/
 a {
-  color: royalblue;
+  color: #f20079;
 }
 a:visited {
-  color: purple;
+  color: #f20079;
 }
 a:hover, a:focus, a:active {
-  color: midnightblue;
+  color: #9961bb;
 }
 a:focus {
   outline: thin dotted;
@@ -666,7 +666,7 @@ a:hover, a:active {
 --------------------------------------------------------------*/
 .widget {
   margin: 0 0 1.5em;
-  border-top: 2px solid blue;
+  border-top: 2px solid #9961bb;
   font-family: Arial, sans-serif;
   /* Make sure select elements fit in nicely with their friends. */
 }
@@ -693,14 +693,14 @@ a:hover, a:active {
   padding: 0;
 }
 .widget ul a {
-  border-top: 1px solid rgba(255, 255, 0, 0.5);
-  color: red;
+  border-top: 1px solid rgba(58, 58, 58, 0.5);
+  color: #f20079;
   display: block;
   padding: 7px 0;
 }
 .widget ul a:hover {
   border-bottom: none;
-  background-color: rgba(255, 255, 0, 0.15);
+  background-color: rgba(58, 58, 58, 0.15);
 }
 .widget ul .sub-menu {
   margin-left: 1em;
@@ -729,7 +729,7 @@ a:hover, a:active {
 }
 .widget_archive ul li::before,
 .widget_categories ul li::before {
-  border-bottom: 1px dotted #b2b300;
+  border-bottom: 1px dotted #141414;
   content: "";
   -webkit-flex-grow: 1;
   -ms-flex-positive: 1;
@@ -762,7 +762,7 @@ a:hover, a:active {
 
 /* Comment widget */
 .widget_recent_comments li {
-  border-top: 1px solid rgba(255, 255, 0, 0.5);
+  border-top: 1px solid rgba(58, 58, 58, 0.5);
   font-family: Georgia, serif;
   font-style: italic;
   padding: 7px 0;
@@ -822,7 +822,7 @@ a:hover, a:active {
   margin-bottom: 5px;
 }
 .widget_calendar thead {
-  border-bottom: 1px solid rgba(255, 255, 0, 0.5);
+  border-bottom: 1px solid rgba(58, 58, 58, 0.5);
 }
 .widget_calendar td {
   text-align: center;
@@ -960,7 +960,7 @@ a:hover, a:active {
     content: "";
     display: table;
     table-layout: fixed;
-    border-bottom: 2px solid yellow;
+    border-bottom: 2px solid #3a3a3a;
     margin: 10px 0;
     width: 100%;
   }
