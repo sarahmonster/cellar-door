@@ -6,15 +6,49 @@
 	margin: 0 0 1.5em;
 }
 
+/* Hide stuff only needed for microformats */
 .byline,
 .updated:not(.published){
 	display: none;
 }
 
-.single .byline,
-.group-blog .byline {
-	display: inline;
+/* Author cards */
+.author .avatar {
+	border-radius: 50%;
 }
+
+@include mobile {
+	.author {
+		float: left;
+		margin-right: $size__site-gutter/2;
+		width: 25%;
+
+		.author-name,
+		.author-bio {
+			display: none;
+		}
+	} // .author
+} // mobile
+
+@include tablet {
+	.author {
+		@include clearfix;
+		border-bottom: 2px solid $color__tertiary;
+		margin: $size__site-gutter/2 0;
+		width: 100%;
+
+		.avatar {
+			float: left;
+			margin: 0 $size__site-gutter/2 $size__site-gutter/2 0;
+			width: 100px;
+		}
+
+		.author-name {
+			clear: none;
+		}
+	} // .author
+} // tablet
+
 
 .page-content,
 .entry-content,

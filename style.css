@@ -933,16 +933,46 @@ a:hover, a:active {
   margin: 0 0 1.5em;
 }
 
+/* Hide stuff only needed for microformats */
 .byline,
 .updated:not(.published) {
   display: none;
 }
 
-.single .byline,
-.group-blog .byline {
-  display: inline;
+/* Author cards */
+.author .avatar {
+  border-radius: 50%;
 }
 
+@media (max-width: 767px) {
+  .author {
+    float: left;
+    margin-right: 10px;
+    width: 25%;
+  }
+  .author .author-name,
+  .author .author-bio {
+    display: none;
+  }
+}
+@media (min-width: 768px) {
+  .author {
+    content: "";
+    display: table;
+    table-layout: fixed;
+    border-bottom: 2px solid yellow;
+    margin: 10px 0;
+    width: 100%;
+  }
+  .author .avatar {
+    float: left;
+    margin: 0 10px 10px 0;
+    width: 100px;
+  }
+  .author .author-name {
+    clear: none;
+  }
+}
 .page-content,
 .entry-content,
 .entry-summary {

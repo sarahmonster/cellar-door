@@ -21,6 +21,7 @@
 		if ( 'post' === get_post_type() ) : ?>
 		<div class="entry-meta">
 			<?php femfreq_posted_on(); ?>
+			<?php femfreq_authors(); ?>
 		</div><!-- .entry-meta -->
 		<?php
 		endif; ?>

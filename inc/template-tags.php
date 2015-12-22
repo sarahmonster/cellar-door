@@ -34,9 +34,32 @@ function femfreq_posted_on() {
 		'<span class="author vcard"><a class="url fn n" href="' . esc_url( get_author_posts_url( get_the_author_meta( 'ID' ) ) ) . '">' . esc_html( get_the_author() ) . '</a></span>'
 	);
 
-	echo '<span class="posted-on">' . $posted_on . '</span><span class="byline"> ' . $byline . '</span>'; // WPCS: XSS OK.
-
+	echo '<span class="posted-on">' . $posted_on . '</span>'; // WPCS: XSS OK.
 }
+endif;
+
+if ( ! function_exists( 'femfreq_author_bio' ) ) :
+	/**
+	 * Prints HTML with meta information for the categories, tags and comments.
+	 */
+function femfreq_authors() {
+		if ( function_exists( 'coauthors_posts_links' ) ) :
+			$coauthors = get_coauthors();
+			foreach( $coauthors as $coauthor ) :
+				femfreq_author( $coauthor->ID, $coauthor->display_name, $coauthor->user_description );
+			endforeach;
+		else :
+			femfreq_author( get_the_author_meta( 'ID' ), get_the_author_meta( 'display_name' ), get_the_author_meta( 'description' ) );
+		endif;
+}
+
+function femfreq_author( $id, $name, $bio ) { ?>
+	<div class="author vcard">
+		<?php echo get_avatar( $id, 300 ); ?>
+		<h3 class="author-name"><a class="url fn n" href="<?php echo esc_url( get_author_posts_url( $id ) ); ?>"><?php echo $name; ?></a></h3>
+		<p class="author-bio"><?php echo wp_kses_post( $bio ); ?></p>
+	</div><!-- .author -->
+<?php }
 endif;
 
 if ( ! function_exists( 'femfreq_entry_footer' ) ) :
