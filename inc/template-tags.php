@@ -38,6 +38,20 @@ function femfreq_posted_on() {
 }
 endif;
 
+if ( ! function_exists( 'femfreq_excerpt' ) ) :
+	/**
+	 * Displays an optional excerpt.
+	 */
+	function femfreq_excerpt() {
+		if ( has_excerpt() || is_search() ) : ?>
+			<div class="entry-summary">
+				<?php the_excerpt(); ?>
+			</div>
+		<?php endif;
+	}
+endif;
+
+
 if ( ! function_exists( 'femfreq_author_bio' ) ) :
 	/**
 	 * Prints HTML with meta information for the categories, tags and comments.
@@ -56,7 +70,7 @@ function femfreq_authors() {
 function femfreq_author( $id, $name, $bio ) { ?>
 	<div class="author vcard">
 		<?php echo get_avatar( $id, 300 ); ?>
-		<h3 class="author-name"><a class="url fn n" href="<?php echo esc_url( get_author_posts_url( $id ) ); ?>"><?php echo $name; ?></a></h3>
+		<h2 class="author-name"><a class="url fn n" href="<?php echo esc_url( get_author_posts_url( $id ) ); ?>"><?php echo $name; ?></a></h2>
 		<p class="author-bio"><?php echo wp_kses_post( $bio ); ?></p>
 	</div><!-- .author -->
 <?php }

@@ -286,6 +286,17 @@ h1, h2, h3, h4, h5, h6 {
   font-family: soleil, Arial, sans-serif;
   clear: both;
 }
+h1 a, h2 a, h3 a, h4 a, h5 a, h6 a {
+  text-decoration: none;
+}
+
+h1 {
+  color: #59bab6;
+  font-size: 36px;
+  font-size: 3.6rem;
+  font-weight: 500;
+  line-height: 1.2;
+}
 
 h2 {
   color: #59bab6;
@@ -626,59 +637,7 @@ a:hover, a:active {
 }
 
 .site-content {
-  padding: 10px;
-}
-
-/* On smaller devices, give the sidebar a bit of breathing room at the top */
-@media (max-width: 1023px) {
-  #secondary {
-    margin-top: 20px;
-  }
-}
-/* On desktop devices, we'll show a sidebar next to our content */
-@media (min-width: 1024px) {
-  .single .content-area {
-    display: inline-block;
-    width: 100%;
-    box-sizing: border-box;
-    padding-left: 1em;
-    padding-right: 1em;
-  }
-  .single .content-area:first-child {
-    padding-left: 0;
-  }
-  .single .content-area:last-child {
-    padding-right: 0;
-  }
-}
-@media (min-width: 1024px) and (min-width: 768px) {
-  .single .content-area {
-    margin-right: -4px;
-    width: 66.66667%;
-    vertical-align: top;
-  }
-}
-@media (min-width: 1024px) {
-  .single .widget-area {
-    display: inline-block;
-    width: 100%;
-    box-sizing: border-box;
-    padding-left: 1em;
-    padding-right: 1em;
-  }
-  .single .widget-area:first-child {
-    padding-left: 0;
-  }
-  .single .widget-area:last-child {
-    padding-right: 0;
-  }
-}
-@media (min-width: 1024px) and (min-width: 768px) {
-  .single .widget-area {
-    margin-right: -4px;
-    width: 33.33333%;
-    vertical-align: top;
-  }
+  padding: 5px;
 }
 
 /* Footer */
@@ -861,6 +820,113 @@ li.focus > .children {
   display: none;
 }
 
+/* Hide post sidebar on small screens */
+@media (max-width: 1023px) {
+  #secondary {
+    display: none;
+  }
+}
+/* On desktop devices, we'll show a sidebar next to our content */
+@media (min-width: 1024px) {
+  .single .entry-content {
+    display: inline-block;
+    width: 100%;
+    box-sizing: border-box;
+    padding-left: 1em;
+    padding-right: 0;
+  }
+  .single .entry-content:first-child {
+    padding-left: 0;
+  }
+  .single .entry-content:last-child {
+    padding-right: 0;
+  }
+}
+@media (min-width: 1024px) and (min-width: 768px) {
+  .single .entry-content {
+    margin-right: -4px;
+    width: 66.66667%;
+    vertical-align: top;
+  }
+}
+@media (min-width: 1024px) {
+  .single .widget-area {
+    display: inline-block;
+    width: 100%;
+    box-sizing: border-box;
+    padding-left: 0;
+    padding-right: 1em;
+  }
+  .single .widget-area:first-child {
+    padding-left: 0;
+  }
+  .single .widget-area:last-child {
+    padding-right: 0;
+  }
+}
+@media (min-width: 1024px) and (min-width: 768px) {
+  .single .widget-area {
+    margin-right: -4px;
+    width: 33.33333%;
+    vertical-align: top;
+  }
+}
+
+/* Arrange post headers */
+@media (min-width: 768px) {
+  .single .attachment-femfreq-feature {
+    display: inline-block;
+    width: 100%;
+    box-sizing: border-box;
+    padding-left: 1em;
+    padding-right: 1em;
+    margin: 20px 0;
+  }
+  .single .attachment-femfreq-feature:first-child {
+    padding-left: 0;
+  }
+  .single .attachment-femfreq-feature:last-child {
+    padding-right: 0;
+  }
+}
+@media (min-width: 768px) and (min-width: 768px) {
+  .single .attachment-femfreq-feature {
+    margin-right: -4px;
+    width: 66.66667%;
+    vertical-align: top;
+  }
+}
+@media (min-width: 768px) {
+  .single .entry-header {
+    display: inline-block;
+    width: 100%;
+    box-sizing: border-box;
+    padding-left: 1em;
+    padding-right: 1em;
+    background: #fff;
+    margin: 40px -17%;
+    padding: 0 10px;
+  }
+  .single .entry-header:first-child {
+    padding-left: 0;
+  }
+  .single .entry-header:last-child {
+    padding-right: 0;
+  }
+}
+@media (min-width: 768px) and (min-width: 768px) {
+  .single .entry-header {
+    margin-right: -4px;
+    width: 50%;
+    vertical-align: top;
+  }
+}
+
+.entry-summary {
+  color: #696969;
+  font-style: italic;
+}
+
 /* Author cards */
 .author .avatar {
   border-radius: 50%;
@@ -895,6 +961,7 @@ li.focus > .children {
     clear: none;
   }
   .author .author-bio {
+    color: #696969;
     font-style: italic;
   }
 }

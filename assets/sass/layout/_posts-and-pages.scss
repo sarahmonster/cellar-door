@@ -12,6 +12,49 @@
 	display: none;
 }
 
+/* Hide post sidebar on small screens */
+@include desktop-max {
+	#secondary {
+		display: none;
+	}
+}
+
+/* On desktop devices, we'll show a sidebar next to our content */
+@include desktop {
+	// Sidebar is only present on individual blog posts
+	.single {
+		.entry-content {
+			@include col(8, 12, $last: true);
+		}
+
+		.widget-area {
+			@include col(4, 12, $first: true);
+		}
+	}
+}
+
+/* Arrange post headers */
+@include tablet {
+	.single {
+		.attachment-femfreq-feature {
+			@include col(8, 12);
+			margin: $size__site-gutter 0;
+		}
+
+		.entry-header {
+			@include col(6, 12);
+			background: $color__background-body;
+			margin: $size__site-gutter*2 -17%;
+			padding: 0 $size__site-gutter/2;
+		}
+	}
+}
+
+.entry-summary {
+	color: $color__mid-grey;
+	font-style: italic;
+}
+
 /* Author cards */
 .author .avatar {
 	border-radius: 50%;
@@ -48,6 +91,7 @@
 		}
 
 		.author-bio {
+			color: $color__mid-grey;
 			font-style: italic;
 		}
 	} // .author

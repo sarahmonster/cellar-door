@@ -33,9 +33,9 @@
 			<?php
 			if ( function_exists( 'jetpack_the_site_logo' ) && jetpack_the_site_logo() ) :
 				jetpack_the_site_logo();
-			else :
-				echo file_get_contents( esc_url( get_template_directory_uri() ) . '/assets/images/feminist-frequency.svg' );
-			endif;
+			else : ?>
+				<a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php echo file_get_contents( esc_url( get_template_directory_uri() ) . '/assets/images/feminist-frequency.svg' ); ?></a>
+			<?php endif;
 
 			if ( is_front_page() && is_home() ) : ?>
 				<h1 class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
