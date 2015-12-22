@@ -1,3 +1,7 @@
+html {
+	font-size: 62.5%;
+}
+
 body,
 button,
 input,
@@ -5,12 +9,21 @@ select,
 textarea {
 	color: $color__text-main;
 	font-family: $font__main;
-	@include font-size(1);
+	@include font-size(1.9);
 	line-height: $font__line-height-body;
 }
 
 h1, h2, h3, h4, h5, h6 {
+	font-family: $font__headings;
 	clear: both;
+}
+
+h2 {
+	color: $color__primary;
+	@include font-size(1.6);
+	letter-spacing: 1px;
+	text-transform: uppercase;
+
 }
 
 p {
@@ -32,7 +45,7 @@ address {
 pre {
 	background: $color__background-pre;
 	font-family: $font__pre;
-	@include font-size(0.9375);
+	@include font-size(1.6);
 	line-height: $font__line-height-pre;
 	margin-bottom: 1.6em;
 	max-width: 100%;
@@ -42,7 +55,7 @@ pre {
 
 code, kbd, tt, var {
 	font-family: $font__code;
-	@include font-size(0.9375);
+	@include font-size(1.6);
 }
 
 abbr, acronym {

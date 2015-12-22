@@ -16,8 +16,12 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="profile" href="http://gmpg.org/xfn/11">
 <link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>">
-
 <?php wp_head(); ?>
+
+<!-- Temporary Typekit code @todo: Remove when moving to VIP -->
+<script src="https://use.typekit.net/hxe1yee.js"></script>
+<script>try{Typekit.load({ async: true });}catch(e){}</script>
+
 </head>
 
 <body <?php body_class(); ?>>
