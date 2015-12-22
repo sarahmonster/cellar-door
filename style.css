@@ -275,11 +275,11 @@ button,
 input,
 select,
 textarea {
-  color: #3a3a3a;
+  color: #696969;
   font-family: karmina, Georgia, serif;
-  font-size: 19px;
-  font-size: 1.9rem;
-  line-height: 1.5;
+  font-size: 20px;
+  font-size: 2rem;
+  line-height: 1.6;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -632,25 +632,24 @@ a:hover, a:active {
 --------------------------------------------------------------*/
 .site {
   margin: 0 auto;
-  max-width: 1140px;
-  padding: 20px;
+  max-width: 1200px;
+  padding: 40px;
 }
 
 .site-content {
-  padding: 5px;
+  padding: 10px;
 }
 
 /* Footer */
 .site-footer {
-  clear: both;
   width: 100%;
 }
 .site-footer .widget-area {
   display: inline-block;
   width: 100%;
   box-sizing: border-box;
-  padding-left: 1em;
-  padding-right: 1em;
+  padding-left: 40px;
+  padding-right: 40px;
 }
 .site-footer .widget-area:first-child {
   padding-left: 0;
@@ -680,8 +679,8 @@ a:hover, a:active {
     display: inline-block;
     width: 100%;
     box-sizing: border-box;
-    padding-left: 1em;
-    padding-right: 1em;
+    padding-left: 40px;
+    padding-right: 40px;
   }
   .site-branding:first-child {
     padding-left: 0;
@@ -703,8 +702,8 @@ a:hover, a:active {
     display: inline-block;
     width: 100%;
     box-sizing: border-box;
-    padding-left: 1em;
-    padding-right: 1em;
+    padding-left: 40px;
+    padding-right: 40px;
     position: absolute;
     top: 50%;
     -webkit-transform: translateY(-50%);
@@ -729,10 +728,10 @@ a:hover, a:active {
   #site-navigation .menu {
     border-top: 2px solid #efefef;
     border-bottom: 2px solid #efefef;
-    padding: 10px 0;
+    padding: 20px 0;
   }
   #site-navigation li {
-    margin-right: 10px;
+    margin-right: 20px;
   }
 }
 /* Top-level nav */
@@ -832,7 +831,7 @@ li.focus > .children {
     display: inline-block;
     width: 100%;
     box-sizing: border-box;
-    padding-left: 1em;
+    padding-left: 40px;
     padding-right: 0;
   }
   .single .entry-content:first-child {
@@ -855,7 +854,7 @@ li.focus > .children {
     width: 100%;
     box-sizing: border-box;
     padding-left: 0;
-    padding-right: 1em;
+    padding-right: 40px;
   }
   .single .widget-area:first-child {
     padding-left: 0;
@@ -878,9 +877,9 @@ li.focus > .children {
     display: inline-block;
     width: 100%;
     box-sizing: border-box;
-    padding-left: 1em;
-    padding-right: 1em;
-    margin: 20px 0;
+    padding-left: 40px;
+    padding-right: 40px;
+    margin: 40px 0;
   }
   .single .attachment-femfreq-feature:first-child {
     padding-left: 0;
@@ -901,11 +900,11 @@ li.focus > .children {
     display: inline-block;
     width: 100%;
     box-sizing: border-box;
-    padding-left: 1em;
-    padding-right: 1em;
+    padding-left: 40px;
+    padding-right: 40px;
     background: #fff;
-    margin: 40px -17%;
-    padding: 0 10px;
+    margin: 80px -17%;
+    padding: 0 20px;
   }
   .single .entry-header:first-child {
     padding-left: 0;
@@ -935,7 +934,7 @@ li.focus > .children {
 @media (max-width: 767px) {
   .author {
     float: left;
-    margin-right: 10px;
+    margin-right: 20px;
     width: 25%;
   }
   .author .author-name,
@@ -949,12 +948,12 @@ li.focus > .children {
     display: table;
     table-layout: fixed;
     border-bottom: 2px solid #3a3a3a;
-    margin: 10px 0;
+    margin: 20px 0;
     width: 100%;
   }
   .author .avatar {
     float: left;
-    margin: 0 10px 10px 0;
+    margin: 0 20px 20px 0;
     width: 100px;
   }
   .author .author-name {

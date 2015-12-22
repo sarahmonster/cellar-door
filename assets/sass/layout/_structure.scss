@@ -10,8 +10,6 @@
 
 /* Footer */
 .site-footer {
-	@include row;
-	clear: both;
 	width: $size__site-main;
 
 	.widget-area {
