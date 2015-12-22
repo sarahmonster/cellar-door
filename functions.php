@@ -13,8 +13,6 @@
 require_once WP_CONTENT_DIR . '/themes/vip/plugins/vip-init.php';
 require_once get_template_directory() . '/inc/plugins.php';
 
-add_action( 'after_setup_theme', 'sfcapc_wpcom_register_typekit_fonts' );
-
 if ( ! function_exists( 'femfreq_setup' ) ) :
 /**
  * Sets up theme defaults and registers support for various WordPress features.

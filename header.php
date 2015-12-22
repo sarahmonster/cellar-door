@@ -26,9 +26,11 @@
 
 	<header id="masthead" class="site-header" role="banner">
 		<div class="site-branding">
-			<?php 
-			if ( function_exists( 'jetpack_the_site_logo' ) ) :
+			<?php
+			if ( function_exists( 'jetpack_the_site_logo' ) && jetpack_the_site_logo() ) :
 				jetpack_the_site_logo();
+			else :
+				echo file_get_contents( esc_url( get_template_directory_uri() ) . '/assets/images/feminist-frequency.svg' );
 			endif;
 
 			if ( is_front_page() && is_home() ) : ?>

@@ -495,64 +495,6 @@ a:hover, a:active {
 /*--------------------------------------------------------------
 ## Menus
 --------------------------------------------------------------*/
-.main-navigation {
-  clear: both;
-  display: block;
-  float: left;
-  width: 100%;
-}
-.main-navigation ul {
-  display: none;
-  list-style: none;
-  margin: 0;
-  padding-left: 0;
-}
-.main-navigation ul ul {
-  box-shadow: 0 3px 3px rgba(0, 0, 0, 0.2);
-  float: left;
-  position: absolute;
-  top: 1.5em;
-  left: -999em;
-  z-index: 99999;
-}
-.main-navigation ul ul ul {
-  left: -999em;
-  top: 0;
-}
-.main-navigation ul ul li:hover > ul, .main-navigation ul ul li.focus > ul {
-  left: 100%;
-}
-.main-navigation ul ul a {
-  width: 200px;
-}
-.main-navigation ul li:hover > ul,
-.main-navigation ul li.focus > ul {
-  left: auto;
-}
-.main-navigation li {
-  float: left;
-  position: relative;
-}
-.main-navigation a {
-  display: block;
-  text-decoration: none;
-}
-
-/* Small menu. */
-.menu-toggle,
-.main-navigation.toggled ul {
-  display: block;
-}
-
-@media screen and (min-width: 37.5em) {
-  .menu-toggle {
-    display: none;
-  }
-
-  .main-navigation ul {
-    display: block;
-  }
-}
 .site-main .comment-navigation, .site-main
 .posts-navigation, .site-main
 .post-navigation {
@@ -659,6 +601,284 @@ a:hover, a:active {
 .site-content:after,
 .site-footer:after {
   clear: both;
+}
+
+/*--------------------------------------------------------------
+# Structure
+--------------------------------------------------------------*/
+.site {
+  margin: 0 auto;
+  max-width: 1140px;
+  padding: 20px;
+}
+
+.site-content {
+  padding: 10px;
+}
+
+/* On smaller devices, give the sidebar a bit of breathing room at the top */
+@media (max-width: 1023px) {
+  #secondary {
+    margin-top: 20px;
+  }
+}
+/* On desktop devices, we'll show a sidebar next to our content */
+@media (min-width: 1024px) {
+  .single .content-area {
+    display: inline-block;
+    width: 100%;
+    box-sizing: border-box;
+    padding-left: 1em;
+    padding-right: 1em;
+  }
+  .single .content-area:first-child {
+    padding-left: 0;
+  }
+  .single .content-area:last-child {
+    padding-right: 0;
+  }
+}
+@media (min-width: 1024px) and (min-width: 768px) {
+  .single .content-area {
+    margin-right: -4px;
+    width: 66.66667%;
+    vertical-align: top;
+  }
+}
+@media (min-width: 1024px) {
+  .single .widget-area {
+    display: inline-block;
+    width: 100%;
+    box-sizing: border-box;
+    padding-left: 1em;
+    padding-right: 1em;
+  }
+  .single .widget-area:first-child {
+    padding-left: 0;
+  }
+  .single .widget-area:last-child {
+    padding-right: 0;
+  }
+}
+@media (min-width: 1024px) and (min-width: 768px) {
+  .single .widget-area {
+    margin-right: -4px;
+    width: 33.33333%;
+    vertical-align: top;
+  }
+}
+
+/* Footer */
+.site-footer {
+  clear: both;
+  width: 100%;
+}
+.site-footer .widget-area {
+  display: inline-block;
+  width: 100%;
+  box-sizing: border-box;
+  padding-left: 1em;
+  padding-right: 1em;
+}
+.site-footer .widget-area:first-child {
+  padding-left: 0;
+}
+.site-footer .widget-area:last-child {
+  padding-right: 0;
+}
+@media (min-width: 768px) {
+  .site-footer .widget-area {
+    margin-right: -4px;
+    width: 33.33333%;
+    vertical-align: top;
+  }
+}
+
+@media (max-width: 767px) {
+  .site-branding {
+    display: none;
+  }
+}
+@media (min-width: 768px) {
+  #masthead {
+    position: relative;
+  }
+
+  .site-branding {
+    display: inline-block;
+    width: 100%;
+    box-sizing: border-box;
+    padding-left: 1em;
+    padding-right: 1em;
+  }
+  .site-branding:first-child {
+    padding-left: 0;
+  }
+  .site-branding:last-child {
+    padding-right: 0;
+  }
+}
+@media (min-width: 768px) and (min-width: 768px) {
+  .site-branding {
+    margin-right: -4px;
+    width: 16.66667%;
+    vertical-align: top;
+  }
+}
+
+@media (min-width: 768px) {
+  #site-navigation {
+    display: inline-block;
+    width: 100%;
+    box-sizing: border-box;
+    padding-left: 1em;
+    padding-right: 1em;
+    position: absolute;
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+  }
+  #site-navigation:first-child {
+    padding-left: 0;
+  }
+  #site-navigation:last-child {
+    padding-right: 0;
+  }
+}
+@media (min-width: 768px) and (min-width: 768px) {
+  #site-navigation {
+    margin-right: -4px;
+    width: 83.33333%;
+    vertical-align: top;
+  }
+}
+@media (min-width: 768px) {
+  #site-navigation .menu {
+    border-top: 2px solid #efefef;
+    border-bottom: 2px solid #efefef;
+    padding: 10px 0;
+  }
+  #site-navigation li {
+    margin-right: 10px;
+  }
+}
+/* Top-level nav */
+.main-navigation ul {
+  display: none;
+  list-style: none;
+  margin: 0;
+  padding-left: 0;
+}
+.main-navigation ul li {
+  display: inline-block;
+  position: relative;
+}
+.main-navigation ul a {
+  display: inline-block;
+  text-decoration: none;
+}
+
+/* Sub-menu */
+.main-navigation .children {
+  box-shadow: 0 3px 3px rgba(0, 0, 0, 0.2);
+  float: left;
+  position: absolute;
+  top: 1.5em;
+  left: -999em;
+  z-index: 99999;
+}
+.main-navigation .children ul {
+  left: -999em;
+  top: 0;
+}
+.main-navigation .children li:hover > ul, .main-navigation .children li.focus > ul {
+  left: 100%;
+}
+.main-navigation .children a {
+  width: 200px;
+}
+
+li:hover > .children,
+li.focus > .children {
+  left: auto;
+}
+
+/* Small menu. */
+.menu-toggle,
+.main-navigation.toggled ul {
+  display: block;
+}
+
+@media screen and (min-width: 37.5em) {
+  .menu-toggle {
+    display: none;
+  }
+
+  .main-navigation ul {
+    display: block;
+  }
+}
+/*--------------------------------------------------------------
+# Content
+--------------------------------------------------------------*/
+.sticky {
+  display: block;
+}
+
+.hentry {
+  margin: 0 0 1.5em;
+}
+
+/* Hide stuff only needed for microformats */
+.byline,
+.updated:not(.published) {
+  display: none;
+}
+
+/* Author cards */
+.author .avatar {
+  border-radius: 50%;
+}
+
+@media (max-width: 767px) {
+  .author {
+    float: left;
+    margin-right: 10px;
+    width: 25%;
+  }
+  .author .author-name,
+  .author .author-bio {
+    display: none;
+  }
+}
+@media (min-width: 768px) {
+  .author {
+    content: "";
+    display: table;
+    table-layout: fixed;
+    border-bottom: 2px solid #3a3a3a;
+    margin: 10px 0;
+    width: 100%;
+  }
+  .author .avatar {
+    float: left;
+    margin: 0 10px 10px 0;
+    width: 100px;
+  }
+  .author .author-name {
+    clear: none;
+  }
+}
+.page-content,
+.entry-content,
+.entry-summary {
+  margin: 1.5em 0 0;
+}
+
+.page-links {
+  clear: both;
+  margin: 0 0 1.5em;
 }
 
 /*--------------------------------------------------------------
@@ -832,156 +1052,6 @@ a:hover, a:active {
 }
 .widget_calendar #next {
   text-align: right;
-}
-
-/*--------------------------------------------------------------
-# Content
---------------------------------------------------------------*/
-.site {
-  margin: 0 auto;
-  max-width: 1140px;
-  padding: 20px;
-}
-
-.site-content {
-  padding: 10px;
-}
-
-/* On smaller devices, give the sidebar a bit of breathing room at the top */
-@media (max-width: 1023px) {
-  #secondary {
-    margin-top: 20px;
-  }
-}
-/* On desktop devices, we'll show a sidebar next to our content */
-@media (min-width: 1024px) {
-  .single .content-area {
-    display: inline-block;
-    width: 100%;
-    box-sizing: border-box;
-    padding-left: 1em;
-    padding-right: 1em;
-  }
-  .single .content-area:first-child {
-    padding-left: 0;
-  }
-  .single .content-area:last-child {
-    padding-right: 0;
-  }
-}
-@media (min-width: 1024px) and (min-width: 768px) {
-  .single .content-area {
-    margin-right: -4px;
-    width: 66.66667%;
-    vertical-align: top;
-  }
-}
-@media (min-width: 1024px) {
-  .single .widget-area {
-    display: inline-block;
-    width: 100%;
-    box-sizing: border-box;
-    padding-left: 1em;
-    padding-right: 1em;
-  }
-  .single .widget-area:first-child {
-    padding-left: 0;
-  }
-  .single .widget-area:last-child {
-    padding-right: 0;
-  }
-}
-@media (min-width: 1024px) and (min-width: 768px) {
-  .single .widget-area {
-    margin-right: -4px;
-    width: 33.33333%;
-    vertical-align: top;
-  }
-}
-
-/* Footer */
-.site-footer {
-  clear: both;
-  width: 100%;
-}
-.site-footer .widget-area {
-  display: inline-block;
-  width: 100%;
-  box-sizing: border-box;
-  padding-left: 1em;
-  padding-right: 1em;
-}
-.site-footer .widget-area:first-child {
-  padding-left: 0;
-}
-.site-footer .widget-area:last-child {
-  padding-right: 0;
-}
-@media (min-width: 768px) {
-  .site-footer .widget-area {
-    margin-right: -4px;
-    width: 33.33333%;
-    vertical-align: top;
-  }
-}
-
-.sticky {
-  display: block;
-}
-
-.hentry {
-  margin: 0 0 1.5em;
-}
-
-/* Hide stuff only needed for microformats */
-.byline,
-.updated:not(.published) {
-  display: none;
-}
-
-/* Author cards */
-.author .avatar {
-  border-radius: 50%;
-}
-
-@media (max-width: 767px) {
-  .author {
-    float: left;
-    margin-right: 10px;
-    width: 25%;
-  }
-  .author .author-name,
-  .author .author-bio {
-    display: none;
-  }
-}
-@media (min-width: 768px) {
-  .author {
-    content: "";
-    display: table;
-    table-layout: fixed;
-    border-bottom: 2px solid #3a3a3a;
-    margin: 10px 0;
-    width: 100%;
-  }
-  .author .avatar {
-    float: left;
-    margin: 0 10px 10px 0;
-    width: 100px;
-  }
-  .author .author-name {
-    clear: none;
-  }
-}
-.page-content,
-.entry-content,
-.entry-summary {
-  margin: 1.5em 0 0;
-}
-
-.page-links {
-  clear: both;
-  margin: 0 0 1.5em;
 }
 
 /*--------------------------------------------------------------

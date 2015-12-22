@@ -91,15 +91,20 @@ Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
 @import "shared/clearings";
 
 /*--------------------------------------------------------------
-# Widgets
+# Structure
 --------------------------------------------------------------*/
-@import "layout/widgets";
+@import "layout/structure";
+@import "layout/masthead";
 
 /*--------------------------------------------------------------
 # Content
 --------------------------------------------------------------*/
-@import "layout/structure";
 @import "layout/posts-and-pages";
+
+/*--------------------------------------------------------------
+# Widgets
+--------------------------------------------------------------*/
+@import "layout/widgets";
 
 /*--------------------------------------------------------------
 # Infinite scroll

@@ -1,0 +1,116 @@
+@include mobile {
+	.site-branding {
+		display: none;
+	}
+}
+
+@include tablet {
+	#masthead {
+		position: relative;
+	}
+
+	.site-branding {
+		@include col(2, 12);
+	}
+
+	#site-navigation {
+		@include col(10, 12);
+		position: absolute;
+			top: 50%;
+		transform: translateY(-50%);
+
+		.menu {
+			border-top: 2px solid $color__grey;
+			border-bottom: 2px solid $color__grey;
+			padding: $size__site-gutter/2 0;
+		}
+
+		li {
+			margin-right: $size__site-gutter/2;
+		}
+	}
+}
+
+/* Top-level nav */
+.main-navigation {
+		ul {
+			display: none;
+			list-style: none;
+			margin: 0;
+			padding-left: 0;
+
+		li {
+			display: inline-block;
+			position: relative;
+
+			&:hover > a,
+			&.focus > a {
+			}
+		}
+
+		a {
+			display: inline-block;
+			text-decoration: none;
+		}
+
+		.current_page_item > a,
+		.current-menu-item > a,
+		.current_page_ancestor > a,
+		.current-menu-ancestor > a {
+		}
+	}
+}
+
+/* Sub-menu */
+.main-navigation .children {
+	box-shadow: 0 3px 3px rgba(0, 0, 0, 0.2);
+	float: left;
+	position: absolute;
+	top: 1.5em;
+	left: -999em;
+	z-index: 99999;
+
+	ul {
+		left: -999em;
+		top: 0;
+	}
+
+	li {
+		&:hover > ul,
+		&.focus > ul {
+			left: 100%;
+		}
+	}
+
+	a {
+		width: 200px;
+	}
+
+	:hover > a,
+	.focus > a {
+	}
+
+	a:hover,
+	a.focus {
+	}
+} // .children
+
+li:hover > .children,
+li.focus > .children {
+	left: auto;
+}
+
+/* Small menu. */
+.menu-toggle,
+.main-navigation.toggled ul {
+	display: block;
+}
+
+@media screen and (min-width: 37.5em) {
+	.menu-toggle {
+		display: none;
+	}
+	.main-navigation ul {
+		display: block;
+	}
+}
