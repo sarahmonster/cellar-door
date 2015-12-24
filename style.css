@@ -291,7 +291,7 @@ h1 a, h2 a, h3 a, h4 a, h5 a, h6 a {
 }
 
 h1 {
-  color: #59bab6;
+  color: #f20079;
   font-size: 36px;
   font-size: 3.6rem;
   font-weight: 500;
@@ -299,7 +299,7 @@ h1 {
 }
 
 h2 {
-  color: #59bab6;
+  color: #f20079;
   font-size: 16px;
   font-size: 1.6rem;
   letter-spacing: 1px;
@@ -501,13 +501,13 @@ textarea {
 ## Links
 --------------------------------------------------------------*/
 a {
-  color: #f20079;
+  color: #9961bb;
 }
 a:visited {
-  color: #f20079;
+  color: #9961bb;
 }
 a:hover, a:focus, a:active {
-  color: #59bab6;
+  color: #f20079;
 }
 a:focus {
   outline: thin dotted;
@@ -759,7 +759,7 @@ a:hover, a:active {
 .main-navigation ul .current-menu-item > a,
 .main-navigation ul .current_page_ancestor > a,
 .main-navigation ul .current-menu-ancestor > a {
-  color: #59bab6;
+  color: #f20079;
 }
 
 /* Sub-menu */
@@ -921,6 +921,12 @@ li.focus > .children {
   }
 }
 
+.entry-title,
+.page-title {
+  background: #f5dfdf;
+  display: inline;
+}
+
 .entry-summary {
   color: #696969;
   font-style: italic;
@@ -979,7 +985,7 @@ li.focus > .children {
 # Widgets
 --------------------------------------------------------------*/
 .widget {
-  border-top: 2px solid #59bab6;
+  border-top: 2px solid #f20079;
   font-family: soleil, Arial, sans-serif;
   font-size: 13px;
   font-size: 1.3rem;

@@ -50,6 +50,12 @@
 	}
 }
 
+.entry-title,
+.page-title {
+	background: $color__pink-light;
+	display: inline;
+}
+
 .entry-summary {
 	color: $color__mid-grey;
 	font-style: italic;
