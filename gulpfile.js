@@ -16,15 +16,17 @@ var livereload = require( 'gulp-livereload' );
 
 // Styles tasks
 gulp.task( 'styles', function() {
-	return gulp.src('assets/sass/style.scss')
-		.pipe(sass( { style: 'expanded', sourcemap: true } ).on( 'error', sass.logError ) )
+	return gulp.src( 'assets/sass/style.scss' )
+		.pipe( sourcemaps.init() )
+		.pipe( sass( { style: 'expanded' } ).on( 'error', sass.logError ) )
 		.pipe( autoprefixer( { browsers: ['last 2 versions', 'ie >= 9'], cascade: false } ) )
 		.pipe( sourcemaps.write( './', { includeContent: false, sourceRoot: 'source' } ) )
 		.pipe( csscomb() )
-		.on( 'error', function ( err ) { console.error( 'Error!', err.message ); } )
+		.on( 'error', function ( err ) {
+			console.error( 'Error!', err.message );
+		} )
 		.pipe( gulp.dest( './' ) )
 		.pipe( livereload() );
-		//.pipe( notify( { message: 'Styles task complete' } ) );
 });
 
 // Scripts
