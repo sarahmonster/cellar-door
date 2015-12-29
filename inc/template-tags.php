@@ -7,11 +7,13 @@
  * @package Feminist_Frequency
  */
 
-if ( ! function_exists( 'femfreq_posted_on' ) ) :
-/**
- * Prints HTML with meta information for the current post-date/time and author.
- */
-function femfreq_posted_on() {
+
+ if ( ! function_exists( 'femfreq_entry_header' ) ) :
+ /**
+  * Prints HTML with meta information shown above post title: date posted, category, and edit link.
+  */
+ function femfreq_entry_header() {
+
 	$time_string = '<time class="entry-date published updated" datetime="%1$s">%2$s</time>';
 	if ( get_the_time( 'U' ) !== get_the_modified_time( 'U' ) ) {
 		$time_string = '<time class="entry-date published" datetime="%1$s">%2$s</time><time class="updated" datetime="%3$s">%4$s</time>';
@@ -24,10 +26,7 @@ function femfreq_posted_on() {
 		esc_html( get_the_modified_date() )
 	);
 
-	$posted_on = sprintf(
-		esc_html_x( 'Posted on %s', 'post date', 'femfreq' ),
-		'<a href="' . esc_url( get_permalink() ) . '" rel="bookmark">' . $time_string . '</a>'
-	);
+	$posted_on = '<a href="' . esc_url( get_permalink() ) . '" rel="bookmark">' . $time_string . '</a>';
 
 	$byline = sprintf(
 		esc_html_x( 'by %s', 'post author', 'femfreq' ),
@@ -36,13 +35,32 @@ function femfreq_posted_on() {
 	esc_html( get_the_author_meta( 'display_name' ) );
 
 	echo '<span class="posted-on">' . $posted_on . '</span>'; // WPCS: XSS OK.
+
+	// Hide category on pages.
+	if ( 'post' === get_post_type() ) {
+		/* translators: used between list items, there is a space after the comma */
+		$categories_list = get_the_category_list( esc_html__( ', ', 'femfreq' ) );
+		if ( $categories_list && femfreq_categorized_blog() ) {
+			echo '<span class="cat-links">' . $categories_list . '</span>'; // WPCS: XSS OK.
+		}
+	}
+
+	edit_post_link(
+		sprintf(
+			/* translators: %s: Name of current post */
+			esc_html__( 'Edit %s', 'femfreq' ),
+			the_title( '<span class="screen-reader-text">"', '"</span>', false )
+		),
+		'<span class="edit-link">',
+		'</span>'
+	);
 }
 endif;
 
 if ( ! function_exists( 'femfreq_excerpt' ) ) :
-	/**
-	 * Displays an optional excerpt.
-	 */
+/**
+ * Displays an optional excerpt.
+ */
 	function femfreq_excerpt() {
 		if ( has_excerpt() || is_search() ) : ?>
 			<div class="entry-summary">
@@ -54,9 +72,9 @@ endif;
 
 
 if ( ! function_exists( 'femfreq_authors' ) ) :
-	/**
-	 * Prints HTML with meta information for the categories, tags and comments.
-	 */
+/**
+ * Prints HTML with meta information for the categories, tags and comments.
+ */
 function femfreq_authors() {
 		if ( function_exists( 'coauthors_posts_links' ) ) :
 			$coauthors = get_coauthors();
@@ -84,12 +102,6 @@ if ( ! function_exists( 'femfreq_entry_footer' ) ) :
 function femfreq_entry_footer() {
 	// Hide category and tag text for pages.
 	if ( 'post' === get_post_type() ) {
-		/* translators: used between list items, there is a space after the comma */
-		$categories_list = get_the_category_list( esc_html__( ', ', 'femfreq' ) );
-		if ( $categories_list && femfreq_categorized_blog() ) {
-			printf( '<span class="cat-links">' . esc_html__( 'Posted in %1$s', 'femfreq' ) . '</span>', $categories_list ); // WPCS: XSS OK.
-		}
-
 		/* translators: used between list items, there is a space after the comma */
 		$tags_list = get_the_tag_list( '', esc_html__( ', ', 'femfreq' ) );
 		if ( $tags_list ) {

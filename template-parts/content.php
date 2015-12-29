@@ -10,10 +10,20 @@
 ?>
 
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-	<?php if ( has_post_thumbnail() ) :
+	<?php
+	if ( has_post_thumbnail() ) :
 		the_post_thumbnail( 'femfreq-feature' );
-	endif; ?>
+	else :
+		echo '<div class="femfreq-feature-placeholder"></div>';
+	endif;
+	?>
+
 	<header class="entry-header">
+
+		<div class="entry-meta">
+			<?php femfreq_entry_header(); ?>
+		</div><!-- .entry-meta -->
+
 		<?php
 		if ( is_single() ) :
 			the_title( '<h1 class="entry-title">', '</h1>' );
@@ -32,8 +42,6 @@
 
 	<div class="entry-content">
 
-		<?php femfreq_authors(); ?>
-
 		<?php
 			the_content( sprintf(
 				/* translators: %s: Name of current post. */
@@ -46,14 +54,12 @@
 				'after'  => '</div>',
 			) );
 		?>
+
 	</div><!-- .entry-content -->
 
 	<footer class="entry-footer">
-		<?php if ( 'post' === get_post_type() ) : ?>
-		<div class="entry-meta">
-			<?php femfreq_posted_on(); ?>
-		</div><!-- .entry-meta -->
-	<?php endif; ?>
+		<?php femfreq_authors(); ?>
+		
 		<?php femfreq_entry_footer(); ?>
 	</footer><!-- .entry-footer -->
 </article><!-- #post-## -->

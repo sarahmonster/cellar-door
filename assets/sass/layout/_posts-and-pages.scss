@@ -2,10 +2,6 @@
 	display: block;
 }
 
-.hentry {
-	margin: 0 0 1.5em;
-}
-
 /* Hide stuff only needed for microformats */
 .byline,
 .updated:not(.published){
@@ -36,28 +32,73 @@
 /* Arrange post headers */
 @include tablet {
 	.single {
-		.attachment-femfreq-feature {
-			@include col(8, 12);
+		.attachment-femfreq-feature,
+		.femfreq-feature-placeholder {
+			@include col(6, 12);
 			margin: $size__site-gutter 0;
+			padding-right: 0;
+		}
+
+		.femfreq-feature-placeholder {
+			background: $color__off-white;
+			height: 300px;
 		}
 
 		.entry-header {
 			@include col(6, 12);
-			background: $color__background-body;
-			margin: $size__site-gutter*2 -17%;
-			padding: 0 $size__site-gutter/2;
+			margin: $size__site-gutter*2 0;
+			padding-left: $size__site-gutter/2;
+		}
+
+		.entry-title,
+		.page-title {
+			margin-left: -$size__site-gutter;
 		}
 	}
 }
 
+.entry-meta {
+	color: $color__grey;
+	font-family: $font__sans;
+	@include font-size(1.3);
+	letter-spacing: 1px;
+	margin-bottom: $size__site-gutter/4;
+	text-transform: uppercase;
+
+	a {
+		color: $color__grey;
+		text-decoration: none;
+
+		&:hover {
+			color: $color__mid-grey;
+		}
+	}
+
+	span::after {
+		display: inline-block;
+		content: '\00b7';
+		margin: 0 5px;
+	}
+
+	span:last-of-type::after {
+		display: none;
+	}
+}
 .entry-title,
 .page-title {
-	background: $color__pink-light;
+	background: linear-gradient(to bottom, transparent 0, $color__pink-light 0);
+	background-size: 100% 1.15em;
+	background-position: 0 center;
 	display: inline;
+	background-repeat: no-repeat;
+	box-decoration-break: clone;
+	padding-left: 10px;
+	padding-right: 10px;
 }
 
 .entry-summary {
-	color: $color__mid-grey;
+	color: $color__grey;
+	@include font-size(2.4);
 	font-style: italic;
 }
 
@@ -82,8 +123,9 @@
 @include tablet {
 	.author {
 		@include clearfix;
-		border-bottom: 2px solid $color__tertiary;
+		border-top: 2px solid $color__off-white;
 		margin: $size__site-gutter/2 0;
+		padding-top: $size__site-gutter/2;
 		width: 100%;
 
 		.avatar {
