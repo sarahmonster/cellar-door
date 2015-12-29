@@ -131,9 +131,9 @@
 
 /* Text widget */
 .textwidget {
+	@include font-size(1.9);
 	font-family: $font__serif;
 	font-style: italic;
-	font-size: 1.2em;
 }
 
 /* Tag cloud widget */

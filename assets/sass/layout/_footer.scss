@@ -1,0 +1,35 @@
+/* Footer */
+.site-footer {
+	background: $color__charcoal;
+	color: $color__off-white;
+	padding: $size__site-gutter 0;
+	width: $size__site-main;
+
+	.footer-widget-area {
+		margin: 0 auto;
+		max-width: $size__site-width;
+	}
+
+	.widget-area {
+		@include col(4, 12);
+	}
+
+	.widget ul a {
+		color: $color__off-white;
+	}
+
+	.site-info {
+		color: $color__grey;
+		font-family: $font__sans;
+		@include font-size(1.1);
+		letter-spacing: 1px;
+		margin-top: $size__site-gutter/2;
+		text-transform: uppercase;
+		text-align: center;
+
+		a {
+			color: $color__pink-light;
+			text-decoration: none;
+		}
+	}
+}

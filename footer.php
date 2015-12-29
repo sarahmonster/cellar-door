@@ -10,18 +10,17 @@
  */
 
 ?>
-
 	</div><!-- #content -->
-
-	<footer id="colophon" class="site-footer" role="contentinfo">
-
-		<?php get_sidebar( 'footer' ); ?>
-		
-		<div class="site-info">
-			<?php echo vip_powered_wpcom(); ?>
-		</div><!-- .site-info -->
-	</footer><!-- #colophon -->
 </div><!-- #page -->
+
+<footer id="colophon" class="site-footer" role="contentinfo">
+
+	<?php get_sidebar( 'footer' ); ?>
+
+	<div class="site-info">
+		&copy;2012&ndash;<?php echo date('Y'); ?> Feminist Frequency. <?php echo vip_powered_wpcom(); ?>
+	</div><!-- .site-info -->
+</footer><!-- #colophon -->
 
 <?php wp_footer(); ?>
 

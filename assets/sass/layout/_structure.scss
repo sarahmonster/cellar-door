@@ -7,13 +7,3 @@
 .site-content {
 	padding: $size__site-gutter / 4;
 }
-
-/* Footer */
-.site-footer {
-	width: $size__site-main;
-
-	.widget-area {
-		@include col(4, 12);
-	}
-
-} // .site-footer
