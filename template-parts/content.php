@@ -40,26 +40,30 @@
 	endif;
 	?>
 
-	<div class="entry-content">
+	<div class="content-container">
 
-		<?php
-			the_content( sprintf(
-				/* translators: %s: Name of current post. */
-				wp_kses( __( 'Continue reading %s <span class="meta-nav">&rarr;</span>', 'femfreq' ), array( 'span' => array( 'class' => array() ) ) ),
-				the_title( '<span class="screen-reader-text">"', '"</span>', false )
-			) );
+		<div class="entry-content">
 
-			wp_link_pages( array(
-				'before' => '<div class="page-links">' . esc_html__( 'Pages:', 'femfreq' ),
-				'after'  => '</div>',
-			) );
-		?>
+			<?php
+				the_content( sprintf(
+					/* translators: %s: Name of current post. */
+					wp_kses( __( 'Continue reading %s <span class="meta-nav">&rarr;</span>', 'femfreq' ), array( 'span' => array( 'class' => array() ) ) ),
+					the_title( '<span class="screen-reader-text">"', '"</span>', false )
+				) );
 
-	</div><!-- .entry-content -->
+				wp_link_pages( array(
+					'before' => '<div class="page-links">' . esc_html__( 'Pages:', 'femfreq' ),
+					'after'  => '</div>',
+				) );
+			?>
 
-	<footer class="entry-footer">
-		<?php femfreq_authors(); ?>
-		
-		<?php femfreq_entry_footer(); ?>
-	</footer><!-- .entry-footer -->
+		</div><!-- .entry-content -->
+
+		<footer class="entry-footer">
+			<?php femfreq_entry_footer(); ?>
+			<?php femfreq_authors(); ?>
+		</footer><!-- .entry-footer -->
+
+	</div>
+	
 </article><!-- #post-## -->

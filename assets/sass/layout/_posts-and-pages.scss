@@ -19,7 +19,7 @@
 @include desktop {
 	// Sidebar is only present on individual blog posts
 	.single {
-		.entry-content {
+		.content-container {
 			@include col(8, 12, $last: true);
 		}
 
