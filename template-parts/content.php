@@ -1,6 +1,6 @@
 <?php
 /**
- * Template part for displaying posts.
+ * Template part for displaying posts on archive pages.
  *
  * @link https://codex.wordpress.org/Template_Hierarchy
  *
@@ -10,60 +10,28 @@
 ?>
 
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-	<?php
-	if ( has_post_thumbnail() ) :
-		the_post_thumbnail( 'femfreq-feature' );
-	else :
-		echo '<div class="femfreq-feature-placeholder"></div>';
-	endif;
-	?>
+	<div class="entry-wrapper">
 
-	<header class="entry-header">
-
-		<div class="entry-meta">
-			<?php femfreq_entry_header(); ?>
-		</div><!-- .entry-meta -->
-
-		<?php
-		if ( is_single() ) :
-			the_title( '<h1 class="entry-title">', '</h1>' );
-		else :
-			the_title( '<h2 class="entry-title"><a href="' . esc_url( get_permalink() ) . '" rel="bookmark">', '</a></h2>' );
-		endif;
-
-		femfreq_excerpt();
-		?>
-	</header><!-- .entry-header -->
-
-	<?php if ( 'video' !== get_post_format() ) :
-		get_sidebar();
-	endif;
-	?>
-
-	<div class="content-container">
-
-		<div class="entry-content">
-
+		<header class="entry-header">
 			<?php
-				the_content( sprintf(
-					/* translators: %s: Name of current post. */
-					wp_kses( __( 'Continue reading %s <span class="meta-nav">&rarr;</span>', 'femfreq' ), array( 'span' => array( 'class' => array() ) ) ),
-					the_title( '<span class="screen-reader-text">"', '"</span>', false )
-				) );
-
-				wp_link_pages( array(
-					'before' => '<div class="page-links">' . esc_html__( 'Pages:', 'femfreq' ),
-					'after'  => '</div>',
-				) );
+			if ( has_post_thumbnail() ) :
+				the_post_thumbnail( 'femfreq-feature' );
+			else :
+				echo '<div class="femfreq-feature-placeholder"></div>';
+			endif;
 			?>
 
-		</div><!-- .entry-content -->
+			<div class="entry-meta">
+				<?php femfreq_categories(); ?>
+			</div><!-- .entry-meta -->
 
-		<footer class="entry-footer">
-			<?php femfreq_entry_footer(); ?>
-			<?php femfreq_authors(); ?>
-		</footer><!-- .entry-footer -->
+			<?php the_title( '<h2 class="entry-title"><a href="' . esc_url( get_permalink() ) . '" rel="bookmark">', '</a></h2>' ); ?>
+		</header>
 
-	</div>
-	
+		<div class="entry-summary">
+			<?php //femfreq_excerpt();
+			the_excerpt(); ?>
+		</div>
+
+	</div><!-- .entry-wrapper -->
 </article><!-- #post-## -->

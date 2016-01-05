@@ -40,7 +40,6 @@
 		}
 
 		.femfreq-feature-placeholder {
-			background: $color__off-white;
 			height: 300px;
 		}
 
@@ -55,6 +54,10 @@
 			margin-left: -$size__site-gutter;
 		}
 	}
+}
+
+.femfreq-feature-placeholder {
+	background: $color__mid-grey url('assets/images/pattern-bg-dark.png');
 }
 
 .entry-meta {
@@ -84,7 +87,8 @@
 		display: none;
 	}
 }
-.entry-title,
+
+.single .entry-title,
 .page-title {
 	background: linear-gradient(to bottom, transparent 0, $color__pink-light 0);
 	background-size: 100% 1.15em;

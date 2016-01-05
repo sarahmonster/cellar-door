@@ -8,11 +8,11 @@
  */
 
 
- if ( ! function_exists( 'femfreq_entry_header' ) ) :
- /**
-  * Prints HTML with meta information shown above post title: date posted, category, and edit link.
-  */
- function femfreq_entry_header() {
+if ( ! function_exists( 'femfreq_entry_header' ) ) :
+/**
+ * Prints HTML with meta information shown above post title: date posted, category, and edit link.
+ */
+function femfreq_entry_header() {
 
 	$time_string = '<time class="entry-date published updated" datetime="%1$s">%2$s</time>';
 	if ( get_the_time( 'U' ) !== get_the_modified_time( 'U' ) ) {
@@ -54,6 +54,21 @@
 		'<span class="edit-link">',
 		'</span>'
 	);
+}
+endif;
+
+if ( ! function_exists( 'femfreq_categories' ) ) :
+/**
+ * Prints the categorie(s) for the post.
+ */
+function femfreq_categories() {
+	if ( 'post' === get_post_type() ) :
+		/* translators: used between list items, there is a space after the comma */
+		$categories_list = get_the_category_list( esc_html__( ', ', 'femfreq' ) );
+		if ( $categories_list && femfreq_categorized_blog() ) :
+			echo '<span class="cat-links">' . $categories_list . '</span>'; // WPCS: XSS OK.
+		endif;
+	endif;
 }
 endif;
 

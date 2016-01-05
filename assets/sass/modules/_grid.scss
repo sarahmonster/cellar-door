@@ -2,10 +2,10 @@
 
 @mixin col($col, $sum, $gap: $size__site-gutter, $align: top, $first: false, $last: false) {
 	display: inline-block;
-  width: 100%;
-  box-sizing: border-box;
-  padding-left: if($first, 0, $gap);
-  padding-right: if($last, 0, $gap);
+	width: 100%;
+	box-sizing: border-box;
+	padding-left: if($first, 0, $gap);
+	padding-right: if($last, 0, $gap);
 
 	&:first-child {
 		padding-left: 0;
@@ -17,7 +17,7 @@
 
   @include tablet {
 		margin-right: -4px; // To avoid whitespace; https://css-tricks.com/fighting-the-space-between-inline-block-elements/
-    width: percentage($col/$sum);
-    vertical-align: $align;
-  }
+		width: percentage($col/$sum);
+		vertical-align: $align;
+	}
 }
