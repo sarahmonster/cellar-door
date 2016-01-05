@@ -27,3 +27,19 @@ function femfreq_body_classes( $classes ) {
 	return $classes;
 }
 add_filter( 'body_class', 'femfreq_body_classes' );
+
+/**
+ * Decrease the length of post excerpts to 32 words.
+ */
+function femfreq_custom_excerpt_length( $length ) {
+	return 32;
+}
+add_filter( 'excerpt_length', 'femfreq_custom_excerpt_length', 999 );
+
+/**
+ * Use a simple ellipsis to indicate more content in the excerpt.
+ */
+function femfreq_custom_excerpt_more() {
+	return '&hellip; ';
+}
+add_filter( 'excerpt_more', 'femfreq_custom_excerpt_more' );
