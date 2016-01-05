@@ -19,6 +19,7 @@ function femfreq_jetpack_setup() {
 		'container' => 'main',
 		'render'    => 'femfreq_infinite_scroll_render',
 		'footer'    => 'page',
+		'wrapper'   => false,
 	) );
 
 	// Add theme support for Responsive Videos.

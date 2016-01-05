@@ -1137,14 +1137,14 @@ li.focus > .children {
 		width: 33.33333%;
 	}
 }
-.archive article:first-of-type,
-.blog article:first-of-type,
-.search article:first-of-type {
+.archive article:nth-of-type(3n+1),
+.blog article:nth-of-type(3n+1),
+.search article:nth-of-type(3n+1) {
 	padding-left: 0;
 }
-.archive article:nth-of-type(4n),
-.blog article:nth-of-type(4n),
-.search article:nth-of-type(4n) {
+.archive article:nth-of-type(3n),
+.blog article:nth-of-type(3n),
+.search article:nth-of-type(3n) {
 	padding-right: 0;
 }
 .archive article .entry-wrapper,
