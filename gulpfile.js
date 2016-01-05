@@ -20,8 +20,8 @@ gulp.task( 'styles', function() {
 		.pipe( sourcemaps.init() )
 		.pipe( sass( { style: 'expanded' } ).on( 'error', sass.logError ) )
 		.pipe( autoprefixer( { browsers: ['last 2 versions', 'ie >= 9'], cascade: false } ) )
-		.pipe( sourcemaps.write( './', { includeContent: false, sourceRoot: 'source' } ) )
 		.pipe( csscomb() )
+		.pipe( sourcemaps.write( './', { includeContent: false, sourceRoot: 'source' } ) )
 		.on( 'error', function ( err ) {
 			console.error( 'Error!', err.message );
 		} )
