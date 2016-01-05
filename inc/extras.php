@@ -43,3 +43,23 @@ function femfreq_custom_excerpt_more() {
 	return '&hellip; ';
 }
 add_filter( 'excerpt_more', 'femfreq_custom_excerpt_more' );
+
+/**
+ * Filter the categories archive widget to add a span around post count
+ */
+function femfreq_cat_count_span( $links ) {
+	$links = str_replace( '</a> (', '</a><span class="post-count">(', $links );
+	$links = str_replace( ')', ')</span>', $links );
+	return $links;
+}
+add_filter( 'wp_list_categories', 'femfreq_cat_count_span' );
+
+/**
+ * Filter the archives widget to add a span around post count
+ */
+function femfreq_archive_count_span( $links ) {
+	$links = str_replace( '</a>&nbsp;(', '</a><span class="post-count">(', $links );
+	$links = str_replace( ')', ')</span>', $links );
+	return $links;
+}
+add_filter( 'get_archives_link', 'femfreq_archive_count_span' );
