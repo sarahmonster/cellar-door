@@ -25,7 +25,7 @@ a {
 
 }
 
-.entry-content a:not('.image-link') {
+.entry-content a:not([rel*="attachment"]) {
 	border-bottom: 2px solid;
 	position: relative;
 	text-decoration: none;

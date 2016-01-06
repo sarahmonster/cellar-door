@@ -12,9 +12,7 @@
 		}
 
 		.entry-wrapper {
-			background: $color__white;
-			box-shadow: 0px 2px 4px 0px transparentize($color__grey, 0.9);
-			padding: $size__site-gutter/4;
+			@include card();
 		}
 
 		.femfreq-feature-placeholder {
