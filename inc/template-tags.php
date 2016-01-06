@@ -28,13 +28,20 @@ function femfreq_entry_header() {
 
 	$posted_on = '<a href="' . esc_url( get_permalink() ) . '" rel="bookmark">' . $time_string . '</a>';
 
-	$byline = sprintf(
-		esc_html_x( 'by %s', 'post author', 'femfreq' ),
-		'<span class="author vcard"><a class="url fn n" href="' . esc_url( get_author_posts_url( get_the_author_meta( 'ID' ) ) ) . '">' . esc_html( get_the_author() ) . '</a></span>'
-	);
-	esc_html( get_the_author_meta( 'display_name' ) );
+	// Get a byline for all post author(s)
+	if ( function_exists( 'coauthors_posts_links' ) ) :
+		$coauthors = get_coauthors();
+		foreach( $coauthors as $coauthor ) :
+			if ( $byline ) :
+				$byline .= ' & ';
+			endif;
+			$byline .= femfreq_get_author_link( $coauthor->ID, $coauthor->display_name );
+		endforeach;
+	else :
+		$byline = femfreq_get_author_link( get_the_author_meta( 'ID' ), get_the_author_meta( 'display_name' ) );
+	endif;
 
-	echo '<span class="posted-on">' . $posted_on . '</span>'; // WPCS: XSS OK.
+	echo '<span class="posted-on">' . $posted_on . '</span> by <span class="byline">' . $byline . '</span>'; // WPCS: XSS OK.
 
 	// Hide category on pages.
 	if ( 'post' === get_post_type() ) {
@@ -86,28 +93,44 @@ if ( ! function_exists( 'femfreq_excerpt' ) ) :
 endif;
 
 
-if ( ! function_exists( 'femfreq_authors' ) ) :
+if ( ! function_exists( 'femfreq_author_panel' ) ) :
 /**
- * Prints HTML with meta information for the categories, tags and comments.
+ * Prints author bio panels for each post author.
+ * Works whether we're using the Co-Authors Plus plugin or not.
  */
-function femfreq_authors() {
+function femfreq_author_panels() {
 		if ( function_exists( 'coauthors_posts_links' ) ) :
 			$coauthors = get_coauthors();
 			foreach( $coauthors as $coauthor ) :
-				femfreq_author( $coauthor->ID, $coauthor->display_name, $coauthor->user_description );
+				femfreq_author_bio( $coauthor->ID, $coauthor->display_name, $coauthor->user_description );
 			endforeach;
 		else :
-			femfreq_author( get_the_author_meta( 'ID' ), get_the_author_meta( 'display_name' ), get_the_author_meta( 'description' ) );
+			femfreq_author_bio( get_the_author_meta( 'ID' ), get_the_author_meta( 'display_name' ), get_the_author_meta( 'description' ) );
 		endif;
 }
+endif;
 
-function femfreq_author( $id, $name, $bio ) { ?>
+if ( ! function_exists( 'femfreq_author_bio' ) ) :
+/**
+ * Prints an author bio panel with the post author(s)' Gravatar, bio, and URL.
+ */
+function femfreq_author_bio( $id, $name, $bio ) { ?>
 	<div class="author vcard">
 		<?php echo get_avatar( $id, 300 ); ?>
 		<h2 class="author-name"><a class="url fn n" href="<?php echo esc_url( get_author_posts_url( $id ) ); ?>"><?php echo $name; ?></a></h2>
 		<p class="author-bio"><?php echo wp_kses_post( $bio ); ?></p>
 	</div><!-- .author -->
 <?php }
+endif;
+
+if ( ! function_exists( 'femfreq_get_author_link' ) ) :
+/**
+ * Prints a simple byline with the author's name and a link to their author page.
+ */
+function femfreq_get_author_link( $id, $name ) {
+	$return = '<a class="url fn n" href="' . esc_url( get_author_posts_url( $id ) ) . '">' . $name . '</a>';
+	return $return;
+}
 endif;
 
 if ( ! function_exists( 'femfreq_entry_footer' ) ) :

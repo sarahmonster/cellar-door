@@ -56,7 +56,7 @@
 
 		<footer class="entry-footer">
 			<?php femfreq_entry_footer(); ?>
-			<?php femfreq_authors(); ?>
+			<?php femfreq_author_panels(); ?>
 		</footer><!-- .entry-footer -->
 
 	</div>
