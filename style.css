@@ -886,6 +886,10 @@ li.focus > .children {
 .site-footer .widget ul a {
 	color: #efefef;
 }
+.site-footer .widget ul a:hover {
+	background-color: rgba(150, 150, 150, 0.1); 
+	color: #fefefe;
+}
 .site-footer .site-info {
 	color: #969696;
 	font-family: soleil, Arial, sans-serif;
@@ -1279,12 +1283,13 @@ li.focus > .children {
 	border-top: 1px solid rgba(150, 150, 150, 0.75);
 	color: #696969;
 	display: block;
-	padding: 7px 0;
+	padding: 10px 0;
 	text-decoration: none;
 }
 .widget ul a:hover {
-	background-color: rgba(245, 223, 223, 0.5); 
+	background-color: rgba(245, 223, 223, 0.25);
 	border-bottom: none;
+	color: #3a3a3a;
 }
 .widget ul .sub-menu {
 	margin-left: 1em;
@@ -1312,6 +1317,10 @@ li.focus > .children {
 	-ms-flex-order: 1;
 	-webkit-order: 1;
 	        order: 1;
+}
+.widget_archive ul li a:hover,
+.widget_categories ul li a:hover {
+	background-color: transparent;
 }
 .widget_archive ul li::before,
 .widget_categories ul li::before {

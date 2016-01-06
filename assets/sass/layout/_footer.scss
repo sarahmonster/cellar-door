@@ -16,6 +16,11 @@
 
 	.widget ul a {
 		color: $color__off-white;
+
+		&:hover {
+			color: $color__white;
+			background-color: transparentize($color__grey, 0.9);
+		}
 	}
 
 	.site-info {

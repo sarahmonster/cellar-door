@@ -31,12 +31,13 @@
 		border-top: 1px solid transparentize($color__grey, 0.25);
 		color: $color__mid-grey;
 		display: block;
-		padding: 7px 0;
+		padding: 10px 0;
 		text-decoration: none;
 
 		&:hover {
 			border-bottom: none;
-			background-color: transparentize($color__pink-light, 0.5);
+			background-color: transparentize($color__pink-light, 0.75);
+			color: $color__charcoal;
 		}
 	}
 
@@ -57,7 +58,11 @@
 		a {
 			border: none;
 			order: 1;
-		} // a
+
+			&:hover {
+				background-color: transparent;
+			}
+		}
 
 		&::before {
 			border-bottom: 1px dotted $color__grey;
