@@ -25,6 +25,37 @@ a {
 
 }
 
+.entry-content a {
+	border-bottom: 2px solid;
+	position: relative;
+	text-decoration: none;
+	transition: color 400ms ease-in-out;
+
+	&::before {
+		border-bottom: 2px solid $color__link-hover;
+		color: $color__link-hover;
+		content: attr(data-hover);
+		//content: 'as one critic observed';
+		display: inline-block;
+		height: 1.5em;
+		overflow: hidden;
+		padding: 0;
+		position: absolute;
+			top: -4px;
+			left: 0;
+		max-width: 0;
+		transition: max-width 300ms ease-in-out;
+	}
+
+	&:hover {
+		color: $color__background-body;
+	}
+
+	&:hover::before {
+		max-width: 100%;
+	}
+}
+
 /*--------------------------------------------------------------
 ## Menus
 --------------------------------------------------------------*/

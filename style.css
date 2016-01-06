@@ -556,6 +556,33 @@ a:active {
 	outline: 0;
 }
 
+.entry-content a {
+	border-bottom: 2px solid;
+	position: relative;
+	text-decoration: none;
+	transition: color 400ms ease-in-out;
+}
+.entry-content a::before {
+	border-bottom: 2px solid #f20079;
+	color: #f20079;
+	content: attr(data-hover);
+	display: inline-block;
+	height: 1.5em;
+	left: 0;
+	max-width: 0;
+	overflow: hidden;
+	padding: 0;
+	position: absolute;
+	top: -4px;
+	transition: max-width 300ms ease-in-out;
+}
+.entry-content a:hover {
+	color: #fff;
+}
+.entry-content a:hover::before {
+	max-width: 100%;
+}
+
 /*--------------------------------------------------------------
 ## Menus
 --------------------------------------------------------------*/

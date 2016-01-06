@@ -47,7 +47,7 @@ function femfreq_setup() {
 	 * @link https://developer.wordpress.org/themes/functionality/featured-images-post-thumbnails/
 	 */
 	add_theme_support( 'post-thumbnails' );
-	add_image_size( 'femfreq-feature', 1000, 500, true ); 
+	add_image_size( 'femfreq-feature', 1000, 500, true );
 
 	// This theme uses wp_nav_menu() in one location.
 	register_nav_menus( array(
@@ -152,6 +152,8 @@ add_action( 'widgets_init', 'femfreq_widgets_init' );
  */
 function femfreq_scripts() {
 	wp_enqueue_style( 'femfreq-style', get_stylesheet_uri() );
+
+	wp_enqueue_script( 'femfreq-main', get_template_directory_uri() . '/assets/js/femfreq.js', array(), time(), true );
 
 	wp_enqueue_script( 'femfreq-navigation', get_template_directory_uri() . '/assets/js/navigation.js', array(), '20120206', true );
 
