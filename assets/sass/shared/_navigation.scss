@@ -25,7 +25,7 @@ a {
 
 }
 
-.entry-content a {
+.entry-content a:not('.image-link') {
 	border-bottom: 2px solid;
 	position: relative;
 	text-decoration: none;
@@ -35,7 +35,6 @@ a {
 		border-bottom: 2px solid $color__link-hover;
 		color: $color__link-hover;
 		content: attr(data-hover);
-		//content: 'as one critic observed';
 		display: inline-block;
 		height: 1.5em;
 		overflow: hidden;

@@ -556,13 +556,13 @@ a:active {
 	outline: 0;
 }
 
-.entry-content a {
+.entry-content a:not('.image-link') {
 	border-bottom: 2px solid;
 	position: relative;
 	text-decoration: none;
 	transition: color 400ms ease-in-out;
 }
-.entry-content a::before {
+.entry-content a:not('.image-link')::before {
 	border-bottom: 2px solid #f20079;
 	color: #f20079;
 	content: attr(data-hover);
@@ -576,10 +576,10 @@ a:active {
 	top: -4px;
 	transition: max-width 300ms ease-in-out;
 }
-.entry-content a:hover {
+.entry-content a:not('.image-link'):hover {
 	color: #fff;
 }
-.entry-content a:hover::before {
+.entry-content a:not('.image-link'):hover::before {
 	max-width: 100%;
 }
 
