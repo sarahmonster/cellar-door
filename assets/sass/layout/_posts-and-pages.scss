@@ -172,3 +172,24 @@
 		font-style: normal;
 	}
 }
+
+.resource-list {
+	@include font-size(1.6);
+
+	h2 {
+		border-top: 2px solid;
+		padding: 5px 0 10px;
+	}
+
+	@include tablet {
+		@include col(1, 2);
+	}
+
+	&:nth-of-type(odd) {
+		padding-right: 0 !important;
+	}
+
+	&:nth-of-type(even) {
+		padding-left: 0 !important;
+	}
+}

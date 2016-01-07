@@ -414,7 +414,8 @@ hr {
 
 ul,
 ol {
-	margin: 0 0 1.5em 3em;
+	margin: 0 0 1.5em 0;
+	padding: 0;
 }
 
 ul {
@@ -425,10 +426,14 @@ ol {
 	list-style: decimal;
 }
 
+.entry-content li {
+	margin-bottom: 0.5em;
+}
+
 li > ul,
 li > ol {
 	margin-bottom: 0;
-	margin-left: 1.5em;
+	margin-left: 1em;
 }
 
 dt {
@@ -1153,6 +1158,43 @@ li.focus > .children {
 .transcript h6 {
 	color: #696969;
 	font-style: normal;
+}
+
+.resource-list {
+	font-size: 16px;
+	font-size: 1.6rem;
+}
+.resource-list h2 {
+	border-top: 2px solid;
+	padding: 5px 0 10px;
+}
+@media (min-width: 768px) {
+	.resource-list {
+		box-sizing: border-box;
+		display: inline-block;
+		padding-left: 40px;
+		padding-right: 40px; 
+		width: 100%;
+	}
+	.resource-list:first-child {
+		padding-left: 0;
+	}
+	.resource-list:last-child {
+		padding-right: 0;
+	}
+}
+@media (min-width: 768px) and (min-width: 768px) {
+	.resource-list {
+		margin-right: -4px;
+		vertical-align: top; 
+		width: 50%;
+	}
+}
+.resource-list:nth-of-type(odd) {
+	padding-right: 0 !important;
+}
+.resource-list:nth-of-type(even) {
+	padding-left: 0 !important;
 }
 
 .archive article,
