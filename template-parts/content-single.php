@@ -11,10 +11,14 @@
 
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 	<?php
-	if ( has_post_thumbnail() ) :
-		the_post_thumbnail( 'femfreq-feature' );
+	if ( 'video' !== get_post_format() ) :
+		if ( has_post_thumbnail() ) :
+			the_post_thumbnail( 'femfreq-feature' );
+		else :
+			echo '<div class="femfreq-feature-placeholder"></div>';
+		endif;
 	else :
-		echo '<div class="femfreq-feature-placeholder"></div>';
+		echo '<div id="femfreq-video-container"></div>';
 	endif;
 	?>
 
@@ -32,8 +36,7 @@
 
 	<?php if ( 'video' !== get_post_format() ) :
 		get_sidebar();
-	endif;
-	?>
+	endif; ?>
 
 	<div class="content-container">
 

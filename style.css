@@ -976,17 +976,10 @@ li.focus > .children {
 	}
 }
 
-/* Use a centered content column for video posts */
-.single-format-video .content-container {
-	margin-left: auto;
-	margin-right: auto;
-	max-width: 750px;
-}
-
 /* Arrange post headers */
 @media (min-width: 768px) {
-	.single .attachment-femfreq-feature,
-	.single .femfreq-feature-placeholder {
+	.single:not(.single-format-video) .attachment-femfreq-feature,
+	.single:not(.single-format-video) .femfreq-feature-placeholder {
 		box-sizing: border-box;
 		display: inline-block;
 		margin: 40px 0;
@@ -995,18 +988,18 @@ li.focus > .children {
 		padding-right: 0; 
 		width: 100%;
 	}
-	.single .attachment-femfreq-feature:first-child,
-	.single .femfreq-feature-placeholder:first-child {
+	.single:not(.single-format-video) .attachment-femfreq-feature:first-child,
+	.single:not(.single-format-video) .femfreq-feature-placeholder:first-child {
 		padding-left: 0;
 	}
-	.single .attachment-femfreq-feature:last-child,
-	.single .femfreq-feature-placeholder:last-child {
+	.single:not(.single-format-video) .attachment-femfreq-feature:last-child,
+	.single:not(.single-format-video) .femfreq-feature-placeholder:last-child {
 		padding-right: 0;
 	}
 }
 @media (min-width: 768px) and (min-width: 768px) {
-	.single .attachment-femfreq-feature,
-	.single .femfreq-feature-placeholder {
+	.single:not(.single-format-video) .attachment-femfreq-feature,
+	.single:not(.single-format-video) .femfreq-feature-placeholder {
 		margin-right: -4px;
 		vertical-align: top; 
 		width: 50%;
@@ -1014,10 +1007,10 @@ li.focus > .children {
 }
 
 @media (min-width: 768px) {
-	.single .femfreq-feature-placeholder {
+	.single:not(.single-format-video) .femfreq-feature-placeholder {
 		height: 300px;
 	}
-	.single .entry-header {
+	.single:not(.single-format-video) .entry-header {
 		box-sizing: border-box;
 		display: inline-block;
 		margin: 80px 0;
@@ -1026,15 +1019,15 @@ li.focus > .children {
 		padding-right: 40px;
 		width: 100%;
 	}
-	.single .entry-header:first-child {
+	.single:not(.single-format-video) .entry-header:first-child {
 		padding-left: 0;
 	}
-	.single .entry-header:last-child {
+	.single:not(.single-format-video) .entry-header:last-child {
 		padding-right: 0;
 	}
 }
 @media (min-width: 768px) and (min-width: 768px) {
-	.single .entry-header {
+	.single:not(.single-format-video) .entry-header {
 		margin-right: -4px;
 		vertical-align: top; 
 		width: 50%;
@@ -1042,14 +1035,22 @@ li.focus > .children {
 }
 
 @media (min-width: 768px) {
-	.single .entry-title,
-	.single .page-title {
+	.single:not(.single-format-video) .entry-title,
+	.single:not(.single-format-video) .page-title {
 		margin-left: -40px;
 	}
 }
 
 .femfreq-feature-placeholder {
 	background: #696969 url('assets/images/pattern-bg-dark.png');
+}
+
+/* Use a centered content column for video posts */
+.single-format-video .content-container,
+.single-format-video .entry-header {
+	margin-left: auto;
+	margin-right: auto;
+	max-width: 750px;
 }
 
 .entry-meta {
