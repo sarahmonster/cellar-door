@@ -710,7 +710,7 @@ a:active {
 .site {
 	margin: 0 auto;
 	max-width: 1200px;
-	padding: 40px;
+	padding: 0 10px;
 }
 
 .site-content {
@@ -779,8 +779,6 @@ a:active {
 
 @media (min-width: 768px) {
 	#site-navigation .menu {
-		border-bottom: 2px solid #969696;
-		border-top: 2px solid #969696;
 		padding: 20px 0;
 	}
 	#site-navigation li {
@@ -788,11 +786,16 @@ a:active {
 	}
 }
 
+#masthead {
+	margin-bottom: 20px; 
+	margin-top: 20px;
+}
+
 /* Top-level nav */
 .main-navigation {
 	font-family: soleil, Arial, sans-serif;
-	font-size: 15px;
-	font-size: 1.5rem;
+	font-size: 17px;
+	font-size: 1.7rem;
 }
 .main-navigation ul {
 	display: none;
@@ -805,9 +808,12 @@ a:active {
 	position: relative;
 }
 .main-navigation ul a {
+	border-bottom: 2px solid;
 	color: #696969;
 	display: inline-block;
+	padding-bottom: 5px;
 	text-decoration: none;
+	width: 120px;
 }
 .main-navigation ul .current_page_item > a,
 .main-navigation ul .current-menu-item > a,

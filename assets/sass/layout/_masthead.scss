@@ -20,8 +20,6 @@
 		transform: translateY(-50%);
 
 		.menu {
-			border-top: 2px solid $color__grey;
-			border-bottom: 2px solid $color__grey;
 			padding: $size__site-gutter/2 0;
 		}
 
@@ -31,10 +29,16 @@
 	}
 }
 
+#masthead {
+	margin-top: $size__site-gutter/2;
+	margin-bottom: $size__site-gutter/2;
+}
+
+
 /* Top-level nav */
 .main-navigation {
 	font-family: $font__sans;
-	@include font-size(1.5);
+	@include font-size(1.7);
 
 		ul {
 			display: none;
@@ -53,8 +57,11 @@
 
 		a {
 			color: $color__mid-grey;
+			border-bottom: 2px solid;
 			display: inline-block;
+			padding-bottom: 5px;
 			text-decoration: none;
+			width: 120px;
 		}
 
 		.current_page_item > a,
