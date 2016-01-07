@@ -1138,6 +1138,23 @@ li.focus > .children {
 	margin: 0 0 1.5em;
 }
 
+.transcript {
+	background: #efefef;
+	border-top: 2px solid #696969;
+	color: #696969;
+	font-style: italic;
+	padding: 20px;
+}
+.transcript h1,
+.transcript h2,
+.transcript h3,
+.transcript h4,
+.transcript h5,
+.transcript h6 {
+	color: #696969;
+	font-style: normal;
+}
+
 .archive article,
 .blog article,
 .search article {
