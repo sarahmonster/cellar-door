@@ -18,9 +18,9 @@ object {
 	@include card();
 
 	@include tablet {
-		margin-left: -40px;
-		margin-right: -40px;
-		max-width: calc(100% + 80px)
+		margin-left: -$size__site-overhang;
+		margin-right: -$size__site-overhang;
+		max-width: calc(100% + (#{$size__site-overhang} * 2))
 	}
 }
 

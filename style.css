@@ -331,7 +331,20 @@ i {
 }
 
 blockquote {
+	border-top: 1px solid;
+	color: #d081a8;
+	font-style: italic; 
 	margin: 0 1.5em;
+}
+
+.entry-content blockquote.alignleft {
+	margin-left: -80px;
+	max-width: 400px;
+}
+
+.entry-content blockquote.alignright {
+	margin-right: -80px;
+	max-width: 400px;
 }
 
 address {
@@ -1592,9 +1605,9 @@ object {
 }
 @media (min-width: 768px) {
 	.entry-content img {
-		margin-left: -40px;
-		margin-right: -40px;
-		max-width: calc(100% + 80px);
+		margin-left: -80px;
+		margin-right: -80px;
+		max-width: calc(100% + (80px * 2));
 	}
 }
 

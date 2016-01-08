@@ -46,7 +46,24 @@ dfn, cite, em, i {
 }
 
 blockquote {
+	border-top: 1px solid;
+	color: $color__pink-mid;
 	margin: 0 1.5em;
+	font-style: italic;
+}
+
+.entry-content blockquote {
+
+
+	&.alignleft {
+		margin-left: -$size__site-overhang;
+		max-width: 400px;
+	}
+
+	&.alignright {
+		margin-right: -$size__site-overhang;
+		max-width: 400px;
+	}
 }
 
 address {
