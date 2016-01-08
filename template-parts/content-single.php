@@ -40,6 +40,8 @@
 
 	<div class="content-container">
 
+		<div id="femfreq-sharing-container"> </div>
+
 		<div class="entry-content">
 
 			<?php

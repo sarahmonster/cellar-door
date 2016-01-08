@@ -28,6 +28,21 @@
 	}
 }
 
+.content-container {
+	position: relative;
+}
+
+/* Show sharing buttons in a floated column to left of post content */
+#femfreq-sharing-container {
+	left: -60px;
+	position: absolute;
+	top: 25px;
+
+	.sharedaddy {
+		width: 50px;
+	}
+}
+
 /* Arrange post headers */
 @include tablet {
 	.single:not(.single-format-video) {

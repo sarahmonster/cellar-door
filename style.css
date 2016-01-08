@@ -561,13 +561,13 @@ a:active {
 	outline: 0;
 }
 
-.entry-content a:not([rel*='attachment']) {
+.entry-content :not(.sharedaddy) a:not([rel*='attachment']) {
 	border-bottom: 2px solid;
 	position: relative;
 	text-decoration: none;
 	transition: color 400ms ease-in-out;
 }
-.entry-content a:not([rel*='attachment'])::before {
+.entry-content :not(.sharedaddy) a:not([rel*='attachment'])::before {
 	border-bottom: 2px solid #f20079;
 	color: #f20079;
 	content: attr(data-hover);
@@ -581,10 +581,10 @@ a:active {
 	top: -4px;
 	transition: max-width 300ms ease-in-out;
 }
-.entry-content a:not([rel*='attachment']):hover {
+.entry-content :not(.sharedaddy) a:not([rel*='attachment']):hover {
 	color: #fff;
 }
-.entry-content a:not([rel*='attachment']):hover::before {
+.entry-content :not(.sharedaddy) a:not([rel*='attachment']):hover::before {
 	max-width: 100%;
 }
 
@@ -980,6 +980,20 @@ li.focus > .children {
 		vertical-align: top; 
 		width: 33.33333%;
 	}
+}
+
+.content-container {
+	position: relative;
+}
+
+/* Show sharing buttons in a floated column to left of post content */
+#femfreq-sharing-container {
+	left: -60px;
+	position: absolute;
+	top: 25px;
+}
+#femfreq-sharing-container .sharedaddy {
+	width: 50px;
 }
 
 /* Arrange post headers */

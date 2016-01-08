@@ -11,8 +11,15 @@
 	function moveVideo() {
 		var video = $( '.entry-content' ).find( '.jetpack-video-wrapper' );
 		if ( 0 < video.length ) {
-			console.log( 'hi' );
 			video.appendTo( '#femfreq-video-container' );
+		}
+	}
+
+	// Move sharing links to different location.
+	function moveSharingLinks() {
+		var sharingLinks = $( '.entry-content' ).find( '.sharedaddy' );
+		if ( 0 < sharingLinks.length ) {
+			sharingLinks.appendTo( '#femfreq-sharing-container' );
 		}
 	}
 
@@ -46,6 +53,7 @@
 	// Run our functions as soon as possible
 	$( document ).on( 'ready', function() {
 		moveVideo();
+		moveSharingLinks();
 	} );
 
 	// Run our functions once the window has loaded fully
