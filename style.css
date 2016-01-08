@@ -992,6 +992,9 @@ li.focus > .children {
 	position: absolute;
 	top: 25px;
 }
+.single-format-standard #femfreq-sharing-container {
+	left: -10px;
+}
 #femfreq-sharing-container .sharedaddy {
 	width: 50px;
 }
@@ -1163,7 +1166,7 @@ li.focus > .children {
 .page-content,
 .entry-content,
 .entry-summary {
-	margin: 1.5em 0 0;
+	margin: 0;
 }
 
 .page-links {

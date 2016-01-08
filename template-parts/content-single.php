@@ -40,7 +40,11 @@
 
 	<div class="content-container">
 
-		<div id="femfreq-sharing-container"> </div>
+		<div id="femfreq-sharing-container">
+			<?php if ( function_exists( 'sharing_display' ) ) :
+				sharing_display( '', true );
+			endif; ?>
+		</div>
 
 		<div class="entry-content">
 

@@ -15,14 +15,6 @@
 		}
 	}
 
-	// Move sharing links to different location.
-	function moveSharingLinks() {
-		var sharingLinks = $( '.entry-content' ).find( '.sharedaddy' );
-		if ( 0 < sharingLinks.length ) {
-			sharingLinks.appendTo( '#femfreq-sharing-container' );
-		}
-	}
-
 	// Resize images so they fit our new content width better.
 	// This may be done via some database work in the future & removed.
 	function resizeImages() {
@@ -53,7 +45,6 @@
 	// Run our functions as soon as possible
 	$( document ).on( 'ready', function() {
 		moveVideo();
-		moveSharingLinks();
 	} );
 
 	// Run our functions once the window has loaded fully
