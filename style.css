@@ -963,8 +963,9 @@ li.focus > .children {
 	.single:not(.single-format-video) .widget-area {
 		box-sizing: border-box;
 		display: inline-block;
+		margin-top: 1.5em; 
 		padding-left: 0;
-		padding-right: 40px; 
+		padding-right: 40px;
 		width: 100%;
 	}
 	.single:not(.single-format-video) .widget-area:first-child {
@@ -1174,6 +1175,7 @@ li.focus > .children {
 	margin: 0 0 1.5em;
 }
 
+/* Transcript box */
 .transcript {
 	background: #efefef;
 	border-top: 2px solid #696969;
@@ -1191,6 +1193,7 @@ li.focus > .children {
 	font-style: normal;
 }
 
+/* Resource lists */
 .resource-list {
 	font-size: 16px;
 	font-size: 1.6rem;
@@ -1222,10 +1225,10 @@ li.focus > .children {
 	}
 }
 .resource-list:nth-of-type(odd) {
-	padding-right: 0 !important;
+	padding-left: 0 !important;
 }
 .resource-list:nth-of-type(even) {
-	padding-left: 0 !important;
+	padding-right: 0 !important;
 }
 
 .archive article,

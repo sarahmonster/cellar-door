@@ -24,6 +24,7 @@
 
 		.widget-area {
 			@include col(4, 12, $first: true);
+			margin-top: 1.5em;
 		}
 	}
 }
@@ -188,6 +189,7 @@
 	margin: 0 0 1.5em;
 }
 
+/* Transcript box */
 .transcript {
 	background: $color__off-white;
 	border-top: 2px solid $color__mid-grey;
@@ -201,6 +203,7 @@
 	}
 }
 
+/* Resource lists */
 .resource-list {
 	@include font-size(1.6);
 
@@ -214,10 +217,10 @@
 	}
 
 	&:nth-of-type(odd) {
-		padding-right: 0 !important;
+		padding-left: 0 !important;
 	}
 
 	&:nth-of-type(even) {
-		padding-left: 0 !important;
+		padding-right: 0 !important;
 	}
 }
