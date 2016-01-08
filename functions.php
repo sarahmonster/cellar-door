@@ -154,7 +154,7 @@ add_action( 'widgets_init', 'femfreq_widgets_init' );
 function femfreq_scripts() {
 	wp_enqueue_style( 'femfreq-style', get_stylesheet_uri() );
 
-	wp_enqueue_script( 'femfreq-main', get_template_directory_uri() . '/assets/js/femfreq.js', array(), time(), true );
+	wp_enqueue_script( 'femfreq-main', get_template_directory_uri() . '/assets/js/femfreq.js', array( 'jquery' ), time(), true );
 
 	wp_enqueue_script( 'femfreq-navigation', get_template_directory_uri() . '/assets/js/navigation.js', array(), '20120206', true );
 
