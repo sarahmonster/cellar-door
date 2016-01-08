@@ -48,6 +48,7 @@ function femfreq_setup() {
 	 */
 	add_theme_support( 'post-thumbnails' );
 	add_image_size( 'femfreq-feature', 1000, 500, true );
+	add_image_size( 'femfreq-card', 650, 400, true );
 
 	// This theme uses wp_nav_menu() in one location.
 	register_nav_menus( array(

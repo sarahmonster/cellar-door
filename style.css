@@ -1277,17 +1277,39 @@ li.focus > .children {
 	box-shadow: 0 2px 4px 0 rgba(150, 150, 150, 0.1);
 	padding: 10px;
 }
-.archive article .femfreq-feature-placeholder,
-.blog article .femfreq-feature-placeholder,
-.search article .femfreq-feature-placeholder {
-	height: 200px;
-}
 .archive article .entry-header,
 .blog article .entry-header,
 .search article .entry-header {
 	background: #f20079;
-	min-height: 150px; 
+	min-height: 200px; 
 	position: relative;
+}
+.archive article .entry-header .femfreq-feature-placeholder,
+.blog article .entry-header .femfreq-feature-placeholder,
+.search article .entry-header .femfreq-feature-placeholder {
+	height: 200px;
+}
+.archive article .entry-header img,
+.blog article .entry-header img,
+.search article .entry-header img {
+	margin-bottom: -10px; 
+
+	-webkit-filter: brightness(80%) contrast(120%);
+	        filter: brightness(80%) contrast(120%);
+}
+.archive article .entry-header::after,
+.blog article .entry-header::after,
+.search article .entry-header::after {
+	background-image: linear-gradient(-1deg, #5300b2 0%, #00d3c9 100%);
+	bottom: 0;
+	content: '';
+	display: block;
+	left: 0;
+	opacity: 0.5;
+	position: absolute;
+	right: 0;
+	top: 0;
+	z-index: 1;
 }
 .archive article .entry-meta,
 .blog article .entry-meta,
@@ -1295,10 +1317,11 @@ li.focus > .children {
 	background: #efefef;
 	border-left: 2px solid #f20079;
 	color: #f20079;
-	left: -15px; 
+	left: -15px;
 	padding: 5px 10px;
 	position: absolute;
 	top: 5px;
+	z-index: 2;
 }
 .archive article .entry-meta a,
 .blog article .entry-meta a,
@@ -1319,6 +1342,7 @@ li.focus > .children {
 	margin: 10px;
 	position: absolute;
 	text-transform: none;
+	z-index: 2;
 }
 .archive article .entry-title a,
 .blog article .entry-title a,

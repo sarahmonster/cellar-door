@@ -15,7 +15,7 @@
 		<header class="entry-header">
 			<?php
 			if ( has_post_thumbnail() ) :
-				the_post_thumbnail( 'femfreq-feature' );
+				the_post_thumbnail( 'femfreq-card' );
 			else :
 				echo '<div class="femfreq-feature-placeholder"></div>';
 			endif;
