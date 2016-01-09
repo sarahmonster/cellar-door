@@ -338,12 +338,12 @@ blockquote {
 }
 
 .entry-content blockquote.alignleft {
-	margin-left: -80px;
+	margin-left: -40px;
 	max-width: 400px;
 }
 
 .entry-content blockquote.alignright {
-	margin-right: -80px;
+	margin-right: -40px;
 	max-width: 400px;
 }
 
@@ -1050,7 +1050,7 @@ li.focus > .children {
 	.single:not(.single-format-video) .entry-header {
 		box-sizing: border-box;
 		display: inline-block;
-		margin: 80px 0;
+		margin: 80px 0 0;
 		padding-left: 40px;
 		padding-left: 20px; 
 		padding-right: 40px;
@@ -1605,9 +1605,9 @@ object {
 }
 @media (min-width: 768px) {
 	.entry-content img {
-		margin-left: -80px;
-		margin-right: -80px;
-		max-width: calc(100% + (80px * 2));
+		margin-left: -40px;
+		margin-right: -40px;
+		max-width: calc(100% + (40px * 2));
 	}
 }
 

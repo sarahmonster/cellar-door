@@ -65,7 +65,7 @@
 
 		.entry-header {
 			@include col(6, 12);
-			margin: $size__site-gutter*2 0;
+			margin: $size__site-gutter*2 0 0;
 			padding-left: $size__site-gutter/2;
 		}
 
