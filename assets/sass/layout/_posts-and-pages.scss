@@ -14,6 +14,11 @@
 	}
 }
 
+/* Hide extra social links */
+#jp-post-flair {
+	display: none !important;
+}
+
 /* On desktop devices, we'll show a sidebar next to our content */
 @include desktop {
 	// Sidebar is only present on individual blog posts

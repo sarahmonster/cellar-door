@@ -948,6 +948,11 @@ li.focus > .children {
 	}
 }
 
+/* Hide extra social links */
+#jp-post-flair {
+	display: none !important;
+}
+
 /* On desktop devices, we'll show a sidebar next to our content */
 @media (min-width: 1024px) {
 	.single:not(.single-format-video) .content-container {
@@ -1395,6 +1400,7 @@ li.focus > .children {
 
 /* Search widget */
 .widget_search .search-form .search-field {
+	margin-top: 20px;
 	width: 100%;
 }
 
