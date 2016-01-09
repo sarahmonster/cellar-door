@@ -13,6 +13,9 @@
 	<?php
 	if ( 'video' !== get_post_format() ) :
 		if ( has_post_thumbnail() ) :
+			if ( '' === get_the_post_thumbnail() ) :
+				echo '<div class="femfreq-feature-placeholder"></div>';
+			endif;
 			the_post_thumbnail( 'femfreq-feature' );
 		else :
 			echo '<div class="femfreq-feature-placeholder"></div>';
