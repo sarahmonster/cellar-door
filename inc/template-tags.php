@@ -51,16 +51,6 @@ function femfreq_entry_header() {
 			echo '<span class="cat-links">' . $categories_list . '</span>'; // WPCS: XSS OK.
 		}
 	}
-
-	edit_post_link(
-		sprintf(
-			/* translators: %s: Name of current post */
-			esc_html__( 'Edit %s', 'femfreq' ),
-			the_title( '<span class="screen-reader-text">"', '"</span>', false )
-		),
-		'<span class="edit-link">',
-		'</span>'
-	);
 }
 endif;
 

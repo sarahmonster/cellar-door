@@ -1095,7 +1095,9 @@ li.focus > .children {
 	max-width: 750px;
 }
 
-.entry-meta {
+.entry-meta,
+.entry-footer .tags-links,
+.entry-footer .edit-link {
 	color: #969696;
 	font-family: soleil, Arial, sans-serif;
 	font-size: 13px;
@@ -1104,20 +1106,34 @@ li.focus > .children {
 	margin-bottom: 10px;
 	text-transform: uppercase;
 }
-.entry-meta a {
+.entry-meta a,
+.entry-footer .tags-links a,
+.entry-footer .edit-link a {
 	color: #969696;
 	text-decoration: none;
 }
-.entry-meta a:hover {
+.entry-meta a:hover,
+.entry-footer .tags-links a:hover,
+.entry-footer .edit-link a:hover {
 	color: #696969;
 }
-.entry-meta span::after {
+.entry-meta span::after,
+.entry-footer .tags-links span::after,
+.entry-footer .edit-link span::after {
 	content: '\00b7';
 	display: inline-block;
 	margin: 0 5px;
 }
-.entry-meta span:last-of-type::after {
+.entry-meta span:last-of-type::after,
+.entry-footer .tags-links span:last-of-type::after,
+.entry-footer .edit-link span:last-of-type::after {
 	display: none;
+}
+
+.entry-footer .tags-links::after {
+	content: '\00b7';
+	display: inline-block;
+	margin: 0 5px;
 }
 
 .single .entry-title,
