@@ -20,7 +20,7 @@ object {
 	@include tablet {
 		margin-left: -$size__site-overhang;
 		margin-right: -$size__site-overhang;
-		max-width: calc(100% + (#{$size__site-overhang} * 2))
+		max-width: calc(100% + #{($size__site-overhang * 2)})
 	}
 }
 
