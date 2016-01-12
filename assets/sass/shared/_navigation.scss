@@ -76,10 +76,9 @@ a {
 		text-decoration: none;
 
 		.icon-arrow {
-			fill: $color__pink-light;
+			fill: $color__off-white;
 			height: 80px;
 			margin: 0 -10px;
-			opacity: 0.125;
 			width: 80px;
 		}
 
@@ -97,6 +96,10 @@ a {
 
 		&:hover {
 			color: $color__purple;
+
+			.icon-arrow {
+				fill: $color__grey;
+			}
 		}
 	}
 

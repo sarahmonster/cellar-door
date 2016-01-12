@@ -633,10 +633,9 @@ a:active {
 .post-navigation .nav-next a .icon-arrow {
 	height: 80px;
 	margin: 0 -10px;
-	opacity: 0.125;
 	width: 80px; 
 
-	fill: #f5dfdf;
+	fill: #efefef;
 }
 .comment-navigation .nav-previous a span,
 .comment-navigation .nav-next a span,
@@ -662,6 +661,14 @@ a:active {
 .post-navigation .nav-previous a:hover,
 .post-navigation .nav-next a:hover {
 	color: #9961bb;
+}
+.comment-navigation .nav-previous a:hover .icon-arrow,
+.comment-navigation .nav-next a:hover .icon-arrow,
+.posts-navigation .nav-previous a:hover .icon-arrow,
+.posts-navigation .nav-next a:hover .icon-arrow,
+.post-navigation .nav-previous a:hover .icon-arrow,
+.post-navigation .nav-next a:hover .icon-arrow {
+	fill: #969696;
 }
 
 .comment-navigation .nav-previous,
