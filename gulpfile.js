@@ -13,6 +13,7 @@ var cache = require( 'gulp-cache' );
 var sourcemaps = require( 'gulp-sourcemaps' );
 var csscomb = require( 'gulp-csscomb' );
 var livereload = require( 'gulp-livereload' );
+var svgsprite = require( 'gulp-svg-sprite' );
 
 // Styles tasks
 gulp.task( 'styles', function() {
@@ -52,6 +53,24 @@ gulp.task( 'images', function() {
     //.pipe( notify( { message: 'Images task complete' } ) );
 });
 
+// Create a CSS sprite of all our icons
+svgconfig       = {
+	"mode": {
+		"symbol": {
+			"dest": ".",
+			"prefix": "icon-",
+			"sprite": "icons.svg",
+			"inline": false
+		}
+	}
+};
+
+gulp.task( 'sprite', function() {
+	return gulp.src( 'assets/svg/icons/*.svg' )
+	.pipe( svgsprite( svgconfig ) )
+	.pipe( gulp.dest( 'assets/svg' ) );
+} );
+
 // Watch files for changes
 gulp.task( 'watch', function() {
 	livereload.listen();
@@ -61,4 +80,4 @@ gulp.task( 'watch', function() {
 });
 
 // Default Task
-gulp.task( 'default', ['styles', 'scripts', 'images', 'watch'] );
+gulp.task( 'default', ['styles', 'scripts', 'images', 'sprite', 'watch'] );
