@@ -613,19 +613,97 @@ a:active {
 	overflow: hidden;
 }
 
+.comment-navigation .nav-previous a,
+.comment-navigation .nav-next a,
+.posts-navigation .nav-previous a,
+.posts-navigation .nav-next a,
+.post-navigation .nav-previous a,
+.post-navigation .nav-next a {
+	color: #f20079;
+	display: block;
+	font-style: italic;
+	padding: 16px 0;
+	text-decoration: none;
+}
+.comment-navigation .nav-previous a .icon-arrow,
+.comment-navigation .nav-next a .icon-arrow,
+.posts-navigation .nav-previous a .icon-arrow,
+.posts-navigation .nav-next a .icon-arrow,
+.post-navigation .nav-previous a .icon-arrow,
+.post-navigation .nav-next a .icon-arrow {
+	height: 80px;
+	margin: 0 -10px;
+	opacity: 0.125;
+	width: 80px; 
+
+	fill: #f5dfdf;
+}
+.comment-navigation .nav-previous a span,
+.comment-navigation .nav-next a span,
+.posts-navigation .nav-previous a span,
+.posts-navigation .nav-next a span,
+.post-navigation .nav-previous a span,
+.post-navigation .nav-next a span {
+	color: #969696;
+	display: block;
+	font-family: soleil, Arial, sans-serif;
+	font-size: 15px;
+	font-size: 1.5rem;
+	font-style: normal;
+	font-weight: bold;
+	letter-spacing: 1px;
+	padding-top: 15px;
+	text-transform: uppercase;
+}
+.comment-navigation .nav-previous a:hover,
+.comment-navigation .nav-next a:hover,
+.posts-navigation .nav-previous a:hover,
+.posts-navigation .nav-next a:hover,
+.post-navigation .nav-previous a:hover,
+.post-navigation .nav-next a:hover {
+	color: #9961bb;
+}
+
 .comment-navigation .nav-previous,
 .posts-navigation .nav-previous,
 .post-navigation .nav-previous {
+	text-align: left;
+}
+.comment-navigation .nav-previous .icon-arrow,
+.posts-navigation .nav-previous .icon-arrow,
+.post-navigation .nav-previous .icon-arrow {
 	float: left;
-	width: 50%;
 }
 
 .comment-navigation .nav-next,
 .posts-navigation .nav-next,
 .post-navigation .nav-next {
-	float: right;
 	text-align: right;
-	width: 50%;
+}
+.comment-navigation .nav-next .icon-arrow,
+.posts-navigation .nav-next .icon-arrow,
+.post-navigation .nav-next .icon-arrow {
+	float: right;
+	-webkit-transform: rotate(180deg);
+	    -ms-transform: rotate(180deg);
+	        transform: rotate(180deg);
+}
+
+@media (min-width: 768px) {
+	.comment-navigation .nav-previous,
+	.posts-navigation .nav-previous,
+	.post-navigation .nav-previous {
+		float: left;
+		text-align: left;
+		width: 50%;
+	}
+	.comment-navigation .nav-next,
+	.posts-navigation .nav-next,
+	.post-navigation .nav-next {
+		float: right;
+		text-align: right;
+		width: 50%;
+	}
 }
 
 /*--------------------------------------------------------------

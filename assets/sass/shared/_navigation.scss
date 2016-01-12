@@ -67,14 +67,70 @@ a {
 		overflow: hidden;
 	}
 
-	.nav-previous {
-		float: left;
-		width: 50%;
+	.nav-previous a,
+	.nav-next a {
+		color: $color__pink;
+		font-style: italic;
+		display: block;
+		padding: $size__site-gutter/2 0;
+		text-decoration: none;
+
+		.icon-arrow {
+			fill: $color__pink-light;
+			height: 80px;
+			margin: 0 -10px;
+			opacity: 0.125;
+			width: 80px;
+		}
+
+		span {
+			color: $color__grey;
+			display: block;
+			font-family: $font__sans;
+			font-style: normal;
+			font-weight: bold;
+			@include font-size(1.5);
+			letter-spacing: 1px;
+			padding-top: 15px;
+			text-transform: uppercase;
+		}
+
+		&:hover {
+			color: $color__purple;
+		}
 	}
 
-	.nav-next {
-		float: right;
-		text-align: right;
-		width: 50%;
+	& .nav-previous {
+		text-align: left;
+
+		.icon-arrow {
+			float: left;
+		}
 	}
+
+	& .nav-next {
+		text-align: right;
+
+		.icon-arrow {
+			float: right;
+			transform: rotate(180deg);
+		}
+	}
+
+	// On tablets and larger, sit navigation side by side
+	@include tablet {
+		& .nav-previous {
+			float: left;
+			text-align: left;
+			width: 50%;
+		}
+
+		& .nav-next {
+			float: right;
+			text-align: right;
+			width: 50%;
+		}
+	} // tablet
+
+
 }
