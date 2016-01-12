@@ -13,7 +13,9 @@ var cache = require( 'gulp-cache' );
 var sourcemaps = require( 'gulp-sourcemaps' );
 var csscomb = require( 'gulp-csscomb' );
 var livereload = require( 'gulp-livereload' );
-var svgsprite = require( 'gulp-svg-sprite' );
+var svgmin = require( 'gulp-svgmin' );
+var cheerio = require( 'gulp-cheerio' );
+var svgstore = require( 'gulp-svgstore' );
 
 // Styles tasks
 gulp.task( 'styles', function() {
@@ -41,35 +43,35 @@ gulp.task( 'scripts', function() {
 
 // Images
 gulp.task( 'images', function() {
-  return gulp.src( 'assets/images/*' )
-    .pipe( cache( imagemin( {
-		optimizationLevel: 3,
-		progressive: true,
-		interlaced: true,
-		svgoPlugins: [{ removeViewBox: false }],
-		use: [pngquant()]
-	} ) ) )
-    .pipe( gulp.dest( 'assets/images' ) );
-    //.pipe( notify( { message: 'Images task complete' } ) );
+	return gulp.src( 'assets/images/*' )
+		.pipe( cache( imagemin( {
+			optimizationLevel: 3,
+			progressive: true,
+			interlaced: true,
+			svgoPlugins: [{ removeViewBox: false }],
+			use: [pngquant()]
+		} ) ) )
+		.pipe( gulp.dest( 'assets/images' ) );
+		//.pipe( notify( { message: 'Images task complete' } ) );
 });
 
-// Create a CSS sprite of all our icons
-svgconfig       = {
-	"mode": {
-		"symbol": {
-			"dest": ".",
-			"prefix": "icon-",
-			"sprite": "icons.svg",
-			"inline": false
-		}
-	}
-};
-
-gulp.task( 'sprite', function() {
+// Minify our icons and make them into an inline sprite
+gulp.task( 'icons', function() {
 	return gulp.src( 'assets/svg/icons/*.svg' )
-	.pipe( svgsprite( svgconfig ) )
-	.pipe( gulp.dest( 'assets/svg' ) );
-} );
+		.pipe( svgmin() )
+		.pipe( svgstore( {
+			fileName: 'icons.svg',
+			inlineSvg: true
+		} ) )
+		.pipe( cheerio( {
+		run: function( $, file ) {
+			$( 'svg' ).addClass( 'hide' );
+			$( '[fill]' ).removeAttr( 'fill' );
+		},
+		parserOptions: { xmlMode: true }
+		}))
+		.pipe( gulp.dest( 'assets/svg' ) );
+});
 
 // Watch files for changes
 gulp.task( 'watch', function() {
@@ -77,7 +79,8 @@ gulp.task( 'watch', function() {
 	gulp.watch( 'assets/sass/**/*.scss', ['styles'] );
 	gulp.watch( 'assets/js/**/*.js', ['scripts'] );
 	gulp.watch( 'assets/images/*', ['images'] );
+	gulp.watch( 'assets/svg/icons/*', ['icons'] );
 });
 
 // Default Task
-gulp.task( 'default', ['styles', 'scripts', 'images', 'sprite', 'watch'] );
+gulp.task( 'default', ['styles', 'scripts', 'images', 'icons', 'watch'] );
