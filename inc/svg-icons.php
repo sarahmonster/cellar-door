@@ -56,3 +56,39 @@ function femfreq_get_icon( $name ) {
 function femfreq_icon( $name ) {
 	echo femfreq_get_icon( $name );
 }
+
+/*
+ * Filter our navigation menus to look for social media links.
+ * When we find a match, we'll hide the text and instead show an SVG icon.
+ */
+function femfreq_social_menu( $items ) {
+	foreach ( $items as $item ) :
+		$subject = $item->url;
+		$feed_pattern = '/\/feed\/?/i';
+		$mail_pattern = '/mailto/i';
+		$skype_pattern = '/skype/i';
+		$domain_pattern = '/([a-z]*)(\.com|\.org|\.io|\.tv|\.co)/i';
+		$domains = array( 'codepen', 'digg', 'dribbble', 'dropbox', 'facebook', 'flickr', 'foursquare', 'github', 'plus.google', 'instagram', 'linkedin', 'path', 'pinterest', 'getpocket', 'polldaddy', 'reddit', 'spotify', 'stumbleupon', 'tumblr', 'twitch', 'twitter', 'vimeo', 'vine', 'wordpress', 'youtube' );
+
+		// Match feed URLs
+		if ( preg_match( $feed_pattern, $subject, $matches ) ) :
+				$icon = femfreq_get_icon( 'feed' );
+		// Match a mailto link
+		elseif ( preg_match( $mail_pattern, $subject, $matches ) ) :
+				$icon = femfreq_get_icon( 'mail' );
+		// Match a Skype link
+		elseif ( preg_match( $skype_pattern, $subject, $matches ) ) :
+				$icon = femfreq_get_icon( 'skype' );
+		// Match various domains
+		elseif ( preg_match( $domain_pattern, $subject, $matches ) && in_array( $matches[1], $domains ) ) :
+			$icon = femfreq_get_icon( $matches[1] );
+		endif;
+
+		// If we've found an icon, hide the text and inject an SVG
+		if ( $icon ) {
+			$item->title = $icon . '<span class="screen-reader-text">' . $item->title . '</span>';
+		}
+		endforeach;
+return $items;
+}
+add_filter( 'wp_nav_menu_objects', 'femfreq_social_menu' );

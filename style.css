@@ -1014,6 +1014,45 @@ li.focus > .children {
 	text-decoration: none;
 }
 
+/* Social menu */
+#footer-1 .widget_nav_menu {
+	border-top: 0;
+}
+#footer-1 .widget_nav_menu .widget-title {
+	display: none;
+}
+
+#menu-social-menu li {
+	display: inline-block;
+}
+
+#menu-social-menu a {
+	background: #f20079;
+	border: 3px solid #f5dfdf;
+	border-radius: 50%;
+	display: inline-block;
+	line-height: 1;
+	margin-right: 4px;
+	padding: 4px;
+}
+
+#menu-social-menu svg {
+	height: 30px;
+	transition: fill 0.1s ease-in 0;
+	width: 30px; 
+
+	fill: #f5dfdf;
+	speak: none;
+}
+
+#menu-social-menu a:hover {
+	background: #f5dfdf;
+	border-color: #9961bb;
+}
+#menu-social-menu a:hover svg {
+	fill: #9961bb;
+}
+
 /*--------------------------------------------------------------
 # Content
 --------------------------------------------------------------*/

@@ -38,3 +38,45 @@
 		}
 	}
 }
+
+/* Social menu */
+#footer-1 .widget_nav_menu {
+	border-top: 0;
+
+	.widget-title {
+		display: none;
+	}
+}
+#menu-social-menu {
+
+	li {
+		display: inline-block;
+	}
+
+	a {
+		background: $color__pink;
+		border: 3px solid $color__pink-light;
+		border-radius: 50%;
+		display: inline-block;
+		line-height: 1;
+		margin-right: 4px;
+		padding: 4px;
+	}
+
+	svg {
+		fill: $color__pink-light;
+		height: 30px;
+		speak: none;
+		transition: fill .1s ease-in 0;
+		width: 30px;
+	}
+
+	a:hover {
+		background: $color__pink-light;
+		border-color: $color__purple;
+
+		svg {
+			fill: $color__purple;
+		}
+	}
+}
