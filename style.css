@@ -338,12 +338,12 @@ blockquote {
 }
 
 .entry-content blockquote.alignleft {
-	margin-left: -40px;
+	margin-left: -32px;
 	max-width: 400px;
 }
 
 .entry-content blockquote.alignright {
-	margin-right: -40px;
+	margin-right: -32px;
 	max-width: 400px;
 }
 
@@ -723,11 +723,11 @@ a:active {
 .site {
 	margin: 0 auto;
 	max-width: 1200px;
-	padding: 0 10px;
+	padding: 0 8px;
 }
 
 .site-content {
-	padding: 10px;
+	padding: 8px;
 }
 
 @media (max-width: 767px) {
@@ -743,8 +743,8 @@ a:active {
 	.site-branding {
 		box-sizing: border-box;
 		display: inline-block;
-		padding-left: 40px;
-		padding-right: 40px; 
+		padding-left: 32px;
+		padding-right: 32px; 
 		width: 100%;
 	}
 	.site-branding:first-child {
@@ -766,8 +766,8 @@ a:active {
 	#site-navigation {
 		box-sizing: border-box;
 		display: inline-block;
-		padding-left: 40px;
-		padding-right: 40px;
+		padding-left: 32px;
+		padding-right: 32px;
 		position: absolute;
 		top: 50%;
 		-webkit-transform: translateY(-50%);
@@ -792,16 +792,16 @@ a:active {
 
 @media (min-width: 768px) {
 	#site-navigation .menu {
-		padding: 20px 0;
+		padding: 16px 0;
 	}
 	#site-navigation li {
-		margin-right: 20px;
+		margin-right: 16px;
 	}
 }
 
 #masthead {
-	margin-bottom: 20px; 
-	margin-top: 20px;
+	margin-bottom: 16px; 
+	margin-top: 16px;
 }
 
 /* Top-level nav */
@@ -880,7 +880,7 @@ li.focus > .children {
 .site-footer {
 	background: #3a3a3a;
 	color: #efefef;
-	padding: 40px 0;
+	padding: 32px 0;
 	width: 100%;
 }
 .site-footer .footer-widget-area {
@@ -890,8 +890,8 @@ li.focus > .children {
 .site-footer .widget-area {
 	box-sizing: border-box;
 	display: inline-block;
-	padding-left: 40px;
-	padding-right: 40px; 
+	padding-left: 32px;
+	padding-right: 32px; 
 	width: 100%;
 }
 .site-footer .widget-area:first-child {
@@ -920,7 +920,7 @@ li.focus > .children {
 	font-size: 11px;
 	font-size: 1.1rem;
 	letter-spacing: 1px;
-	margin-top: 20px;
+	margin-top: 16px;
 	text-align: center; 
 	text-transform: uppercase;
 }
@@ -958,7 +958,7 @@ li.focus > .children {
 	.single:not(.single-format-video) .content-container {
 		box-sizing: border-box;
 		display: inline-block;
-		padding-left: 40px;
+		padding-left: 32px;
 		padding-right: 0; 
 		width: 100%;
 	}
@@ -983,7 +983,7 @@ li.focus > .children {
 		display: inline-block;
 		margin-top: 1.5em; 
 		padding-left: 0;
-		padding-right: 40px;
+		padding-right: 32px;
 		width: 100%;
 	}
 	.single:not(.single-format-video) .widget-area:first-child {
@@ -1024,9 +1024,9 @@ li.focus > .children {
 	.single:not(.single-format-video) .femfreq-feature-placeholder {
 		box-sizing: border-box;
 		display: inline-block;
-		margin: 40px 0;
-		padding-left: 40px;
-		padding-right: 40px;
+		margin: 32px 0;
+		padding-left: 32px;
+		padding-right: 32px;
 		padding-right: 0; 
 		width: 100%;
 	}
@@ -1055,10 +1055,10 @@ li.focus > .children {
 	.single:not(.single-format-video) .entry-header {
 		box-sizing: border-box;
 		display: inline-block;
-		margin: 80px 0 0;
-		padding-left: 40px;
-		padding-left: 20px; 
-		padding-right: 40px;
+		margin: 64px 0 0;
+		padding-left: 32px;
+		padding-left: 16px; 
+		padding-right: 32px;
 		width: 100%;
 	}
 	.single:not(.single-format-video) .entry-header:first-child {
@@ -1079,7 +1079,7 @@ li.focus > .children {
 @media (min-width: 768px) {
 	.single:not(.single-format-video) .entry-title,
 	.single:not(.single-format-video) .page-title {
-		margin-left: -40px;
+		margin-left: -32px;
 	}
 }
 
@@ -1103,7 +1103,7 @@ li.focus > .children {
 	font-size: 13px;
 	font-size: 1.3rem;
 	letter-spacing: 1px;
-	margin-bottom: 10px;
+	margin-bottom: 8px;
 	text-transform: uppercase;
 }
 .entry-meta a,
@@ -1165,7 +1165,7 @@ li.focus > .children {
 @media (max-width: 767px) {
 	.author {
 		float: left;
-		margin-right: 20px;
+		margin-right: 16px;
 		width: 25%;
 	}
 	.author .author-name,
@@ -1179,14 +1179,14 @@ li.focus > .children {
 		border-top: 2px solid #efefef;
 		content: '';
 		display: table;
-		margin: 20px 0;
-		padding-top: 20px;
+		margin: 16px 0;
+		padding-top: 16px;
 		table-layout: fixed;
 		width: 100%;
 	}
 	.author .avatar {
 		float: left;
-		margin: 0 20px 20px 0;
+		margin: 0 16px 16px 0;
 		width: 100px;
 	}
 	.author .author-name {
@@ -1215,7 +1215,7 @@ li.focus > .children {
 	border-top: 2px solid #696969;
 	color: #696969;
 	font-style: italic;
-	padding: 20px;
+	padding: 16px;
 }
 .transcript h1,
 .transcript h2,
@@ -1240,8 +1240,8 @@ li.focus > .children {
 	.resource-list {
 		box-sizing: border-box;
 		display: inline-block;
-		padding-left: 40px;
-		padding-right: 40px; 
+		padding-left: 32px;
+		padding-right: 32px; 
 		width: 100%;
 	}
 	.resource-list:first-child {
@@ -1270,9 +1270,9 @@ li.focus > .children {
 .search article {
 	box-sizing: border-box;
 	display: inline-block;
-	padding-bottom: 40px; 
-	padding-left: 20px;
-	padding-right: 20px;
+	padding-bottom: 32px; 
+	padding-left: 16px;
+	padding-right: 16px;
 	width: 100%;
 }
 .archive article:first-child,
@@ -1309,7 +1309,7 @@ li.focus > .children {
 .search article .entry-wrapper {
 	background: #fefefe;
 	box-shadow: 0 2px 4px 0 rgba(150, 150, 150, 0.1);
-	padding: 10px;
+	padding: 8px;
 }
 .archive article .entry-header,
 .blog article .entry-header,
@@ -1373,7 +1373,7 @@ li.focus > .children {
 	left: 0;
 	letter-spacing: 0;
 	line-height: 1.2;
-	margin: 10px;
+	margin: 8px;
 	position: absolute;
 	text-transform: none;
 	z-index: 2;
@@ -1390,7 +1390,7 @@ li.focus > .children {
 	font-size: 1.8rem;
 	font-style: normal;
 	line-height: 1.4;
-	margin: 10px 0;
+	margin: 8px 0;
 }
 .archive article .entry-summary p,
 .blog article .entry-summary p,
@@ -1416,7 +1416,7 @@ li.focus > .children {
 
 /* Search widget */
 .widget_search .search-form .search-field {
-	margin-top: 20px;
+	margin-top: 16px;
 	width: 100%;
 }
 
@@ -1623,13 +1623,13 @@ object {
 .entry-content img {
 	background: #fefefe;
 	box-shadow: 0 2px 4px 0 rgba(150, 150, 150, 0.1);
-	padding: 10px;
+	padding: 8px;
 }
 @media (min-width: 768px) {
 	.entry-content img {
-		margin-left: -40px;
-		margin-right: -40px;
-		max-width: calc(100% + 80px);
+		margin-left: -32px;
+		margin-right: -32px;
+		max-width: calc(100% + 64px);
 	}
 }
 
