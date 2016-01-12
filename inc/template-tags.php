@@ -28,6 +28,17 @@ function femfreq_entry_header() {
 
 	$posted_on = '<a href="' . esc_url( get_permalink() ) . '" rel="bookmark">' . $time_string . '</a>';
 
+	echo '<span class="posted-on">' . $posted_on . '</span>'; // WPCS: XSS OK.
+
+	// Hide category on pages.
+	if ( 'post' === get_post_type() ) {
+		/* translators: used between list items, there is a space after the comma */
+		$categories_list = get_the_category_list( esc_html__( ', ', 'femfreq' ) );
+		if ( $categories_list && femfreq_categorized_blog() ) {
+			echo '<span class="cat-links">' . $categories_list . '</span>'; // WPCS: XSS OK.
+		}
+	}
+
 	// Get a byline for all post author(s)
 	if ( function_exists( 'coauthors_posts_links' ) ) :
 		$coauthors = get_coauthors();
@@ -41,16 +52,8 @@ function femfreq_entry_header() {
 		$byline = femfreq_get_author_link( get_the_author_meta( 'ID' ), get_the_author_meta( 'display_name' ) );
 	endif;
 
-	echo '<span class="posted-on">' . $posted_on . '</span> by <span class="byline">' . $byline . '</span>'; // WPCS: XSS OK.
+	echo '<span class="byline">by ' . $byline . '</span>'; // WPCS: XSS OK.
 
-	// Hide category on pages.
-	if ( 'post' === get_post_type() ) {
-		/* translators: used between list items, there is a space after the comma */
-		$categories_list = get_the_category_list( esc_html__( ', ', 'femfreq' ) );
-		if ( $categories_list && femfreq_categorized_blog() ) {
-			echo '<span class="cat-links">' . $categories_list . '</span>'; // WPCS: XSS OK.
-		}
-	}
 }
 endif;
 

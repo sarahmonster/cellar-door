@@ -93,7 +93,8 @@
 	max-width: $size__site-content;
 }
 
-.entry-meta,
+.entry-meta .posted-on,
+.entry-meta .cat-links,
 .entry-footer .tags-links,
 .entry-footer .edit-link {
 	color: $color__grey;
@@ -111,22 +112,24 @@
 			color: $color__mid-grey;
 		}
 	}
-
-	span::after {
-		display: inline-block;
-		content: '\00b7';
-		margin: 0 5px;
-	}
-
-	span:last-of-type::after {
-		display: none;
-	}
 }
 
+.entry-meta .posted-on::after,
 .entry-footer .tags-links::after {
 	display: inline-block;
 	content: '\00b7';
-	margin: 0 5px;	
+	margin: 0 5px;
+}
+
+.byline {
+	display: block;
+	@include font-size(1.6);
+	font-style: italic;
+	margin-bottom: $size__site-gutter/4;
+
+	a {
+		font-style: normal;
+	}
 }
 
 .single .entry-title,
