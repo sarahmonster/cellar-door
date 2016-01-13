@@ -23,7 +23,7 @@
 function femfreq_inject_sprite() {
 	include_once( get_template_directory() .'/assets/svg/icons.svg' );
 }
-//add_filter( 'wp_footer' , 'femfreq_inject_sprite' );
+add_filter( 'wp_footer' , 'femfreq_inject_sprite' );
 
 /*
  * Inject some header code to make IE play nice.
@@ -44,8 +44,9 @@ add_filter( 'wp_head' , 'femfreq_ie_shim' );
  */
 function femfreq_get_icon( $name ) {
 	$return = '<svg class="femfreq-icon icon-' . $name . '">';
-		$return .= '<use xlink:href="' . esc_url( get_template_directory_uri() ) . '/assets/svg/icons.svg#' . $name . '" />';
-		$return .= '</svg>';
+	//$return .= '<use xlink:href="' . esc_url( get_template_directory_uri() ) . '/assets/svg/icons.svg#' . $name . '" />';
+	$return .= '<use xlink:href="#' . $name . '" />';
+	$return .= '</svg>';
  return $return;
 }
 
@@ -68,7 +69,7 @@ function femfreq_social_menu( $items ) {
 		$mail_pattern = '/mailto/i';
 		$skype_pattern = '/skype/i';
 		$domain_pattern = '/([a-z]*)(\.com|\.org|\.io|\.tv|\.co)/i';
-		$domains = array( 'codepen', 'digg', 'dribbble', 'dropbox', 'facebook', 'flickr', 'foursquare', 'github', 'plus.google', 'instagram', 'linkedin', 'path', 'pinterest', 'getpocket', 'polldaddy', 'reddit', 'spotify', 'stumbleupon', 'tumblr', 'twitch', 'twitter', 'vimeo', 'vine', 'wordpress', 'youtube' );
+		$domains = array( 'codepen', 'digg', 'dribbble', 'dropbox', 'facebook', 'flickr', 'foursquare', 'github', 'plus.google', 'instagram', 'linkedin', 'path', 'pinterest', 'getpocket', 'polldaddy', 'reddit', 'spotify', 'stumbleupon', 'tumblr', 'twitch', 'twitter', 'vimeo', 'vine', 'youtube' );
 
 		// Match feed URLs
 		if ( preg_match( $feed_pattern, $subject, $matches ) ) :

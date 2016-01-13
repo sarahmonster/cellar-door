@@ -15,3 +15,9 @@
 	@include center-block;
 	text-align: center;
 }
+
+.hide {
+	display: none;
+	height: 0;
+	width: 0;
+}
