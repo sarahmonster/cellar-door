@@ -192,6 +192,11 @@ require get_template_directory() . '/inc/customizer.php';
 require get_template_directory() . '/inc/jetpack.php';
 
 /**
- * Load SVG icon functionality.
+ * SVG icon functionality.
  */
 require get_template_directory() . '/inc/svg-icons.php';
+
+/**
+ * Shortcode functionality, via Shortcake plugin.
+ */
+require get_template_directory() . '/inc/shortcodes.php';
