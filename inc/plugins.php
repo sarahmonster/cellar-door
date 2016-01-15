@@ -13,3 +13,6 @@ wpcom_vip_load_plugin( 'term-management-tools' );
 
 // For more precise excerpts.
 wpcom_vip_load_plugin( 'advanced-excerpt' );
+
+// For custom shortcodes.
+wpcom_vip_load_plugin( 'shortcode-ui' );
