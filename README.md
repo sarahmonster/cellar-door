@@ -43,6 +43,10 @@ The title will appear as the header for the list, and can be skipped if you don'
 
 Shortcodes can also be added automatically using the "Add Media" button and selecting the shortcode desired from the "Insert Post Element" tab.
 
+### Testimonials
+
+Support for [testimonials](https://en.support.wordpress.com/testimonials/) is built into the theme. Testimonials can be added via the [Testimonials page](http://ffreq.wordpress.com/wp-admin/edit.php?post_type=jetpack-testimonial) in your admin panel. They can then be added to any post or page using the [testimonial shortcode](https://en.support.wordpress.com/testimonials-shortcode/). 
+
 ### Additional functionality
 
 Additional functionality can be added to your site by taking advantage of [the plugins available on VIP.](https://vip.wordpress.com/plugins/) You can activate a plugin from your admin panel.

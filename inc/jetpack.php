@@ -25,6 +25,9 @@ function femfreq_jetpack_setup() {
 	// Add theme support for Responsive Videos.
 	add_theme_support( 'jetpack-responsive-videos' );
 
+	// Add theme support for Testimonials.
+	add_theme_support( 'jetpack-testimonial' );
+
 	// Add theme support for Site Logo
 	add_image_size( 'femfreq-logo', 400, 400 );
 	add_theme_support( 'site-logo', array( 'size' => 'femfreq-logo' ) );
