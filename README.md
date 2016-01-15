@@ -15,6 +15,34 @@ Welcome to your new site! If you're new to WordPress, [here is a good place to s
 
 Posts should have both a [Featured Image](https://en.support.wordpress.com/featured-images/) and an [Excerpt](https://en.support.wordpress.com/excerpts/) set in order to display well on archive pages.
 
+### Formatting transcripts and resource lists
+
+Transcript and resource lists require extra formatting. To make this as easy as possible, your theme is using custom [shortcodes](https://en.support.wordpress.com/shortcodes/).
+
+Transcripts can be added by using the following code:
+
+```
+[transcript]
+Here is the text for your transcript.
+[/transcript]
+```
+
+The "transcript" title will automatically be prepended to the transcript, so there's no need to add it yourself.
+
+To add a resource list, use this code:
+
+```
+[resourcelist title="Recommended Reading"]
+- List item one
+- List item two
+- List item three
+[/resourcelist]
+```
+
+The title will appear as the header for the list, and can be skipped if you don't need a title.
+
+Shortcodes can also be added automatically using the "Add Media" button and selecting the shortcode desired from the "Insert Post Element" tab.
+
 ### Additional functionality
 
 Additional functionality can be added to your site by taking advantage of [the plugins available on VIP.](https://vip.wordpress.com/plugins/) You can activate a plugin from your admin panel.
