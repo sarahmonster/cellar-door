@@ -2,7 +2,32 @@
 
 A custom theme developed for FeministFrequency.com, hosted on WordPress.com VIP.
 
-## Getting Started
+This documentation is split into two sections:
+
+* [User's Guide](#users-guide)
+* [Developer's Guide](#developers-guide)
+
+## User's Guide
+
+Welcome to your new site! If you're new to WordPress, [here is a good place to start](https://learn.wordpress.com/). [WordPress.com support](https://en.support.wordpress.com/) is a great place if you have a specific question.
+
+### Tips for formatting posts
+
+Posts should have both a [Featured Image](https://en.support.wordpress.com/featured-images/) and an [Excerpt](https://en.support.wordpress.com/excerpts/) set in order to display well on archive pages.
+
+### Additional functionality
+
+Additional functionality can be added to your site by taking advantage of [the plugins available on VIP.](https://vip.wordpress.com/plugins/) You can activate a plugin from your admin panel.
+
+Currently, we're using the following plugins:
+
+* [Co-Authors Plus](https://vip.wordpress.com/plugins/co-authors-plus/) to assign multiple authors to a post.
+* [Term Management Tools](https://vip.wordpress.com/plugins/term-management-tools/) for better categorization tools.
+* [Advanced Excerpt](https://vip.wordpress.com/plugins/advanced-excerpt/) for smarter automatic post excerpts.
+* [Shortcake](https://vip.wordpress.com/plugins/shortcake/) for custom shortcodes and a UI for implementation.
+
+
+## Developer's Guide
 
 To get started, check out the repository to your local machine. It's easiest to test using [VIP Quickstart](https://vip.wordpress.com/documentation/quickstart/) since this will closely mirror the environment used for VIP. On a different environment, you'd probably need to remove the VIP init functions from `functions.php` to avoid PHP errors. Plugins would need to be installed manually.
 
@@ -45,14 +70,14 @@ Run `kill -9 <PID>` to terminate the process.
 
 Breakpoints are defined in `assets/sass/modules/_breakpoints.scss` and then used as a simple mixin within the relevant file:
 
-```
+```css
 */ Increase width to 50% on tablet sizes */
 @include tablet {
 	width: 50%;
 }
 ```
 
-### SVG Icon Sprite
+### SVG icon system
 
 We're using a custom icon set, relying on an SVG sprite method. To add a new icon, create an SVG using your editor of choice and save it to the `assets/svg/icons` directory.
 
@@ -64,17 +89,12 @@ This sprite is also used to build social navigation menus. It will automatically
 
 For more details, please read the comments in `inc/svg-icons.php`
 
-## Additional functionality
+### Plugins
 
 Additional functionality is primarily implemented via plugins. [These are the plugins available on VIP.](https://vip.wordpress.com/plugins/)
-Plugins are loaded and configured in the `inc/plugins.php` file. Currently, the theme is using:
+Plugins used by the theme are loaded and configured in the `inc/plugins.php` file. For more infomation on plugins used, check [the plugin section of the user guide](#additional-functionality).
 
-* [Co-Authors Plus](https://vip.wordpress.com/plugins/co-authors-plus/) to assign multiple authors to a post.
-* [Term Management Tools](https://vip.wordpress.com/plugins/term-management-tools/) for better categorization tools.
-* [Advanced Excerpt](https://vip.wordpress.com/plugins/advanced-excerpt/) for smarter automatic post excerpts.
-* [Shortcake](https://vip.wordpress.com/plugins/shortcake/) for custom shortcodes and a UI for implementation.
-
-## Additional Information
+## Additional information
 
 * Contributors: Automattic, Inc.
 * Tested up to: 4.4
