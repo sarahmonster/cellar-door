@@ -53,14 +53,13 @@
 	}
 }
 
-
 /* Arrange post headers */
 @include tablet {
 	.single:not(.single-format-video) {
 		.attachment-femfreq-feature,
 		.femfreq-feature-placeholder {
 			@include col(6, 12);
-			margin: $size__site-gutter 0;
+			margin-top: 10px;
 			padding-right: 0;
 		}
 
@@ -70,7 +69,6 @@
 
 		.entry-header {
 			@include col(6, 12);
-			margin: $size__site-gutter*2 0 0;
 			padding-left: $size__site-gutter/2;
 		}
 
