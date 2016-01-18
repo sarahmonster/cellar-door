@@ -146,6 +146,10 @@
 	color: $color__grey;
 	@include font-size(2.4);
 	font-style: italic;
+
+	p {
+		margin: $size__site-gutter/2 0 0;
+	}
 }
 
 /* Author cards */

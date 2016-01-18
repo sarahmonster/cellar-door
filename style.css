@@ -1288,6 +1288,9 @@ li.focus > .children {
 	font-size: 2.4rem;
 	font-style: italic;
 }
+.entry-summary p {
+	margin: 16px 0 0;
+}
 
 /* Author cards */
 .author .avatar {
