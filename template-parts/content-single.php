@@ -37,10 +37,6 @@
 		?>
 	</header><!-- .entry-header -->
 
-	<?php if ( 'video' !== get_post_format() ) :
-		get_sidebar();
-	endif; ?>
-
 	<div class="content-container">
 
 		<div id="femfreq-sharing-container">
@@ -72,5 +68,9 @@
 		</footer><!-- .entry-footer -->
 
 	</div>
+
+	<?php if ( 'video' !== get_post_format() ) :
+		get_sidebar();
+	endif; ?>
 
 </article><!-- #post-## -->

@@ -24,11 +24,11 @@
 	// Sidebar is only present on individual blog posts
 	.single:not(.single-format-video) {
 		.content-container {
-			@include col(8, 12, $last: true);
+			@include col(8, 12, $first: true);
 		}
 
-		.widget-area {
-			@include col(4, 12, $first: true);
+		#secondary {
+			@include col(4, 12, $last: true, $push: 1);
 			margin-top: 1.5em;
 		}
 	}

@@ -1,6 +1,6 @@
 /* Adapted from http://thesassway.com/intermediate/simple-grid-mixins */
 
-@mixin col($col, $sum, $gap: $size__site-gutter, $align: top, $first: false, $last: false) {
+@mixin col($col, $sum, $gap: $size__site-gutter, $align: top, $first: false, $last: false, $push: false) {
 	display: inline-block;
 	width: 100%;
 	box-sizing: border-box;
@@ -20,4 +20,9 @@
 		width: percentage($col/$sum);
 		vertical-align: $align;
 	}
+
+	@if $push {
+		padding-left: calc(#{($gap))} + #{(percentage($push/$sum))});
+	}
+
 }

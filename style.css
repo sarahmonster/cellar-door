@@ -1088,8 +1088,8 @@ li.focus > .children {
 	.single:not(.single-format-video) .content-container {
 		box-sizing: border-box;
 		display: inline-block;
-		padding-left: 32px;
-		padding-right: 0; 
+		padding-left: 0;
+		padding-right: 32px; 
 		width: 100%;
 	}
 	.single:not(.single-format-video) .content-container:first-child {
@@ -1108,23 +1108,24 @@ li.focus > .children {
 }
 
 @media (min-width: 1024px) {
-	.single:not(.single-format-video) .widget-area {
+	.single:not(.single-format-video) #secondary {
 		box-sizing: border-box;
 		display: inline-block;
 		margin-top: 1.5em; 
-		padding-left: 0;
-		padding-right: 32px;
+		padding-left: 32px;
+		padding-left: calc(32px + 8.33333%);
+		padding-right: 0;
 		width: 100%;
 	}
-	.single:not(.single-format-video) .widget-area:first-child {
+	.single:not(.single-format-video) #secondary:first-child {
 		padding-left: 0;
 	}
-	.single:not(.single-format-video) .widget-area:last-child {
+	.single:not(.single-format-video) #secondary:last-child {
 		padding-right: 0;
 	}
 }
 @media (min-width: 1024px) and (min-width: 768px) {
-	.single:not(.single-format-video) .widget-area {
+	.single:not(.single-format-video) #secondary {
 		margin-right: -4px;
 		vertical-align: top; 
 		width: 33.33333%;
