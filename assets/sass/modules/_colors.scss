@@ -10,7 +10,7 @@ $color__purple: #9961bb;
 $color__purple-light: #cfb4df;
 $color__teal: #59bab6;
 
-$color__links: $color__purple;
+$color__links: lighten($color__mid-grey, 10%);
 $color__primary: $color__pink;
 $color__secondary: $color__teal;
 $color__tertiary: $color__charcoal;
