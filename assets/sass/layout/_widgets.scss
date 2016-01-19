@@ -12,6 +12,31 @@
 	}
 }
 
+/* Game information */
+#game-information {
+  background: $color__charcoal;
+  color: $color__off-white;
+  padding-left: $size__site-gutter/2;
+  padding-right: $size__site-gutter/2;
+  text-align: center;
+
+  dl {
+    text-align: center;
+  }
+
+  dt {
+    border-top: 1px solid transparentize($color__off-white, 0.8);
+    letter-spacing: 1px;
+    padding-top: $size__site-gutter/4;
+    text-transform: uppercase;
+  }
+
+  dd {
+    margin: 0;
+    padding-bottom: $size__site-gutter/4;
+  }
+}
+
 /* Search widget */
 .widget_search .search-form .search-field {
 	margin-top: $size__site-gutter/2;

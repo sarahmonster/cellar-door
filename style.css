@@ -1550,6 +1550,28 @@ li.focus > .children {
 	max-width: 100%;
 }
 
+/* Game information */
+#game-information {
+	background: #3a3a3a;
+	color: #efefef;
+	padding-left: 16px;
+	padding-right: 16px;
+	text-align: center;
+}
+#game-information dl {
+	text-align: center;
+}
+#game-information dt {
+	border-top: 1px solid rgba(239, 239, 239, 0.2);
+	letter-spacing: 1px;
+	padding-top: 8px;
+	text-transform: uppercase;
+}
+#game-information dd {
+	margin: 0;
+	padding-bottom: 8px;
+}
+
 /* Search widget */
 .widget_search .search-form .search-field {
 	margin-top: 16px;

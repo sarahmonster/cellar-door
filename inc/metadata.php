@@ -25,35 +25,38 @@ function femfreq_game_information( $id ) {
     $game_information = get_post_meta( $id, 'game_information' );
     if ( 0 < count( $game_information ) ) :
         $game = $game_information[0];
-
+        echo '<section id="game-information" class="widget">';
         echo '<h2 class="widget-title">';
         esc_html_e( 'Game information', 'femfreq' );
         echo '</h2>';
 
-        echo '<ul>';
+        echo '<dl>';
 
         if ( $game['date_published'] ) :
-            echo '<li>';
-            esc_html_e( 'Published: ', 'femfreq' );
+            echo '<dt>';
+            esc_html_e( 'Published', 'femfreq' );
+            echo '</dt><dd>';
             echo $game['date_published'];
-            echo '</li>';
+            echo '</dd>';
         endif;
 
         if ( $game['developer'] ) :
-            echo '<li>';
-            esc_html_e( 'Developer: ', 'femfreq' );
+            echo '<dt>';
+            esc_html_e( 'Developer', 'femfreq' );
+            echo '</dt><dd>';
             echo $game['developer'];
-            echo '</li>';
+            echo '</dd>';
         endif;
 
         if ( $game['publisher'] ) :
-            echo '<li>';
-            esc_html_e( 'Publisher: ', 'femfreq' );
+            echo '<dt>';
+            esc_html_e( 'Publisher', 'femfreq' );
+            echo '</dt><dd>';
             echo $game['publisher'];
-            echo '</li>';
+            echo '</dd>';
         endif;
 
-        echo '</ul>';
-
+        echo '</dl>';
+        echo '</section>';
     endif;
 }
