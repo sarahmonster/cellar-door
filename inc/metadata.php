@@ -6,7 +6,12 @@
  * @package Feminist_Frequency
  */
 
-add_action( 'fm_post_post', function() {
+ /**
+  * Use Fieldmanager plugin to set up a custom post meta box for game information.
+  *
+  * @link http://fieldmanager.org/
+  */
+function femfreq_set_up_game_information_meta() {
     $fm = new Fieldmanager_Group( array(
         'name' => 'game_information',
         'children' => array(
@@ -15,11 +20,14 @@ add_action( 'fm_post_post', function() {
             'publisher' => new Fieldmanager_Textfield( __( 'Publisher', 'femfreq' ) ),
         ),
     ) );
-    $fm->add_meta_box( __( 'Game Information', 'femfreq' ), 'post' );
-} );
+    $fm->add_meta_box( __( 'Game Information', 'femfreq' ), 'post', 'side', 'default' );
+}
+add_action( 'fm_post_post', 'femfreq_set_up_game_information_meta' );
 
 /**
- * Retrieve game information and display it.
+ * Retrieve game information and display it in a widget.
+ *
+ * @param int $id ID of the post for which you want to get meta information.
  */
 function femfreq_game_information( $id ) {
     $game_information = get_post_meta( $id, 'game_information' );
