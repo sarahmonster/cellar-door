@@ -1132,6 +1132,20 @@ li.focus > .children {
 	}
 }
 
+#femfreq-video-container {
+	position: relative;
+}
+#femfreq-video-container .jetpack-video-wrapper {
+	max-width: 794.667px;
+}
+#femfreq-video-container blockquote {
+	position: absolute;
+	right: 0;
+	text-align: center;
+	top: 50%;
+	width: 300px;
+}
+
 .content-container {
 	position: relative;
 }

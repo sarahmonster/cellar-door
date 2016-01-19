@@ -20,10 +20,13 @@
 		else :
 			echo '<div class="femfreq-feature-placeholder"></div>';
 		endif;
-	else :
-		echo '<div id="femfreq-video-container"></div>';
-	endif;
-	?>
+	else : ?>
+		<div id="femfreq-video-container">
+			<blockquote class="alignright">
+				Like this video? <a href="https://www.youtube.com/user/feministfrequency">Subscribe to our Youtube channel</a> for more!
+			</blockquote>
+		</div>
+	<?php endif; ?>
 
 	<header class="entry-header">
 

@@ -11,7 +11,7 @@
 	function moveVideo() {
 		var video = $( '.entry-content' ).find( '.jetpack-video-wrapper' );
 		if ( 0 < video.length ) {
-			video.appendTo( '#femfreq-video-container' );
+			video.prependTo( '#femfreq-video-container' );
 		}
 	}
 

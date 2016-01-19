@@ -33,6 +33,23 @@
 	}
 }
 
+#femfreq-video-container {
+  position: relative;
+
+  .jetpack-video-wrapper {
+    max-width: 794.667px;
+  }
+
+  blockquote {
+    position: absolute;
+    text-align: center;
+      top: 50%;
+      right: 0;
+    width: 300px;
+
+  }
+}
+
 .content-container {
 	position: relative;
 }
