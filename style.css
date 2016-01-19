@@ -1083,24 +1083,24 @@ li.focus > .children {
 	display: none !important;
 }
 
-/* On desktop devices, we'll show a sidebar next to our content */
+/* On desktop devices, we'll show a sidebar next to our content, for single posts only. */
 @media (min-width: 1024px) {
-	.single:not(.single-format-video) .content-container {
+	.single .content-container {
 		box-sizing: border-box;
 		display: inline-block;
 		padding-left: 0;
 		padding-right: 32px; 
 		width: 100%;
 	}
-	.single:not(.single-format-video) .content-container:first-child {
+	.single .content-container:first-child {
 		padding-left: 0;
 	}
-	.single:not(.single-format-video) .content-container:last-child {
+	.single .content-container:last-child {
 		padding-right: 0;
 	}
 }
 @media (min-width: 1024px) and (min-width: 768px) {
-	.single:not(.single-format-video) .content-container {
+	.single .content-container {
 		margin-right: -4px;
 		vertical-align: top; 
 		width: 66.66667%;
@@ -1108,7 +1108,7 @@ li.focus > .children {
 }
 
 @media (min-width: 1024px) {
-	.single:not(.single-format-video) #secondary {
+	.single #secondary {
 		box-sizing: border-box;
 		display: inline-block;
 		margin-top: 1.5em; 
@@ -1117,15 +1117,15 @@ li.focus > .children {
 		padding-right: 0;
 		width: 100%;
 	}
-	.single:not(.single-format-video) #secondary:first-child {
+	.single #secondary:first-child {
 		padding-left: 0;
 	}
-	.single:not(.single-format-video) #secondary:last-child {
+	.single #secondary:last-child {
 		padding-right: 0;
 	}
 }
 @media (min-width: 1024px) and (min-width: 768px) {
-	.single:not(.single-format-video) #secondary {
+	.single #secondary {
 		margin-right: -4px;
 		vertical-align: top; 
 		width: 33.33333%;

@@ -69,8 +69,6 @@
 
 	</div>
 
-	<?php if ( 'video' !== get_post_format() ) :
-		get_sidebar();
-	endif; ?>
+	<?php get_sidebar(); ?>
 
 </article><!-- #post-## -->

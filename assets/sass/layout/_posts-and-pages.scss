@@ -19,10 +19,9 @@
 	display: none !important;
 }
 
-/* On desktop devices, we'll show a sidebar next to our content */
+/* On desktop devices, we'll show a sidebar next to our content, for single posts only. */
 @include desktop {
-	// Sidebar is only present on individual blog posts
-	.single:not(.single-format-video) {
+	.single {
 		.content-container {
 			@include col(8, 12, $first: true);
 		}
