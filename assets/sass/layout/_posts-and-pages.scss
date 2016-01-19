@@ -19,10 +19,9 @@
 	display: none !important;
 }
 
-/* On desktop devices, we'll show a sidebar next to our content */
+/* On desktop devices, we'll show a sidebar next to our content, for single posts only. */
 @include desktop {
-	// Sidebar is only present on individual blog posts
-	.single:not(.single-format-video) {
+	.single {
 		.content-container {
 			@include col(8, 12, $first: true);
 		}
@@ -81,14 +80,6 @@
 
 .femfreq-feature-placeholder {
 	background: $color__mid-grey url('assets/images/pattern-bg-dark.png');
-}
-
-/* Use a centered content column for video posts */
-.single-format-video .content-container,
-.single-format-video .entry-header {
-	margin-left: auto;
-	margin-right: auto;
-	max-width: $size__site-content;
 }
 
 .entry-meta .posted-on,

@@ -200,3 +200,8 @@ require get_template_directory() . '/inc/svg-icons.php';
  * Shortcode functionality, via Shortcake plugin.
  */
 require get_template_directory() . '/inc/shortcodes.php';
+
+/**
+ * Custom post metadata functionality.
+ */
+require get_template_directory() . '/inc/metadata.php';

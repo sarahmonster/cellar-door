@@ -16,3 +16,6 @@ wpcom_vip_load_plugin( 'advanced-excerpt' );
 
 // For custom shortcodes.
 wpcom_vip_load_plugin( 'shortcode-ui' );
+
+// For custom post metadata.
+wpcom_vip_load_plugin( 'fieldmanager' );
