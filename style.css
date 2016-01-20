@@ -1183,12 +1183,9 @@ li.focus > .children {
 
 /* Show sharing buttons in a floated column to left of post content */
 #femfreq-sharing-container {
-	left: -60px;
+	left: -48px;
 	position: absolute;
 	top: 25px;
-}
-.single-format-standard #femfreq-sharing-container {
-	left: -10px;
 }
 #femfreq-sharing-container .sharedaddy {
 	width: 50px;

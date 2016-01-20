@@ -56,13 +56,9 @@
 
 /* Show sharing buttons in a floated column to left of post content */
 #femfreq-sharing-container {
-	left: -60px;
+	left: -48px;
 	position: absolute;
 	top: 25px;
-
-	.single-format-standard & {
-		left: -10px;
-	}
 
 	.sharedaddy {
 		width: 50px;
