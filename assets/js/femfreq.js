@@ -41,6 +41,11 @@
 		} );
 	}
 
+	// When "read more" buttons are clicked, showed full transcript
+	$( '.transcript' ).find( 'button' ).on( 'click', function() {
+		$( this ).parents( '.transcript' ).toggleClass( 'expanded' );
+	} );
+
 
 	// Run our functions as soon as possible
 	$( document ).on( 'ready', function() {

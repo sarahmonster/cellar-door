@@ -69,6 +69,13 @@ function femfreq_transcript_shortcode( $attr, $content = '', $shortcode_tag ) {
 	<div class="transcript">
 		<h2><?php esc_html_e( 'Transcript', 'femfreq' ); ?></h2>
 		<?php echo wpautop( wp_kses_post( $content ) ); ?>
+		<p class="read-more">
+			<button class="secondary">
+				<span class="read-more-text"><?php esc_html_e( 'Read more', 'femfreq' ); ?></span>
+				<span class="close-text"><?php esc_html_e( 'Close transcript', 'femfreq' ); ?></span>
+				<?php femfreq_icon( 'caret' ); ?>
+			</button>
+		</p>
 	</div>
 
 	<?php

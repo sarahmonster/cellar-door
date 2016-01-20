@@ -30,6 +30,24 @@ input[type="submit"] {
 		border-color: $color__border-button-focus;
 		color: $color__text-button-focus;
 	}
+
+	&.secondary {
+		background-color: $color__charcoal;
+		color: $color__off-white;
+
+		&:hover {
+			background-color: $color__grey;
+			border-color: $color__charcoal;
+			color: $color__charcoal;
+		}
+
+		&:active,
+		&:focus {
+			background-color: $color__charcoal;
+			border-color: $color__grey;
+			color: $color__grey;
+		}
+	}
 }
 
 input[type="text"],
