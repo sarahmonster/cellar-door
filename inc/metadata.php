@@ -31,7 +31,7 @@ add_action( 'fm_post_post', 'femfreq_set_up_game_information_meta' );
  */
 function femfreq_game_information( $id ) {
     $game_information = get_post_meta( $id, 'game_information' );
-    if ( 0 < count( $game_information ) ) :
+    if ( ! empty( $game_information ) && ! empty( $game_information[0] ) && ! empty( $game_information[0]['date_published'] ) ) :
         $game = $game_information[0];
         echo '<section id="game-information" class="widget">';
         echo '<h2 class="widget-title">';
