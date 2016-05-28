@@ -117,7 +117,7 @@
 	li {
 		border-top: 1px solid transparentize($color__tertiary, 0.5);
 		font-family: $font__serif;
-		font-style: italic;
+		@include font-italic;
 		padding: 7px 0;
 
 		a {
@@ -148,7 +148,7 @@
 
 	.rssSummary {
 		font-family: $font__serif;
-		font-style: italic;
+		@include font-italic;
 	}
 
 	cite {
@@ -164,13 +164,13 @@
 .textwidget {
 	@include font-size(1.9);
 	font-family: $font__serif;
-	font-style: italic;
+	@include font-italic;
 }
 
 /* Tag cloud widget */
 .widget_tag_cloud .tagcloud {
 	font-family: $font__serif;
-	font-style: italic;
+	@include font-italic;
 }
 
 /* Calendar widget */
@@ -185,7 +185,7 @@
 
 	caption {
 		font-family: $font__serif;
-		font-style: italic;
+		@include font-italic;
 		margin-bottom: 5px;
 	}
 

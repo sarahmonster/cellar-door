@@ -110,6 +110,8 @@ strong {
 }
 
 dfn {
+	font-family: 'Lora', Georgia, serif;
+	font-size: 110%;
 	font-style: italic;
 }
 
@@ -279,7 +281,7 @@ input,
 select,
 textarea {
 	color: #696969;
-	font-family: karmina, Georgia, serif;
+	font-family: 'Domine', Georgia, serif;
 	font-size: 20px;
 	font-size: 2rem;
 	line-height: 1.6;
@@ -292,7 +294,7 @@ h4,
 h5,
 h6 {
 	clear: both; 
-	font-family: soleil, Arial, sans-serif;
+	font-family: 'Poppins', Arial, sans-serif;
 }
 h1 a,
 h2 a,
@@ -327,12 +329,17 @@ dfn,
 cite,
 em,
 i {
+	font-family: 'Lora', Georgia, serif;
+	font-size: 110%;
 	font-style: italic;
 }
 
 blockquote {
 	border-top: 1px solid;
 	color: #d081a8;
+	font-family: 'Lora', Georgia, serif;
+	font-family: 'Lora', Georgia, serif;
+	font-size: 110%;
 	font-style: italic; 
 	margin: 0 1.5em;
 }
@@ -483,7 +490,7 @@ input[type='submit'] {
 	box-shadow: none;
 	color: #efefef;
 	display: inline-block;
-	font-family: soleil, Arial, sans-serif;
+	font-family: 'Poppins', Arial, sans-serif;
 	font-size: 13px;
 	font-size: 1.3rem;
 	font-style: normal;
@@ -652,6 +659,8 @@ a:active {
 .post-navigation .nav-next a {
 	color: #f20079;
 	display: block;
+	font-family: 'Lora', Georgia, serif;
+	font-size: 110%;
 	font-style: italic;
 	padding: 16px 0;
 	text-decoration: none;
@@ -676,7 +685,7 @@ a:active {
 .post-navigation .nav-next a span {
 	color: #969696;
 	display: block;
-	font-family: soleil, Arial, sans-serif;
+	font-family: 'Poppins', Arial, sans-serif;
 	font-size: 15px;
 	font-size: 1.5rem;
 	font-style: normal;
@@ -926,7 +935,7 @@ a:active {
 
 /* Top-level nav */
 .main-navigation {
-	font-family: soleil, Arial, sans-serif;
+	font-family: 'Poppins', Arial, sans-serif;
 	font-size: 17px;
 	font-size: 1.7rem;
 }
@@ -1036,7 +1045,7 @@ li.focus > .children {
 }
 .site-footer .site-info {
 	color: #969696;
-	font-family: soleil, Arial, sans-serif;
+	font-family: 'Poppins', Arial, sans-serif;
 	font-size: 11px;
 	font-size: 1.1rem;
 	letter-spacing: 1px;
@@ -1262,7 +1271,7 @@ li.focus > .children {
 .entry-footer .tags-links,
 .entry-footer .edit-link {
 	color: #969696;
-	font-family: soleil, Arial, sans-serif;
+	font-family: 'Poppins', Arial, sans-serif;
 	font-size: 13px;
 	font-size: 1.3rem;
 	letter-spacing: 1px;
@@ -1292,6 +1301,8 @@ li.focus > .children {
 
 .byline {
 	display: block;
+	font-family: 'Lora', Georgia, serif;
+	font-size: 110%;
 	font-size: 16px;
 	font-size: 1.6rem;
 	font-style: italic;
@@ -1317,8 +1328,10 @@ li.focus > .children {
 
 .entry-summary {
 	color: #969696;
+	font-family: 'Lora', Georgia, serif;
 	font-size: 24px;
 	font-size: 2.4rem;
+	font-size: 110%;
 	font-style: italic;
 }
 .entry-summary p {
@@ -1362,6 +1375,8 @@ li.focus > .children {
 	}
 	.author .author-bio {
 		color: #696969;
+		font-family: 'Lora', Georgia, serif;
+		font-size: 110%;
 		font-style: italic;
 	}
 }
@@ -1420,6 +1435,8 @@ li.focus > .children {
 	background: #efefef;
 	border-top: 2px solid #696969;
 	color: #696969;
+	font-family: 'Lora', Georgia, serif;
+	font-size: 110%;
 	font-style: italic;
 	max-height: 300px;
 	overflow: hidden;
@@ -1588,7 +1605,7 @@ li.focus > .children {
 .blog article .entry-title,
 .search article .entry-title {
 	bottom: 0;
-	font-family: soleil, Arial, sans-serif;
+	font-family: 'Poppins', Arial, sans-serif;
 	font-size: 27px;
 	font-size: 2.7rem;
 	font-weight: 500;
@@ -1625,14 +1642,14 @@ li.focus > .children {
 --------------------------------------------------------------*/
 .widget {
 	border-top: 2px solid #f20079;
-	font-family: soleil, Arial, sans-serif;
+	font-family: 'Poppins', Arial, sans-serif;
 	font-size: 13px;
 	font-size: 1.3rem;
 	margin: 0 0 1.5em;
 	/* Make sure select elements fit in nicely with their friends. */
 }
 .widget select {
-	font-family: soleil, Arial, sans-serif;
+	font-family: 'Poppins', Arial, sans-serif;
 	max-width: 100%;
 }
 
@@ -1746,7 +1763,9 @@ li.focus > .children {
 /* Comment widget */
 .widget_recent_comments li {
 	border-top: 1px solid rgba(58, 58, 58, 0.5);
-	font-family: karmina, Georgia, serif;
+	font-family: 'Domine', Georgia, serif;
+	font-family: 'Lora', Georgia, serif;
+	font-size: 110%;
 	font-style: italic;
 	padding: 7px 0;
 	/*.comment-author-link::after,
@@ -1758,7 +1777,7 @@ li.focus > .children {
 .widget_recent_comments li a {
 	border: 0;
 	display: inline-block;
-	font-family: soleil, Arial, sans-serif;
+	font-family: 'Poppins', Arial, sans-serif;
 	font-style: normal;
 }
 
@@ -1768,7 +1787,9 @@ li.focus > .children {
 }
 
 .widget_rss .rssSummary {
-	font-family: karmina, Georgia, serif;
+	font-family: 'Domine', Georgia, serif;
+	font-family: 'Lora', Georgia, serif;
+	font-size: 110%;
 	font-style: italic;
 }
 
@@ -1781,15 +1802,19 @@ li.focus > .children {
 
 /* Text widget */
 .textwidget {
-	font-family: karmina, Georgia, serif;
+	font-family: 'Domine', Georgia, serif;
+	font-family: 'Lora', Georgia, serif;
 	font-size: 19px;
 	font-size: 1.9rem;
+	font-size: 110%;
 	font-style: italic;
 }
 
 /* Tag cloud widget */
 .widget_tag_cloud .tagcloud {
-	font-family: karmina, Georgia, serif;
+	font-family: 'Domine', Georgia, serif;
+	font-family: 'Lora', Georgia, serif;
+	font-size: 110%;
 	font-style: italic;
 }
 
@@ -1803,7 +1828,9 @@ li.focus > .children {
 	max-width: 500px;
 }
 .widget_calendar caption {
-	font-family: karmina, Georgia, serif;
+	font-family: 'Domine', Georgia, serif;
+	font-family: 'Lora', Georgia, serif;
+	font-size: 110%;
 	font-style: italic;
 	margin-bottom: 5px;
 }

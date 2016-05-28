@@ -4,6 +4,13 @@
 	font-size: $sizeValue * 1rem;
 }
 
+// Substitute in Lora for italic
+@mixin font-italic {
+	font-family: $font__italic;
+	font-size: 110%;
+	font-style: italic;
+}
+
 // Center block
 @mixin center-block {
 	display: block;

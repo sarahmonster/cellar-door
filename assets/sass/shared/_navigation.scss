@@ -70,7 +70,7 @@ a {
 	.nav-previous a,
 	.nav-next a {
 		color: $color__pink;
-		font-style: italic;
+		@include font-italic;
 		display: block;
 		padding: $size__site-gutter/2 0;
 		text-decoration: none;

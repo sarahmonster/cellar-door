@@ -27,3 +27,17 @@ function cellardoor_wpcom_setup() {
 	}
 }
 add_action( 'after_setup_theme', 'cellardoor_wpcom_setup' );
+
+/*
+ * De-queue Google fonts if custom fonts are being used instead
+ */
+function cellardoor_dequeue_fonts() {
+	if ( class_exists( 'TypekitData' ) && class_exists( 'CustomDesign' ) && CustomDesign::is_upgrade_active() ) {
+		$customfonts = TypekitData::get( 'families' );
+		if ( $customfonts && $customfonts['site-title']['id'] && $customfonts['headings']['id'] && $customfonts['body-text']['id'] ) {
+			wp_dequeue_style( 'cellar-door-fonts' );
+		}
+	}
+}
+
+add_action( 'wp_enqueue_scripts', 'cellardoor_dequeue_fonts' );

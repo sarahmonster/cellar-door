@@ -143,9 +143,70 @@ function cellardoor_widgets_init() {
 add_action( 'widgets_init', 'cellardoor_widgets_init' );
 
 /**
+ * Register Google Fonts
+ */
+ function cellardoor_fonts_url() {
+     $fonts_url = '';
+
+	/* Translators: If there are characters in your language that are not
+	 * supported by Arvo, translate this to 'off'. Do not translate
+	 * into your own language.
+	 */
+ 	$serif = esc_html_x( 'on', 'Domine font: on or off', 'cellardoor' );
+
+	/* Translators: If there are characters in your language that are not
+	 * supported by Poppins, translate this to 'off'. Do not translate
+	 * into your own language.
+	 */
+	$sans = esc_html_x( 'on', 'Poppins font: on or off', 'cellardoor' );
+
+	$font_families = array();
+
+	if ( 'off' !== $serif ) {
+		$font_families[] = 'Domine:400,700';
+		$font_families[] = 'Lora:400i,700i';
+	}
+
+	if ( 'off' !== $sans ) {
+		$font_families[] = 'Poppins:300,400,500,600,700';
+	}
+
+	if ( 'off' !== $serif || 'off' !== $sans ) {
+ 		$query_args = array(
+ 			'family' => urlencode( implode( '|', $font_families ) ),
+ 			'subset' => urlencode( 'latin,latin-ext' ),
+ 		);
+
+ 		$fonts_url = add_query_arg( $query_args, '//fonts.googleapis.com/css' );
+ 	}
+
+ 	return $fonts_url;
+
+ }
+
+ /**
+  * Enqueue Google Fonts for Editor Styles
+  */
+ function cellardoor_editor_styles() {
+     add_editor_style( array( 'editor-style.css', cellardoor_fonts_url() ) );
+ }
+ add_action( 'after_setup_theme', 'cellardoor_editor_styles' );
+
+ /**
+  * Enqueue Google Fonts for custom headers
+  */
+ function cellardoor_admin_scripts( $hook_suffix ) {
+	 wp_enqueue_style( 'cellardoor-fonts', cellardoor_fonts_url(), array(), null );
+ }
+ add_action( 'admin_print_styles-appearance_page_custom-header', 'cellardoor_admin_scripts' );
+
+/**
  * Enqueue scripts and styles.
  */
 function cellardoor_scripts() {
+
+	wp_enqueue_style( 'cellardoor-fonts', cellardoor_fonts_url(), array(), null );
+
 	wp_enqueue_style( 'cellardoor-style', get_stylesheet_uri() );
 
 	wp_enqueue_script( 'cellardoor-main', get_template_directory_uri() . '/assets/js/cellar-door.js', array( 'jquery' ), time(), true );

@@ -60,7 +60,7 @@ strong {
 }
 
 dfn {
-	font-style: italic;
+	@include font-italic;
 }
 
 h1 {
