@@ -33,7 +33,7 @@
 	}
 }
 
-#femfreq-video-container {
+#cellardoor-video-container {
   position: relative;
 
   .jetpack-video-wrapper {
@@ -55,7 +55,7 @@
 }
 
 /* Show sharing buttons in a floated column to left of post content */
-#femfreq-sharing-container {
+#cellardoor-sharing-container {
 	left: -48px;
 	position: absolute;
 	top: 25px;
@@ -68,14 +68,14 @@
 /* Arrange post headers */
 @include tablet {
 	.single:not(.single-format-video) {
-		.attachment-femfreq-feature,
-		.femfreq-feature-placeholder {
+		.attachment-cellardoor-feature,
+		.cellardoor-feature-placeholder {
 			@include col(6, 12);
 			margin-top: 10px;
 			padding-right: 0;
 		}
 
-		.femfreq-feature-placeholder {
+		.cellardoor-feature-placeholder {
 			height: 300px;
 		}
 
@@ -91,7 +91,7 @@
 	}
 }
 
-.femfreq-feature-placeholder {
+.cellardoor-feature-placeholder {
 	background: $color__mid-grey url('assets/images/pattern-bg-dark.png');
 }
 

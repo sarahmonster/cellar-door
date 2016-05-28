@@ -115,7 +115,7 @@ We're using a custom icon set, relying on an SVG sprite method. To add a new ico
 
 Gulp will do all the work from there. To use the icon anywhere in the theme files, use the following function:
 
-`<?php femfreq_icon( 'filename' ); ?>`
+`<?php cellardoor_icon( 'filename' ); ?>`
 
 This sprite is also used to build social navigation menus. It will automatically detect links to social networks and will replace the text for these links with an SVG icon. If you add a new social link, ensure there is an icon for it in the `assets/svg/icons` directory!
 

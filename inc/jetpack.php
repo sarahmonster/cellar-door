@@ -4,7 +4,7 @@
  *
  * @link https://jetpack.me/
  *
- * @package Feminist_Frequency
+ * @package Cellar_Door
  */
 
 /**
@@ -13,11 +13,11 @@
  * See: https://jetpack.me/support/infinite-scroll/
  * See: https://jetpack.me/support/responsive-videos/
  */
-function femfreq_jetpack_setup() {
+function cellardoor_jetpack_setup() {
 	// Add theme support for Infinite Scroll.
 	add_theme_support( 'infinite-scroll', array(
 		'container' => 'main',
-		'render'    => 'femfreq_infinite_scroll_render',
+		'render'    => 'cellardoor_infinite_scroll_render',
 		'footer'    => 'page',
 		'wrapper'   => false,
 	) );
@@ -29,15 +29,15 @@ function femfreq_jetpack_setup() {
 	add_theme_support( 'jetpack-testimonial' );
 
 	// Add theme support for Site Logo
-	add_image_size( 'femfreq-logo', 400, 400 );
-	add_theme_support( 'site-logo', array( 'size' => 'femfreq-logo' ) );
+	add_image_size( 'cellardoor-logo', 400, 400 );
+	add_theme_support( 'site-logo', array( 'size' => 'cellardoor-logo' ) );
 }
-add_action( 'after_setup_theme', 'femfreq_jetpack_setup' );
+add_action( 'after_setup_theme', 'cellardoor_jetpack_setup' );
 
 /**
  * Custom render function for Infinite Scroll.
  */
-function femfreq_infinite_scroll_render() {
+function cellardoor_infinite_scroll_render() {
 	while ( have_posts() ) {
 		the_post();
 		if ( is_search() ) :

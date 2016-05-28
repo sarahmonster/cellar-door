@@ -4,7 +4,7 @@
  *
  * @link https://developer.wordpress.org/themes/basics/template-hierarchy/#single-post
  *
- * @package Feminist_Frequency
+ * @package Cellar_Door
  */
 
 get_header(); ?>
@@ -18,8 +18,8 @@ get_header(); ?>
 			get_template_part( 'template-parts/content-single', get_post_format() );
 
 			the_post_navigation( array(
-						'prev_text' => femfreq_get_icon( 'arrow' ) . '<span>' . esc_html__( 'Previous', 'femfreq' ) . '</span> %title',
-						'next_text' => femfreq_get_icon( 'arrow' ) . '<span>' . esc_html__( 'Next', 'femfreq' ) . '</span> %title',
+						'prev_text' => cellardoor_get_icon( 'arrow' ) . '<span>' . esc_html__( 'Previous', 'cellar-door' ) . '</span> %title',
+						'next_text' => cellardoor_get_icon( 'arrow' ) . '<span>' . esc_html__( 'Next', 'cellar-door' ) . '</span> %title',
 			) );
 
 			// If comments are open or we have at least one comment, load up the comment template.

@@ -1,26 +1,27 @@
 {
-  "name": "feminist-frequency",
+  "name": "cellar-door",
   "version": "1.0.0",
-  "description": "Team 51 strike project for FeministFrequency.com.",
+  "description": "A beautiful card-based magazine theme for WordPress.",
   "main": "gulpfile.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/sarahmonster/femfreq.git"
+    "url": "git+https://github.com/sarahmonster/cellar-door.git"
   },
   "keywords": [
-    "feminist-frequency",
-    "team-51",
-    "strike"
+    "WordPress",
+    "theme",
+    "cellar-door",
+    "magazine"
   ],
-  "author": "Automattic, Inc - Team 51 (http://automattic.com)",
+  "author": "sarah semark (http://triggersandsparks.com)",
   "license": "GPL-2.0+",
   "bugs": {
-    "url": "https://github.com/sarahmonster/femfreq/issues"
+    "url": "https://github.com/sarahmonster/cellar-door/issues"
   },
-  "homepage": "https://github.com/sarahmonster/femfreq#readme",
+  "homepage": "https://github.com/sarahmonster/cellar-door#readme",
   "devDependencies": {
     "gulp": "^3.9.0",
     "gulp-autoprefixer": "^3.0.1",

@@ -12,33 +12,33 @@
  *
  * @link https://developer.wordpress.org/themes/functionality/custom-headers/
  *
- * @package Feminist_Frequency
+ * @package Cellar_Door
  */
 
 /**
  * Set up the WordPress core custom header feature.
  *
- * @uses femfreq_header_style()
+ * @uses cellardoor_header_style()
  */
-function femfreq_custom_header_setup() {
-	add_theme_support( 'custom-header', apply_filters( 'femfreq_custom_header_args', array(
+function cellardoor_custom_header_setup() {
+	add_theme_support( 'custom-header', apply_filters( 'cellardoor_custom_header_args', array(
 		'default-image'          => '',
 		'default-text-color'     => '000000',
 		'width'                  => 1000,
 		'height'                 => 250,
 		'flex-height'            => true,
-		'wp-head-callback'       => 'femfreq_header_style',
+		'wp-head-callback'       => 'cellardoor_header_style',
 	) ) );
 }
-add_action( 'after_setup_theme', 'femfreq_custom_header_setup' );
+add_action( 'after_setup_theme', 'cellardoor_custom_header_setup' );
 
-if ( ! function_exists( 'femfreq_header_style' ) ) :
+if ( ! function_exists( 'cellardoor_header_style' ) ) :
 /**
  * Styles the header image and text displayed on the blog.
  *
- * @see femfreq_custom_header_setup().
+ * @see cellardoor_custom_header_setup().
  */
-function femfreq_header_style() {
+function cellardoor_header_style() {
 	$header_text_color = get_header_textcolor();
 
 	/*

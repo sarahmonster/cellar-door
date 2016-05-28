@@ -3,7 +3,7 @@
  * Configure Fieldmanager plugin to display additional meta box on posts.
  * This is used to add additional context to review posts.
  *
- * @package Feminist_Frequency
+ * @package Cellar_Door
  */
 
  /**
@@ -11,38 +11,38 @@
   *
   * @link http://fieldmanager.org/
   */
-function femfreq_set_up_game_information_meta() {
+function cellardoor_set_up_game_information_meta() {
     $fm = new Fieldmanager_Group( array(
         'name' => 'game_information',
         'children' => array(
-            'date_published' => new Fieldmanager_Textfield( __( 'Date Published', 'femfreq' ) ),
-            'developer' => new Fieldmanager_Textfield( __( 'Developer', 'femfreq' ) ),
-            'publisher' => new Fieldmanager_Textfield( __( 'Publisher', 'femfreq' ) ),
+            'date_published' => new Fieldmanager_Textfield( __( 'Date Published', 'cellar-door' ) ),
+            'developer' => new Fieldmanager_Textfield( __( 'Developer', 'cellar-door' ) ),
+            'publisher' => new Fieldmanager_Textfield( __( 'Publisher', 'cellar-door' ) ),
         ),
     ) );
-    $fm->add_meta_box( __( 'Game Information', 'femfreq' ), 'post', 'side', 'default' );
+    $fm->add_meta_box( __( 'Game Information', 'cellar-door' ), 'post', 'side', 'default' );
 }
-add_action( 'fm_post_post', 'femfreq_set_up_game_information_meta' );
+add_action( 'fm_post_post', 'cellardoor_set_up_game_information_meta' );
 
 /**
  * Retrieve game information and display it in a widget.
  *
  * @param int $id ID of the post for which you want to get meta information.
  */
-function femfreq_game_information( $id ) {
+function cellardoor_game_information( $id ) {
     $game_information = get_post_meta( $id, 'game_information' );
     if ( ! empty( $game_information ) && ! empty( $game_information[0] ) && ! empty( $game_information[0]['date_published'] ) ) :
         $game = $game_information[0];
         echo '<section id="game-information" class="widget">';
         echo '<h2 class="widget-title">';
-        esc_html_e( 'Game information', 'femfreq' );
+        esc_html_e( 'Game information', 'cellar-door' );
         echo '</h2>';
 
         echo '<dl>';
 
         if ( $game['date_published'] ) :
             echo '<dt>';
-            esc_html_e( 'Published', 'femfreq' );
+            esc_html_e( 'Published', 'cellar-door' );
             echo '</dt><dd>';
             echo $game['date_published'];
             echo '</dd>';
@@ -50,7 +50,7 @@ function femfreq_game_information( $id ) {
 
         if ( $game['developer'] ) :
             echo '<dt>';
-            esc_html_e( 'Developer', 'femfreq' );
+            esc_html_e( 'Developer', 'cellar-door' );
             echo '</dt><dd>';
             echo $game['developer'];
             echo '</dd>';
@@ -58,7 +58,7 @@ function femfreq_game_information( $id ) {
 
         if ( $game['publisher'] ) :
             echo '<dt>';
-            esc_html_e( 'Publisher', 'femfreq' );
+            esc_html_e( 'Publisher', 'cellar-door' );
             echo '</dt><dd>';
             echo $game['publisher'];
             echo '</dd>';

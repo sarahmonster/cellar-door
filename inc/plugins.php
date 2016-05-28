@@ -2,7 +2,7 @@
 /**
  * Load and customize plugins
  *
- * @package Feminist_Frequency
+ * @package Cellar_Door
  */
 
 // Allows us to assign multiple authors to a single post.

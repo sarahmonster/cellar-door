@@ -4,7 +4,7 @@
  *
  * @link https://codex.wordpress.org/Template_Hierarchy
  *
- * @package Feminist_Frequency
+ * @package Cellar_Door
  */
 
 get_header(); ?>

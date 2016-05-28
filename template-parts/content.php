@@ -4,7 +4,7 @@
  *
  * @link https://codex.wordpress.org/Template_Hierarchy
  *
- * @package Feminist_Frequency
+ * @package Cellar_Door
  */
 
 ?>
@@ -15,21 +15,21 @@
 		<header class="entry-header">
 			<?php
 			if ( has_post_thumbnail() ) :
-				the_post_thumbnail( 'femfreq-card' );
+				the_post_thumbnail( 'cellardoor-card' );
 			else :
-				echo '<div class="femfreq-feature-placeholder"></div>';
+				echo '<div class="cellardoor-feature-placeholder"></div>';
 			endif;
 			?>
 
 			<div class="entry-meta">
-				<?php femfreq_categories(); ?>
+				<?php cellardoor_categories(); ?>
 			</div><!-- .entry-meta -->
 
 			<?php the_title( '<h2 class="entry-title"><a href="' . esc_url( get_permalink() ) . '" rel="bookmark">', '</a></h2>' ); ?>
 		</header>
 
 		<div class="entry-summary">
-			<?php //femfreq_excerpt();
+			<?php //cellardoor_excerpt();
 			the_excerpt(); ?>
 		</div>
 

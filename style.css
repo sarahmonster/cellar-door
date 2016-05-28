@@ -1,20 +1,20 @@
 @charset 'UTF-8';
 /*!
-Theme Name: Feminist Frequency
-Theme URI: http://underscores.me/
-Author: Automattic
-Author URI: http://wordpress.com/themes/
-Description: Custom theme for FeministFrequency.com
+Theme Name: Cellar Door
+Theme URI: http://sarahmonster.github.io/cellar-door
+Author: sarah semark
+Author URI: http://triggersandsparks.com
+Description: A beautiful magazine theme.
 Version: 1.0.0
 License: GNU General Public License v2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
-Text Domain: femfreq
+Text Domain: cellar-door
 Tags:
 
 This theme, like WordPress, is licensed under the GPL.
 Use it to make something cool, have fun, and share what you've learned with others.
 
-Feminist Frequency is based on Underscores http://underscores.me/, (C) 2012-2015 Automattic, Inc.
+Cellar Door is based on Underscores http://underscores.me/, (C) 2012-2016 Automattic, Inc.
 Underscores is distributed under the terms of the GNU GPL v2 or later.
 
 Normalizing styles have been helped along thanks to the fine work of
@@ -722,9 +722,8 @@ a:active {
 .posts-navigation .nav-next .icon-arrow,
 .post-navigation .nav-next .icon-arrow {
 	float: right;
-	-webkit-transform: rotate(180deg);
-	    -ms-transform: rotate(180deg);
-	        transform: rotate(180deg);
+	-ms-transform: rotate(180deg);
+	    transform: rotate(180deg);
 }
 
 @media (min-width: 768px) {
@@ -892,9 +891,8 @@ a:active {
 		padding-right: 32px;
 		position: absolute;
 		top: 50%;
-		-webkit-transform: translateY(-50%);
-		    -ms-transform: translateY(-50%);
-		        transform: translateY(-50%); 
+		-ms-transform: translateY(-50%);
+		    transform: translateY(-50%); 
 		width: 100%;
 	}
 	#site-navigation:first-child {
@@ -1163,13 +1161,13 @@ li.focus > .children {
 	}
 }
 
-#femfreq-video-container {
+#cellardoor-video-container {
 	position: relative;
 }
-#femfreq-video-container .jetpack-video-wrapper {
+#cellardoor-video-container .jetpack-video-wrapper {
 	max-width: 794.667px;
 }
-#femfreq-video-container blockquote {
+#cellardoor-video-container blockquote {
 	position: absolute;
 	right: 0;
 	text-align: center;
@@ -1182,19 +1180,19 @@ li.focus > .children {
 }
 
 /* Show sharing buttons in a floated column to left of post content */
-#femfreq-sharing-container {
+#cellardoor-sharing-container {
 	left: -48px;
 	position: absolute;
 	top: 25px;
 }
-#femfreq-sharing-container .sharedaddy {
+#cellardoor-sharing-container .sharedaddy {
 	width: 50px;
 }
 
 /* Arrange post headers */
 @media (min-width: 768px) {
-	.single:not(.single-format-video) .attachment-femfreq-feature,
-	.single:not(.single-format-video) .femfreq-feature-placeholder {
+	.single:not(.single-format-video) .attachment-cellardoor-feature,
+	.single:not(.single-format-video) .cellardoor-feature-placeholder {
 		box-sizing: border-box;
 		display: inline-block;
 		margin-top: 10px;
@@ -1203,18 +1201,18 @@ li.focus > .children {
 		padding-right: 0; 
 		width: 100%;
 	}
-	.single:not(.single-format-video) .attachment-femfreq-feature:first-child,
-	.single:not(.single-format-video) .femfreq-feature-placeholder:first-child {
+	.single:not(.single-format-video) .attachment-cellardoor-feature:first-child,
+	.single:not(.single-format-video) .cellardoor-feature-placeholder:first-child {
 		padding-left: 0;
 	}
-	.single:not(.single-format-video) .attachment-femfreq-feature:last-child,
-	.single:not(.single-format-video) .femfreq-feature-placeholder:last-child {
+	.single:not(.single-format-video) .attachment-cellardoor-feature:last-child,
+	.single:not(.single-format-video) .cellardoor-feature-placeholder:last-child {
 		padding-right: 0;
 	}
 }
 @media (min-width: 768px) and (min-width: 768px) {
-	.single:not(.single-format-video) .attachment-femfreq-feature,
-	.single:not(.single-format-video) .femfreq-feature-placeholder {
+	.single:not(.single-format-video) .attachment-cellardoor-feature,
+	.single:not(.single-format-video) .cellardoor-feature-placeholder {
 		margin-right: -4px;
 		vertical-align: top; 
 		width: 50%;
@@ -1222,7 +1220,7 @@ li.focus > .children {
 }
 
 @media (min-width: 768px) {
-	.single:not(.single-format-video) .femfreq-feature-placeholder {
+	.single:not(.single-format-video) .cellardoor-feature-placeholder {
 		height: 300px;
 	}
 	.single:not(.single-format-video) .entry-header {
@@ -1255,7 +1253,7 @@ li.focus > .children {
 	}
 }
 
-.femfreq-feature-placeholder {
+.cellardoor-feature-placeholder {
 	background: #696969 url('assets/images/pattern-bg-dark.png');
 }
 
@@ -1482,9 +1480,8 @@ li.focus > .children {
 	display: inline;
 }
 .transcript.expanded .icon-caret {
-	-webkit-transform: scaleY(-1);
-	    -ms-transform: scaleY(-1);
-	        transform: scaleY(-1);
+	-ms-transform: scaleY(-1);
+	    transform: scaleY(-1);
 }
 .transcript.expanded::after {
 	display: none;
@@ -1543,9 +1540,9 @@ li.focus > .children {
 	min-height: 200px; 
 	position: relative;
 }
-.archive article .entry-header .femfreq-feature-placeholder,
-.blog article .entry-header .femfreq-feature-placeholder,
-.search article .entry-header .femfreq-feature-placeholder {
+.archive article .entry-header .cellardoor-feature-placeholder,
+.blog article .entry-header .cellardoor-feature-placeholder,
+.search article .entry-header .cellardoor-feature-placeholder {
 	height: 200px;
 }
 .archive article .entry-header img,
@@ -1697,24 +1694,20 @@ li.focus > .children {
 /* Archive widgets */
 .widget_archive ul li,
 .widget_categories ul li {
-	display: -webkit-flex;
 	display: -ms-flexbox;
-	display:         flex;
+	display: flex;
 
-	-webkit-align-items: baseline;
-	        align-items: baseline;
+	align-items: baseline;
 	-ms-flex-align: baseline;
-	-webkit-flex-wrap: wrap;
-	    -ms-flex-wrap: wrap;
-	        flex-wrap: wrap;
+	-ms-flex-wrap: wrap;
+	    flex-wrap: wrap;
 }
 .widget_archive ul li a,
 .widget_categories ul li a {
 	border: none;
 
 	-ms-flex-order: 1;
-	-webkit-order: 1;
-	        order: 1;
+	order: 1;
 }
 .widget_archive ul li a:hover,
 .widget_categories ul li a:hover {
@@ -1726,34 +1719,28 @@ li.focus > .children {
 	content: '';
 	margin: 0.25em 3px; 
 
-	-webkit-flex-grow: 1;
-	        flex-grow: 1;
+	flex-grow: 1;
 	-ms-flex-order: 2;
 	-ms-flex-positive: 1;
-	-webkit-order: 2;
-	        order: 2;
+	order: 2;
 }
 .widget_archive ul li .post-count,
 .widget_categories ul li .post-count {
 	padding-top: 0.5em; 
 
 	-ms-flex-order: 3;
-	-webkit-order: 3;
-	        order: 3;
+	order: 3;
 }
 .widget_archive ul li ul,
 .widget_categories ul li ul {
 	margin-left: 1em; 
 
-	-webkit-flex-basis: 100%;
-	        flex-basis: 100%;
-	-webkit-flex-grow: 0;
-	        flex-grow: 0;
+	flex-basis: 100%;
+	flex-grow: 0;
 	-ms-flex-order: 4;
 	-ms-flex-positive: 0;
 	-ms-flex-preferred-size: 100%;
-	-webkit-order: 4;
-	        order: 4;
+	order: 4;
 }
 
 /* Comment widget */

@@ -4,7 +4,7 @@
  *
  * @link https://codex.wordpress.org/Template_Hierarchy
  *
- * @package Feminist_Frequency
+ * @package Cellar_Door
  */
 
 ?>
@@ -14,14 +14,14 @@
 	if ( 'video' !== get_post_format() ) :
 		if ( has_post_thumbnail() ) :
 			if ( '' === get_the_post_thumbnail() ) :
-				echo '<div class="femfreq-feature-placeholder"></div>';
+				echo '<div class="cellardoor-feature-placeholder"></div>';
 			endif;
-			the_post_thumbnail( 'femfreq-feature' );
+			the_post_thumbnail( 'cellardoor-feature' );
 		else :
-			echo '<div class="femfreq-feature-placeholder"></div>';
+			echo '<div class="cellardoor-feature-placeholder"></div>';
 		endif;
 	else : ?>
-		<div id="femfreq-video-container">
+		<div id="cellardoor-video-container">
 			<blockquote class="alignright">
 				Like this video? <a href="https://www.youtube.com/user/feministfrequency">Subscribe to our Youtube channel</a> for more!
 			</blockquote>
@@ -31,18 +31,18 @@
 	<header class="entry-header">
 
 		<div class="entry-meta">
-			<?php femfreq_entry_header(); ?>
+			<?php cellardoor_entry_header(); ?>
 		</div><!-- .entry-meta -->
 
 		<?php
 			the_title( '<h1 class="entry-title">', '</h1>' );
-			femfreq_excerpt();
+			cellardoor_excerpt();
 		?>
 	</header><!-- .entry-header -->
 
 	<div class="content-container">
 
-		<div id="femfreq-sharing-container">
+		<div id="cellardoor-sharing-container">
 			<?php if ( function_exists( 'sharing_display' ) ) :
 				sharing_display( '', true );
 			endif; ?>
@@ -53,12 +53,12 @@
 			<?php
 				the_content( sprintf(
 					/* translators: %s: Name of current post. */
-					wp_kses( __( 'Continue reading %s <span class="meta-nav">&rarr;</span>', 'femfreq' ), array( 'span' => array( 'class' => array() ) ) ),
+					wp_kses( __( 'Continue reading %s <span class="meta-nav">&rarr;</span>', 'cellar-door' ), array( 'span' => array( 'class' => array() ) ) ),
 					the_title( '<span class="screen-reader-text">"', '"</span>', false )
 				) );
 
 				wp_link_pages( array(
-					'before' => '<div class="page-links">' . esc_html__( 'Pages:', 'femfreq' ),
+					'before' => '<div class="page-links">' . esc_html__( 'Pages:', 'cellar-door' ),
 					'after'  => '</div>',
 				) );
 			?>
@@ -66,8 +66,8 @@
 		</div><!-- .entry-content -->
 
 		<footer class="entry-footer">
-			<?php femfreq_entry_footer(); ?>
-			<?php femfreq_author_panels(); ?>
+			<?php cellardoor_entry_footer(); ?>
+			<?php cellardoor_author_panels(); ?>
 		</footer><!-- .entry-footer -->
 
 	</div>
