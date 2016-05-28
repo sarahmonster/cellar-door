@@ -1,17 +1,11 @@
 <?php
 /**
- * Feminist Frequency functions and definitions.
+ * Cellar Door functions and definitions.
  *
  * @link https://developer.wordpress.org/themes/basics/theme-functions/
  *
  * @package Cellar_Door
  */
-
-/**
- *  Load the standard VIP configuration any plugins we'd like to use
- */
-require_once WP_CONTENT_DIR . '/themes/vip/plugins/vip-init.php';
-require_once get_template_directory() . '/inc/plugins.php';
 
 if ( ! function_exists( 'cellardoor_setup' ) ) :
 /**
@@ -25,7 +19,7 @@ function cellardoor_setup() {
 	/*
 	 * Make theme available for translation.
 	 * Translations can be filed in the /languages/ directory.
-	 * If you're building a theme based on Feminist Frequency, use a find and replace
+	 * If you're building a theme based on Cellar Door, use a find and replace
 	 * to change 'cellar-door' to the name of your theme in all the template files.
 	 */
 	load_theme_textdomain( 'cellar-door', get_template_directory() . '/languages' );
@@ -195,13 +189,3 @@ require get_template_directory() . '/inc/jetpack.php';
  * SVG icon functionality.
  */
 require get_template_directory() . '/inc/svg-icons.php';
-
-/**
- * Shortcode functionality, via Shortcake plugin.
- */
-require get_template_directory() . '/inc/shortcodes.php';
-
-/**
- * Custom post metadata functionality.
- */
-require get_template_directory() . '/inc/metadata.php';

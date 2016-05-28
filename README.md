@@ -1,4 +1,4 @@
-# Feminist Frequency
+# cellar-door
 
 A custom theme developed for FeministFrequency.com, hosted on WordPress.com VIP.
 

@@ -18,7 +18,9 @@
 	<?php get_sidebar( 'footer' ); ?>
 
 	<div class="site-info">
-		&copy;2009&ndash;<?php echo date('Y'); ?> Feminist Frequency. <?php echo vip_powered_wpcom(); ?>
+		<a href="<?php echo esc_url( __( 'https://wordpress.org/', 'cellar-door' ) ); ?>"><?php printf( esc_html__( 'Proudly powered by %s', 'cellar-door' ), 'WordPress' ); ?></a>
+		<span class="sep"> | </span>
+		<?php printf( esc_html__( 'Theme: %1$s by %2$s.', 'cellar-door' ), 'Cellar Door', '<a href="http://triggersandsparks.com/" rel="designer">sarah semark</a>' ); ?>
 	</div><!-- .site-info -->
 </footer><!-- #colophon -->
 

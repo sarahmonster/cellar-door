@@ -1,6 +1,6 @@
 <?php
 /**
- * Feminist Frequency Theme Customizer.
+ * cellar-door Theme Customizer.
  *
  * @package Cellar_Door
  */
