@@ -912,8 +912,8 @@ a:active {
 /* Top-level nav */
 .main-navigation {
 	font-family: 'Poppins', Arial, sans-serif;
-	font-size: 17px;
-	font-size: 1.7rem;
+	font-size: 16px;
+	font-size: 1.6rem;
 }
 .main-navigation ul {
 	display: none;
@@ -926,12 +926,19 @@ a:active {
 	position: relative;
 }
 .main-navigation ul a {
-	border-bottom: 2px solid;
-	color: #696969;
+	color: #969696;
 	display: inline-block;
 	padding-bottom: 5px;
 	text-decoration: none;
-	width: 120px;
+}
+.main-navigation ul a::before {
+	background: #969696;
+	content: '';
+	display: inline-block;
+	height: 0.75em;
+	margin-right: 0.25em;
+	vertical-align: baseline;
+	width: 0.75em;
 }
 .main-navigation ul .current_page_item > a,
 .main-navigation ul .current-menu-item > a,
