@@ -854,22 +854,36 @@ a:active {
 #masthead,
 #colophon {
 	background: #3a3a3a;
-	padding-bottom: calc(2em + 32px/2);
-	padding-top: calc(2em + 32px/2);
+	padding: 32px 8px;
+	position: relative;
 	text-align: center;
 	width: 100%;
 }
 
-#masthead {
-	margin-top: -2em;
+#masthead::after,
+#colophon::before {
+	background: #fff;
+	height: 100px;
+	left: 0;
+	position: absolute;
+	right: 0;
 	-ms-transform: skewY(2deg);
-	    transform: skewY(2deg);
+	    transform: skewY(2deg); 
+	width: 100%;
+}
+
+#masthead {
+	padding-bottom: calc(100px + 32px/2);
+}
+#masthead::after {
+	bottom: -50px;
 }
 
 #colophon {
-	margin-bottom: -2em;
-	-ms-transform: skewY(-2deg);
-	    transform: skewY(-2deg);
+	padding-top: calc(100px/2 + 32px/2);
+}
+#colophon::before {
+	top: -50px;
 }
 
 #masthead .site-branding,
@@ -878,20 +892,6 @@ a:active {
 #colophon .footer-widget-area {
 	margin: 0 auto;
 	max-width: 1200px;
-	-ms-transform: skewY(-2deg);
-	    transform: skewY(-2deg);
-}
-
-#masthead .site-branding,
-#masthead #site-navigation {
-	-ms-transform: skewY(-2deg);
-	    transform: skewY(-2deg);
-}
-
-#colophon .site-info,
-#colophon .footer-widget-area {
-	-ms-transform: skewY(2deg);
-	    transform: skewY(2deg);
 }
 
 .site-content {

@@ -4,20 +4,38 @@
 #masthead,
 #colophon {
 	background: $color__charcoal;
-	padding-top: calc(2em + #{$size__site-gutter}/2);
-	padding-bottom: calc(2em + #{$size__site-gutter}/2);
+	padding: $size__site-gutter $size__site-gutter/4;
+	position: relative;
 	text-align: center;
 	width: 100%;
 }
 
+#masthead::after,
+#colophon::before {
+	background: $color__background-body;
+	left: 0;
+	right: 0;
+	width: 100%;
+	height: $size__site-skew-height;
+	position: absolute;
+	transform: skewY($size__site-skew-deg);
+}
+
 #masthead {
-	margin-top: -2em;
-	transform: skewY($size__site-skew);
+	padding-bottom: calc(#{$size__site-skew-height} + #{$size__site-gutter}/2);
+
+	&::after {
+		bottom: -$size__site-skew-height/2;
+	}
 }
 
 #colophon {
-	margin-bottom: -2em;
-	transform: skewY(-$size__site-skew);
+	padding-top: calc(#{$size__site-skew-height}/2 + #{$size__site-gutter}/2);
+
+
+	&::before {
+		top: -$size__site-skew-height/2;
+	}
 }
 
 #masthead .site-branding,
@@ -26,17 +44,6 @@
 #colophon .footer-widget-area {
 	margin: 0 auto;
 	max-width: $size__site-width;
-	transform: skewY(-$size__site-skew); // Resets the container's skew.
-}
-
-#masthead .site-branding,
-#masthead #site-navigation {
-	transform: skewY(-$size__site-skew); // Resets the container's skew.
-}
-
-#colophon .site-info,
-#colophon .footer-widget-area {
-	transform: skewY($size__site-skew); // Resets the container's skew.
 }
 
 .site-content {
