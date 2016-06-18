@@ -451,6 +451,17 @@ ol {
 	margin-bottom: 0.5em;
 }
 
+.entry-content ul li {
+	list-style: none;
+	position: relative;
+}
+
+.entry-content ul li::before {
+	content: '\b7\a0';
+	position: absolute;
+	right: 100%;
+}
+
 li > ul,
 li > ol {
 	margin-bottom: 0;
