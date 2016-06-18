@@ -851,73 +851,53 @@ a:active {
 /*--------------------------------------------------------------
 # Structure
 --------------------------------------------------------------*/
-.site {
+#masthead,
+#colophon {
+	background: #3a3a3a;
+	padding-bottom: calc(2em + 32px/2);
+	padding-top: calc(2em + 32px/2);
+	text-align: center;
+	width: 100%;
+}
+
+#masthead {
+	margin-top: -2em;
+	-ms-transform: skewY(2deg);
+	    transform: skewY(2deg);
+}
+
+#colophon {
+	margin-bottom: -2em;
+	-ms-transform: skewY(-2deg);
+	    transform: skewY(-2deg);
+}
+
+#masthead .site-branding,
+#masthead #site-navigation,
+#colophon .site-info,
+#colophon .footer-widget-area {
 	margin: 0 auto;
 	max-width: 1200px;
-	padding: 0 8px;
+	-ms-transform: skewY(-2deg);
+	    transform: skewY(-2deg);
+}
+
+#masthead .site-branding,
+#masthead #site-navigation {
+	-ms-transform: skewY(-2deg);
+	    transform: skewY(-2deg);
+}
+
+#colophon .site-info,
+#colophon .footer-widget-area {
+	-ms-transform: skewY(2deg);
+	    transform: skewY(2deg);
 }
 
 .site-content {
+	margin: 0 auto;
+	max-width: 1200px;
 	padding: 8px;
-}
-
-@media (max-width: 767px) {
-	.site-branding {
-		display: none;
-	}
-}
-
-@media (min-width: 768px) {
-	#masthead {
-		position: relative;
-	}
-	.site-branding {
-		box-sizing: border-box;
-		display: inline-block;
-		padding-left: 32px;
-		padding-right: 32px; 
-		width: 100%;
-	}
-	.site-branding:first-child {
-		padding-left: 0;
-	}
-	.site-branding:last-child {
-		padding-right: 0;
-	}
-}
-@media (min-width: 768px) and (min-width: 768px) {
-	.site-branding {
-		margin-right: -4px;
-		vertical-align: top; 
-		width: 16.66667%;
-	}
-}
-
-@media (min-width: 768px) {
-	#site-navigation {
-		box-sizing: border-box;
-		display: inline-block;
-		padding-left: 32px;
-		padding-right: 32px;
-		position: absolute;
-		top: 50%;
-		-ms-transform: translateY(-50%);
-		    transform: translateY(-50%); 
-		width: 100%;
-	}
-	#site-navigation:first-child {
-		padding-left: 0;
-	}
-	#site-navigation:last-child {
-		padding-right: 0;
-	}
-}
-@media (min-width: 768px) and (min-width: 768px) {
-	#site-navigation {
-		margin-right: -4px;
-		vertical-align: top; 
-		width: 83.33333%;
-	}
 }
 
 @media (min-width: 768px) {
@@ -927,11 +907,6 @@ a:active {
 	#site-navigation li {
 		margin-right: 16px;
 	}
-}
-
-#masthead {
-	margin-bottom: 16px; 
-	margin-top: 16px;
 }
 
 /* Top-level nav */
@@ -1008,10 +983,7 @@ li.focus > .children {
 
 /* Footer */
 .site-footer {
-	background: #3a3a3a;
 	color: #efefef;
-	padding: 32px 0;
-	width: 100%;
 }
 .site-footer .footer-widget-area {
 	margin: 0 auto;

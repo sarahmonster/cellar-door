@@ -1,23 +1,17 @@
 @include mobile {
-	.site-branding {
-		display: none;
-	}
+
 }
 
 @include tablet {
 	#masthead {
-		position: relative;
+
 	}
 
 	.site-branding {
-		@include col(2, 12);
 	}
 
 	#site-navigation {
-		@include col(10, 12);
-		position: absolute;
-			top: 50%;
-		transform: translateY(-50%);
+
 
 		.menu {
 			padding: $size__site-gutter/2 0;
@@ -28,12 +22,6 @@
 		}
 	}
 }
-
-#masthead {
-	margin-top: $size__site-gutter/2;
-	margin-bottom: $size__site-gutter/2;
-}
-
 
 /* Top-level nav */
 .main-navigation {

@@ -1,9 +1,46 @@
 .site {
+}
+
+#masthead,
+#colophon {
+	background: $color__charcoal;
+	padding-top: calc(2em + #{$size__site-gutter}/2);
+	padding-bottom: calc(2em + #{$size__site-gutter}/2);
+	text-align: center;
+	width: 100%;
+}
+
+#masthead {
+	margin-top: -2em;
+	transform: skewY($size__site-skew);
+}
+
+#colophon {
+	margin-bottom: -2em;
+	transform: skewY(-$size__site-skew);
+}
+
+#masthead .site-branding,
+#masthead #site-navigation,
+#colophon .site-info,
+#colophon .footer-widget-area {
 	margin: 0 auto;
 	max-width: $size__site-width;
-	padding: 0 $size__site-gutter/4;
+	transform: skewY(-$size__site-skew); // Resets the container's skew.
+}
+
+#masthead .site-branding,
+#masthead #site-navigation {
+	transform: skewY(-$size__site-skew); // Resets the container's skew.
+}
+
+#colophon .site-info,
+#colophon .footer-widget-area {
+	transform: skewY($size__site-skew); // Resets the container's skew.
 }
 
 .site-content {
+	margin: 0 auto;
+	max-width: $size__site-width;
 	padding: $size__site-gutter / 4;
 }
