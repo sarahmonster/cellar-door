@@ -44,13 +44,13 @@
 		}
 
 		a {
-			color: $color__grey;
+			color: $color__light-grey;
 			display: inline-block;
 			padding-bottom: 5px;
 			text-decoration: none;
 
 			&::before {
-				background: $color__grey;
+				background: $color__light-grey;
 				content: '';
 				display: inline-block;
 				height: 0.75em;

@@ -16,7 +16,7 @@
 		}
 
 		.entry-header {
-			background: $color__pink;
+			background: $color__grey;
 			position: relative;
 			min-height: 200px;
 
@@ -45,8 +45,8 @@
 
 		.entry-meta {
 			background: $color__off-white;
-			border-left: 2px solid $color__pink;
-			color: $color__pink;
+			border-left: 2px solid $color__grey;
+			color: $color__grey;
 			padding: 0 $size__site-gutter/3;
 			position: absolute;
 				top: 5px;
@@ -54,7 +54,7 @@
 			z-index: 2;
 
 			a {
-				color: $color__pink;
+				color: $color__grey;
 			}
 		}
 

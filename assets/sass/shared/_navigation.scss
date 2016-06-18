@@ -69,14 +69,14 @@ a {
 
 	.nav-previous a,
 	.nav-next a {
-		color: $color__pink;
+		color: $color__mid-grey;
 		@include font-italic;
 		display: block;
 		padding: $size__site-gutter/2 0;
 		text-decoration: none;
 
 		.icon-arrow {
-			fill: $color__off-white;
+			fill: $color__light-grey;
 			height: 80px;
 			margin: 0 -10px;
 			width: 80px;
@@ -95,7 +95,7 @@ a {
 		}
 
 		&:hover {
-			color: $color__purple;
+			color: $color__charcoal;
 
 			.icon-arrow {
 				fill: $color__grey;

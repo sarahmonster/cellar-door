@@ -306,7 +306,7 @@ h6 a {
 }
 
 h1 {
-	color: #f20079;
+	color: #969696;
 	font-size: 36px;
 	font-size: 3.6rem;
 	font-weight: 500;
@@ -314,7 +314,7 @@ h1 {
 }
 
 h2 {
-	color: #f20079;
+	color: #969696;
 	font-size: 16px;
 	font-size: 1.6rem;
 	letter-spacing: 1px;
@@ -336,7 +336,7 @@ i {
 
 blockquote {
 	border-top: 1px solid;
-	color: #d081a8;
+	color: #696969;
 	font-family: 'Lora', Georgia, serif;
 	font-family: 'Lora', Georgia, serif;
 	font-size: 110%;
@@ -411,7 +411,7 @@ html {
 }
 
 body {
-	background: #fff;
+	background: #fefefe;
 	/* Fallback for when there is no custom background color defined. */
 }
 
@@ -496,7 +496,7 @@ button,
 input[type='button'],
 input[type='reset'],
 input[type='submit'] {
-	background: #f20079;
+	background: #3a3a3a;
 	border: 2px solid transparent;
 	border-radius: 2em;
 	box-shadow: none;
@@ -517,9 +517,9 @@ button:hover,
 input[type='button']:hover,
 input[type='reset']:hover,
 input[type='submit']:hover {
-	background-color: #f5dfdf;
-	border-color: #f20079;
-	color: #f20079;
+	background-color: #696969;
+	border-color: #efefef;
+	color: #efefef;
 }
 button:active,
 button:focus,
@@ -531,9 +531,9 @@ input[type='reset']:active,
 input[type='reset']:focus,
 input[type='submit']:active,
 input[type='submit']:focus {
-	background-color: #f20079;
-	border-color: #f5dfdf;
-	color: #f5dfdf;
+	background-color: #696969;
+	border-color: #efefef;
+	color: #efefef;
 }
 button.secondary,
 .button.secondary,
@@ -614,7 +614,7 @@ a:visited {
 a:hover,
 a:focus,
 a:active {
-	color: #f20079;
+	color: #969696;
 }
 a:focus {
 	outline: thin dotted;
@@ -631,8 +631,8 @@ a:active {
 	transition: color 400ms ease-in-out;
 }
 .entry-content :not(.sharedaddy) a:not([rel*='attachment'])::before {
-	border-bottom: 2px solid #f20079;
-	color: #f20079;
+	border-bottom: 2px solid #969696;
+	color: #969696;
 	content: attr(data-hover);
 	display: inline-block;
 	height: 1.5em;
@@ -645,7 +645,7 @@ a:active {
 	transition: max-width 300ms ease-in-out;
 }
 .entry-content :not(.sharedaddy) a:not([rel*='attachment']):hover {
-	color: #fff;
+	color: #fefefe;
 }
 .entry-content :not(.sharedaddy) a:not([rel*='attachment']):hover::before {
 	max-width: 100%;
@@ -669,7 +669,7 @@ a:active {
 .posts-navigation .nav-next a,
 .post-navigation .nav-previous a,
 .post-navigation .nav-next a {
-	color: #f20079;
+	color: #696969;
 	display: block;
 	font-family: 'Lora', Georgia, serif;
 	font-size: 110%;
@@ -687,7 +687,7 @@ a:active {
 	margin: 0 -10px;
 	width: 80px; 
 
-	fill: #efefef;
+	fill: #d6d6d6;
 }
 .comment-navigation .nav-previous a span,
 .comment-navigation .nav-next a span,
@@ -712,7 +712,7 @@ a:active {
 .posts-navigation .nav-next a:hover,
 .post-navigation .nav-previous a:hover,
 .post-navigation .nav-next a:hover {
-	color: #9961bb;
+	color: #3a3a3a;
 }
 .comment-navigation .nav-previous a:hover .icon-arrow,
 .comment-navigation .nav-next a:hover .icon-arrow,
@@ -874,7 +874,7 @@ a:active {
 
 #masthead::after,
 #colophon::before {
-	background: #fff;
+	background: #fefefe;
 	height: 100px;
 	left: 0;
 	position: absolute;
@@ -942,13 +942,13 @@ a:active {
 	position: relative;
 }
 .main-navigation ul a {
-	color: #969696;
+	color: #d6d6d6;
 	display: inline-block;
 	padding-bottom: 5px;
 	text-decoration: none;
 }
 .main-navigation ul a::before {
-	background: #969696;
+	background: #d6d6d6;
 	content: '';
 	display: inline-block;
 	height: 0.75em;
@@ -960,7 +960,7 @@ a:active {
 .main-navigation ul .current-menu-item > a,
 .main-navigation ul .current_page_ancestor > a,
 .main-navigation ul .current-menu-ancestor > a {
-	color: #f20079;
+	color: #969696;
 }
 
 /* Sub-menu */
@@ -1050,7 +1050,7 @@ li.focus > .children {
 	text-transform: uppercase;
 }
 .site-footer .site-info a {
-	color: #f5dfdf;
+	color: #efefef;
 	text-decoration: none;
 }
 
@@ -1067,8 +1067,8 @@ li.focus > .children {
 }
 
 #menu-social-menu a {
-	background: #f20079;
-	border: 3px solid #f5dfdf;
+	background: #696969;
+	border: 3px solid #d6d6d6;
 	border-radius: 50%;
 	display: inline-block;
 	line-height: 1;
@@ -1081,16 +1081,16 @@ li.focus > .children {
 	transition: fill 0.1s ease-in 0;
 	width: 30px; 
 
-	fill: #f5dfdf;
+	fill: #d6d6d6;
 	speak: none;
 }
 
 #menu-social-menu a:hover {
-	background: #f5dfdf;
-	border-color: #9961bb;
+	background: #d6d6d6;
+	border-color: #969696;
 }
 #menu-social-menu a:hover svg {
-	fill: #9961bb;
+	fill: #969696;
 }
 
 /*--------------------------------------------------------------
@@ -1310,7 +1310,7 @@ li.focus > .children {
 
 .single .entry-title,
 .page-title {
-	background: linear-gradient(to bottom, transparent 0, #f5dfdf 0);
+	background: linear-gradient(to bottom, transparent 0, #d6d6d6 0);
 	background-position: 0 center;
 	background-repeat: no-repeat;
 	background-size: 100% 1.15em;
@@ -1549,7 +1549,7 @@ li.focus > .children {
 .archive article .entry-header,
 .blog article .entry-header,
 .search article .entry-header {
-	background: #f20079;
+	background: #969696;
 	min-height: 200px; 
 	position: relative;
 }
@@ -1584,8 +1584,8 @@ li.focus > .children {
 .blog article .entry-meta,
 .search article .entry-meta {
 	background: #efefef;
-	border-left: 2px solid #f20079;
-	color: #f20079;
+	border-left: 2px solid #969696;
+	color: #969696;
 	left: -15px;
 	padding: 0 10.66667px;
 	position: absolute;
@@ -1595,7 +1595,7 @@ li.focus > .children {
 .archive article .entry-meta a,
 .blog article .entry-meta a,
 .search article .entry-meta a {
-	color: #f20079;
+	color: #969696;
 }
 .archive article .entry-title,
 .blog article .entry-title,
@@ -1637,7 +1637,7 @@ li.focus > .children {
 # Widgets
 --------------------------------------------------------------*/
 .widget {
-	border-top: 2px solid #f20079;
+	border-top: 2px solid #969696;
 	font-family: 'Poppins', Arial, sans-serif;
 	font-size: 13px;
 	font-size: 1.3rem;
@@ -1695,7 +1695,7 @@ li.focus > .children {
 	text-decoration: none;
 }
 .widget ul a:hover {
-	background-color: rgba(245, 223, 223, 0.25);
+	background-color: rgba(214, 214, 214, 0.25);
 	border-bottom: none;
 	color: #3a3a3a;
 }

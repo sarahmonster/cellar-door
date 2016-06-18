@@ -30,7 +30,7 @@
 		text-align: center;
 
 		a {
-			color: $color__pink-light;
+			color: $color__off-white;
 			text-decoration: none;
 		}
 	}
@@ -51,8 +51,8 @@
 	}
 
 	a {
-		background: $color__pink;
-		border: 3px solid $color__pink-light;
+		background: $color__mid-grey;
+		border: 3px solid $color__light-grey;
 		border-radius: 50%;
 		display: inline-block;
 		line-height: 1;
@@ -61,7 +61,7 @@
 	}
 
 	svg {
-		fill: $color__pink-light;
+		fill: $color__light-grey;
 		height: 30px;
 		speak: none;
 		transition: fill .1s ease-in 0;
@@ -69,11 +69,11 @@
 	}
 
 	a:hover {
-		background: $color__pink-light;
-		border-color: $color__purple;
+		background: $color__light-grey;
+		border-color: $color__grey;
 
 		svg {
-			fill: $color__purple;
+			fill: $color__grey;
 		}
 	}
 }
