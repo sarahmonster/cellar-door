@@ -1236,7 +1236,7 @@ li.focus > .children {
 }
 
 .cellardoor-feature-placeholder {
-	background: #696969 url('assets/images/pattern-bg-dark.png');
+	background: #696969;
 }
 
 .entry-meta .posted-on,
