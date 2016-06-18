@@ -858,6 +858,7 @@ a:active {
 	position: relative;
 	text-align: center;
 	width: 100%;
+	z-index: 1;
 }
 
 #masthead::after,
@@ -868,8 +869,9 @@ a:active {
 	position: absolute;
 	right: 0;
 	-ms-transform: skewY(2deg);
-	    transform: skewY(2deg); 
+	    transform: skewY(2deg);
 	width: 100%;
+	z-index: 10;
 }
 
 #masthead {
@@ -880,7 +882,8 @@ a:active {
 }
 
 #colophon {
-	padding-top: calc(100px/2 + 32px/2);
+	margin-top: -50px;
+	padding-top: calc(100px + 32px/2);
 }
 #colophon::before {
 	top: -50px;
@@ -898,6 +901,8 @@ a:active {
 	margin: 0 auto;
 	max-width: 1200px;
 	padding: 8px;
+	position: relative;
+	z-index: 100;
 }
 
 @media (min-width: 768px) {

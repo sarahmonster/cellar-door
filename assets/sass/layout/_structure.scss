@@ -8,17 +8,19 @@
 	position: relative;
 	text-align: center;
 	width: 100%;
+	z-index: 1;
 }
 
 #masthead::after,
 #colophon::before {
 	background: $color__background-body;
-	left: 0;
-	right: 0;
-	width: 100%;
 	height: $size__site-skew-height;
+	left: 0;
 	position: absolute;
+	right: 0;
 	transform: skewY($size__site-skew-deg);
+	width: 100%;
+	z-index: 10;
 }
 
 #masthead {
@@ -30,8 +32,8 @@
 }
 
 #colophon {
-	padding-top: calc(#{$size__site-skew-height}/2 + #{$size__site-gutter}/2);
-
+	margin-top: -$size__site-skew-height/2;
+	padding-top: calc(#{$size__site-skew-height} + #{$size__site-gutter}/2);
 
 	&::before {
 		top: -$size__site-skew-height/2;
@@ -49,5 +51,7 @@
 .site-content {
 	margin: 0 auto;
 	max-width: $size__site-width;
-	padding: $size__site-gutter / 4;
+	padding: $size__site-gutter/4;
+	position: relative;
+	z-index: 100;
 }
