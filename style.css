@@ -917,6 +917,9 @@ a:active {
 }
 
 @media (min-width: 768px) {
+	.custom-logo {
+		max-width: 200px;
+	}
 	#site-navigation .menu {
 		padding: 16px 0;
 	}

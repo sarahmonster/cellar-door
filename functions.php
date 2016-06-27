@@ -36,6 +36,15 @@ function cellardoor_setup() {
 	add_theme_support( 'title-tag' );
 
 	/*
+	 * Enable support for custom logo.
+	 */
+	add_theme_support( 'custom-logo', array(
+		'height'      => 400,
+		'width'       => 400,
+		'flex-height' => true,
+	) );
+
+	/*
 	 * Enable support for Post Thumbnails on posts and pages.
 	 *
 	 * @link https://developer.wordpress.org/themes/functionality/featured-images-post-thumbnails/

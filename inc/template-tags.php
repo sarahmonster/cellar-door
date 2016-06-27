@@ -158,6 +158,20 @@ function cellardoor_entry_footer() {
 }
 endif;
 
+if ( ! function_exists( 'cellardoor_the_custom_logo' ) ) :
+/**
+ * Displays the optional custom logo.
+ *
+ * Does nothing if the custom logo is not available.
+ *
+ */
+function cellardoor_the_custom_logo() {
+	if ( function_exists( 'the_custom_logo' ) ) {
+		the_custom_logo();
+	}
+}
+endif;
+
 /**
  * Returns true if a blog has more than 1 category.
  *

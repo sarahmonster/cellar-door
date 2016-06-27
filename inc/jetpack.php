@@ -27,10 +27,6 @@ function cellardoor_jetpack_setup() {
 
 	// Add theme support for Testimonials.
 	add_theme_support( 'jetpack-testimonial' );
-
-	// Add theme support for Site Logo
-	add_image_size( 'cellardoor-logo', 400, 400 );
-	add_theme_support( 'site-logo', array( 'size' => 'cellardoor-logo' ) );
 }
 add_action( 'after_setup_theme', 'cellardoor_jetpack_setup' );
 
